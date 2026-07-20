@@ -2,25 +2,80 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a1d1a;
+
+  --color-brand-50: #eef8ee;
+  --color-brand-100: #d5efd6;
+  --color-brand-200: #aedeb1;
+  --color-brand-300: #7dc784;
+  --color-brand-400: #4dab57;
+  --color-brand-500: #2d8a3b;
+  --color-brand-600: #1f7230;
+  --color-brand-700: #185a28;
+  --color-brand-800: #154722;
+  --color-brand-900: #123a1e;
+
+  --color-ink-50: #f6f7f6;
+  --color-ink-100: #e7e9e8;
+  --color-ink-200: #cdd1cf;
+  --color-ink-300: #a6ada9;
+  --color-ink-400: #767f79;
+  --color-ink-500: #565f59;
+  --color-ink-600: #444b46;
+  --color-ink-700: #383e3a;
+  --color-ink-800: #242825;
+  --color-ink-900: #16181a;
+  --color-ink-950: #0d0f0e;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-brand-50: var(--color-brand-50);
+  --color-brand-100: var(--color-brand-100);
+  --color-brand-200: var(--color-brand-200);
+  --color-brand-300: var(--color-brand-300);
+  --color-brand-400: var(--color-brand-400);
+  --color-brand-500: var(--color-brand-500);
+  --color-brand-600: var(--color-brand-600);
+  --color-brand-700: var(--color-brand-700);
+  --color-brand-800: var(--color-brand-800);
+  --color-brand-900: var(--color-brand-900);
+
+  --color-ink-50: var(--color-ink-50);
+  --color-ink-100: var(--color-ink-100);
+  --color-ink-200: var(--color-ink-200);
+  --color-ink-300: var(--color-ink-300);
+  --color-ink-400: var(--color-ink-400);
+  --color-ink-500: var(--color-ink-500);
+  --color-ink-600: var(--color-ink-600);
+  --color-ink-700: var(--color-ink-700);
+  --color-ink-800: var(--color-ink-800);
+  --color-ink-900: var(--color-ink-900);
+  --color-ink-950: var(--color-ink-950);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+.container-page {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .container-page {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }

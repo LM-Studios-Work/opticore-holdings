@@ -1,31 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #1a1d1a;
+  --background: #f6f8f7;
+  --foreground: #231f1f;
 
-  --color-brand-50: #eef8ee;
-  --color-brand-100: #d5efd6;
-  --color-brand-200: #aedeb1;
-  --color-brand-300: #7dc784;
-  --color-brand-400: #4dab57;
-  --color-brand-500: #2d8a3b;
-  --color-brand-600: #1f7230;
-  --color-brand-700: #185a28;
-  --color-brand-800: #154722;
-  --color-brand-900: #123a1e;
+  /* Soft sage-green brand scale, anchored on #d9efc1 */
+  --color-brand-50: #f4f9ec;
+  --color-brand-100: #e7f2d4;
+  --color-brand-200: #d9efc1;
+  --color-brand-300: #c4e2a1;
+  --color-brand-400: #a6cd78;
+  --color-brand-500: #86b253;
+  --color-brand-600: #6a9440;
+  --color-brand-700: #527433;
+  --color-brand-800: #405a2a;
+  --color-brand-900: #324623;
 
-  --color-ink-50: #f6f7f6;
-  --color-ink-100: #e7e9e8;
-  --color-ink-200: #cdd1cf;
-  --color-ink-300: #a6ada9;
-  --color-ink-400: #767f79;
-  --color-ink-500: #565f59;
-  --color-ink-600: #444b46;
-  --color-ink-700: #383e3a;
-  --color-ink-800: #242825;
-  --color-ink-900: #16181a;
-  --color-ink-950: #0d0f0e;
+  /* Warm charcoal + cool-gray neutrals, anchored on #f6f8f7 / #eaf0f1 / #d2e5e8 / #231f1f */
+  --color-ink-50: #f6f8f7;
+  --color-ink-100: #eaf0f1;
+  --color-ink-200: #d2e5e8;
+  --color-ink-300: #b4c4c6;
+  --color-ink-400: #8a9698;
+  --color-ink-500: #646d6d;
+  --color-ink-600: #4b5252;
+  --color-ink-700: #383a3a;
+  --color-ink-800: #2b2727;
+  --color-ink-900: #231f1f;
+  --color-ink-950: #171414;
 }
 
 @theme inline {

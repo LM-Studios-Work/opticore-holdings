@@ -10,7 +10,7 @@ export default function SectionHeading({
   center?: boolean;
 }) {
   return (
-    <div className={`max-w-2xl ${center ? "mx-auto text-center" : ""}`}>
+    <div className={`max-w-3xl ${center ? "mx-auto text-center" : ""}`}>
       {eyebrow && (
         <p className="text-sm font-semibold uppercase tracking-wider text-brand-600">
           {eyebrow}

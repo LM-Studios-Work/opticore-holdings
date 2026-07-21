@@ -68,16 +68,23 @@ body {
 
 .container-page {
   width: 100%;
-  max-width: 80rem;
+  max-width: 100rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .container-page {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-page {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
   }
 }

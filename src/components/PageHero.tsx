@@ -10,12 +10,13 @@ export default function PageHero({
   children?: React.ReactNode;
 }) {
   return (
-    <section className="relative overflow-hidden bg-ink-950 py-16 text-white sm:py-20">
+    <section className="relative overflow-hidden border-b border-ink-800 bg-ink-950 py-16 text-white sm:py-20">
       <div
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0 opacity-[0.12]"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 15% 25%, var(--color-brand-500) 0%, transparent 45%), radial-gradient(circle at 85% 75%, var(--color-brand-600) 0%, transparent 45%)",
+            "linear-gradient(var(--color-brand-300) 1px, transparent 1px), linear-gradient(90deg, var(--color-brand-300) 1px, transparent 1px)",
+          backgroundSize: "48px 48px",
         }}
       />
       <div className="container-page relative">

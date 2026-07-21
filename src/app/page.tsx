@@ -21,16 +21,17 @@ export default function Home() {
   return (
     <>
       {/* 1. Hero */}
-      <section className="relative overflow-hidden bg-ink-950 text-white">
+      <section className="relative overflow-hidden border-b border-ink-800 bg-ink-950 text-white">
         <div
-          className="absolute inset-0 opacity-25"
+          className="absolute inset-0 opacity-[0.12]"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 10% 20%, var(--color-brand-500) 0%, transparent 40%), radial-gradient(circle at 90% 80%, var(--color-brand-600) 0%, transparent 40%)",
+              "linear-gradient(var(--color-brand-300) 1px, transparent 1px), linear-gradient(90deg, var(--color-brand-300) 1px, transparent 1px)",
+            backgroundSize: "48px 48px",
           }}
         />
         <div className="container-page relative flex flex-col items-center py-20 text-center lg:py-28">
-          <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-300">
+          <span className="inline-flex items-center gap-2 border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-300">
             Trusted across South Africa
           </span>
           <h1 className="mt-5 max-w-3xl text-balance font-display text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
@@ -42,13 +43,13 @@ export default function Home() {
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
               href="/quote"
-              className="rounded-full bg-brand-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-brand-500"
+              className="bg-brand-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-brand-500"
             >
               Request a Free Quote Today!
             </Link>
             <a
               href={siteConfig.phoneHref}
-              className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              className="inline-flex items-center gap-2 border border-white/25 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
             >
               <Phone className="h-4 w-4" />
               {siteConfig.phone}
@@ -72,13 +73,13 @@ export default function Home() {
 
       {/* 2. Intro two-column block */}
       <section className="container-page py-16 sm:py-20">
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+        <div className="grid overflow-hidden border border-ink-200 lg:grid-cols-2">
           <PlaceholderImage
             label="OptiCore Team On Site"
             tone="light"
-            aspect="aspect-[4/3]"
+            aspect="aspect-[4/3] lg:aspect-auto lg:h-full"
           />
-          <div>
+          <div className="border-t border-ink-200 p-8 sm:p-10 lg:border-l lg:border-t-0">
             <SectionHeading
               eyebrow="What We Do"
               title="Professional Facility & Hygiene Solutions in South Africa"
@@ -86,7 +87,7 @@ export default function Home() {
             />
             <Link
               href="/services"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-500"
+              className="mt-6 inline-flex items-center gap-2 bg-brand-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-500"
             >
               Explore Our Services
               <ArrowRight className="h-4 w-4" />
@@ -95,21 +96,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Shop by category — split cards */}
-      <section className="bg-ink-50 py-16 sm:py-20">
+      {/* 3. Shop by category — split grid cards */}
+      <section className="border-y border-ink-200 bg-ink-50 py-16 sm:py-20">
         <div className="container-page">
           <SectionHeading
             eyebrow="Our Services"
             title="Browse by Category"
             center
           />
-          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+          <div className="mt-10 grid grid-cols-1 gap-px border border-ink-200 bg-ink-200 md:grid-cols-2">
             {serviceCategories.map((service) => {
               const Icon = iconMap[service.icon];
               return (
                 <div
                   key={service.slug}
-                  className="flex flex-col overflow-hidden rounded-2xl border border-ink-100 bg-white shadow-sm sm:flex-row"
+                  className="flex flex-col bg-white sm:flex-row"
                 >
                   <div className="flex flex-1 flex-col justify-center p-6">
                     <h3 className="font-display text-lg font-semibold text-ink-900">
@@ -120,7 +121,7 @@ export default function Home() {
                     </p>
                     <Link
                       href={`/services#${service.slug}`}
-                      className="mt-4 inline-flex w-fit items-center gap-2 rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-500"
+                      className="mt-4 inline-flex w-fit items-center gap-2 bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-500"
                     >
                       Learn more
                       <ArrowRight className="h-4 w-4" />
@@ -131,7 +132,6 @@ export default function Home() {
                       label={service.title}
                       icon={Icon}
                       aspect="aspect-[4/3] sm:aspect-auto sm:h-full"
-                      className="rounded-none"
                     />
                   </div>
                 </div>
@@ -148,20 +148,19 @@ export default function Home() {
           title="Top Trending Products"
           center
         />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-px border border-ink-200 bg-ink-200 sm:grid-cols-2 lg:grid-cols-3">
           {medicalProducts.slice(0, 3).map((product) => {
             const Icon = iconMap[product.icon];
             return (
               <div
                 key={product.title}
-                className="flex flex-col overflow-hidden rounded-2xl border border-ink-100 bg-white shadow-sm"
+                className="flex flex-col bg-white"
               >
                 <PlaceholderImage
                   label={product.title}
                   icon={Icon}
                   tone="light"
                   aspect="aspect-[4/3]"
-                  className="rounded-none"
                 />
                 <div className="flex flex-1 flex-col p-6 text-center">
                   <h3 className="font-display text-lg font-semibold text-ink-900">
@@ -178,36 +177,35 @@ export default function Home() {
         <div className="mt-8 flex justify-center">
           <Link
             href="/medical-supplies"
-            className="rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-500"
+            className="bg-brand-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-500"
           >
             View All Products
           </Link>
         </div>
-        <div className="mt-8 rounded-xl border border-dashed border-brand-300 bg-brand-50 px-6 py-4 text-center text-sm font-medium text-brand-800">
+        <div className="mt-8 border border-dashed border-brand-300 bg-brand-50 px-6 py-4 text-center text-sm font-medium text-brand-800">
           Reliable stock availability and fast delivery on PPE, hygiene products
           and medical consumables — order in bulk and save.
         </div>
       </section>
 
       {/* 5. Testimonials in blog-card style */}
-      <section className="bg-ink-50 py-16 sm:py-20">
+      <section className="border-y border-ink-200 bg-ink-50 py-16 sm:py-20">
         <div className="container-page">
           <SectionHeading
             eyebrow="Testimonials"
             title="What Our Clients Say"
             center
           />
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-px border border-ink-200 bg-ink-200 sm:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((t) => (
               <article
                 key={t.name}
-                className="flex flex-col overflow-hidden rounded-2xl border border-ink-100 bg-white shadow-sm"
+                className="flex flex-col bg-white"
               >
                 <PlaceholderImage
                   label={t.name}
                   tone="brand"
                   aspect="aspect-[16/10]"
-                  className="rounded-none"
                 />
                 <div className="flex flex-1 flex-col p-6">
                   <p className="flex-1 text-sm text-ink-600">
@@ -229,11 +227,11 @@ export default function Home() {
       {/* 6. Accreditations */}
       <section className="container-page py-16 sm:py-20">
         <SectionHeading eyebrow="Trusted & Compliant" title="Accreditations" center />
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+        <div className="mx-auto mt-10 grid max-w-3xl grid-cols-2 gap-px border border-ink-200 bg-ink-200 sm:grid-cols-4">
           {accreditations.map((item) => (
             <div
               key={item}
-              className="flex h-24 w-40 items-center justify-center rounded-xl border border-ink-100 bg-white px-4 text-center text-sm font-semibold text-ink-500 shadow-sm"
+              className="flex h-24 items-center justify-center bg-white px-4 text-center text-sm font-semibold text-ink-500"
             >
               {item}
             </div>

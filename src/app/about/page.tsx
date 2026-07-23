@@ -60,16 +60,7 @@ export default function AboutPage() {
               customer service.
             </p>
           </div>
-          <div className="rounded-2xl bg-white p-8 shadow-sm">
-            <Eye className="h-8 w-8 text-brand-600" />
-            <h3 className="mt-4 font-display text-xl font-semibold text-ink-900">
-              Our Vision
-            </h3>
-            <p className="mt-3 text-ink-600">
-              To become one of South Africa&apos;s most trusted providers of
-              integrated cleaning, hygiene, and medical supply services.
-            </p>
-          </div>
+
         </div>
       </section>
 
@@ -112,23 +103,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="container-page py-16 sm:py-20">
-        <SectionHeading
-          eyebrow="Who We Serve"
-          title="Our Target Market"
-          center
-        />
-        <div className="mt-10 flex flex-wrap justify-center gap-3">
-          {targetMarkets.map((market) => (
-            <span
-              key={market}
-              className="rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-medium text-brand-800"
-            >
-              {market}
-            </span>
-          ))}
-        </div>
-      </section>
+
 
       <CtaBanner />
     </>

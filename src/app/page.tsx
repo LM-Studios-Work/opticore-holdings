@@ -1,6 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, ShieldCheck, Clock, BadgeCheck, ArrowRight } from "lucide-react";
 import PlaceholderImage from "@/components/PlaceholderImage";
+import heroImg from "../../public/Hero Image/potential hero 2.jpg";
 import SectionHeading from "@/components/SectionHeading";
 import { iconMap } from "@/lib/icon-map";
 import {
@@ -21,26 +23,30 @@ export default function Home() {
   return (
     <>
       {/* 1. Hero */}
-      <section className="relative overflow-hidden border-b border-ink-800 bg-ink-950 text-white">
-        <div
-          className="absolute inset-0 opacity-[0.12]"
-          style={{
-            backgroundImage:
-              "linear-gradient(var(--color-brand-300) 1px, transparent 1px), linear-gradient(90deg, var(--color-brand-300) 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
-          }}
+      <section className="relative flex h-screen max-h-screen overflow-hidden border-b border-ink-800 text-white">
+        {/* Background photo */}
+        <Image
+          src={heroImg}
+          alt="OptiCore Holdings team on site"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
         />
-        <div className="container-page relative flex flex-col items-center py-20 text-center lg:py-28">
-          <span className="inline-flex items-center gap-2 border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-300">
+        {/* Gradient overlay for legibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ink-950/85 via-ink-950/60 to-transparent" />
+        {/* Content */}
+        <div className="container-page relative flex h-full flex-col justify-center py-24 lg:py-36 lg:max-w-3xl">
+          <span className="inline-flex w-fit items-center gap-2 border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-300">
             Trusted across South Africa
           </span>
-          <h1 className="mt-5 max-w-3xl text-balance font-display text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
+          <h1 className="mt-5 max-w-2xl text-balance font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
             Cleaning, Hygiene &amp; Medical Supply Solutions You Can Rely On
           </h1>
-          <p className="mt-5 max-w-2xl text-pretty text-base text-ink-200 sm:text-lg">
+          <p className="mt-5 max-w-xl text-pretty text-base text-ink-200 sm:text-lg">
             {siteConfig.description}
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href="/quote"
               className="bg-brand-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-brand-500"
@@ -55,17 +61,15 @@ export default function Home() {
               {siteConfig.phone}
             </a>
           </div>
-          <div className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-ink-300">
+          <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-ink-300">
             <span className="flex items-center gap-2">
-              <ShieldCheck className="h-4 w-4 text-brand-400" /> Health &amp;
-              Safety Focused
+              <ShieldCheck className="h-4 w-4 text-brand-400" /> Health &amp; Safety Focused
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-4 w-4 text-brand-400" /> Reliable &amp; On-Time
             </span>
             <span className="flex items-center gap-2">
-              <BadgeCheck className="h-4 w-4 text-brand-400" /> Quality
-              Guaranteed
+              <BadgeCheck className="h-4 w-4 text-brand-400" /> Quality Guaranteed
             </span>
           </div>
         </div>
@@ -224,20 +228,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. Accreditations */}
-      <section className="container-page py-16 sm:py-20">
-        <SectionHeading eyebrow="Trusted & Compliant" title="Accreditations" center />
-        <div className="mx-auto mt-10 grid max-w-3xl grid-cols-2 gap-px border border-ink-200 bg-ink-200 sm:grid-cols-4">
-          {accreditations.map((item) => (
-            <div
-              key={item}
-              className="flex h-24 items-center justify-center bg-white px-4 text-center text-sm font-semibold text-ink-500"
-            >
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
+
     </>
   );
 }

@@ -147,7 +147,7 @@ export default function Home() {
                   <p className="mt-2 text-sm leading-relaxed text-ink-500">
                     {service.shortDescription}
                   </p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-teal-700 transition-all duration-300">
+                  <span className="mt-auto pt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-teal-700 transition-all duration-300">
                     Learn more
                     <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>

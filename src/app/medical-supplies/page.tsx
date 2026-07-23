@@ -7,6 +7,7 @@ import PlaceholderImage from "@/components/PlaceholderImage";
 import CtaBanner from "@/components/CtaBanner";
 import { medicalProducts } from "@/lib/site-data";
 import { iconMap } from "@/lib/icon-map";
+import medicalHero from "../../../public/Services Heros/medical supplies hero.png";
 
 export const metadata: Metadata = {
   title: "Medical Supplies",
@@ -36,17 +37,15 @@ export default function MedicalSuppliesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Medical Supplies"
+        eyebrow="Our Services"
         title="PPE, Hygiene & Medical Consumables"
-        description="OptiCore Medical Supplies provides trusted PPE, medical consumables and cleaning chemicals to healthcare providers, offices and industrial sites across South Africa."
+        description="Consistent stock. Fast delivery. Trusted quality. We supply healthcare providers, corporate offices, and industrial sites across South Africa."
+        image={medicalHero}
+        imageAlt="Medical supplies and PPE products"
       />
 
       <section className="container-page py-16 sm:py-20">
-        <SectionHeading
-          eyebrow="Product Range"
-          title="What We Supply"
-          description="Browse our core product categories below — get in touch for pricing, bulk orders or products not listed here."
-        />
+
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {medicalProducts.map((product) => {
             const Icon = iconMap[product.icon];
@@ -98,8 +97,8 @@ export default function MedicalSuppliesPage() {
 
       <section className="container-page py-16 text-center sm:py-20">
         <SectionHeading
-          title="Need Medical Supplies for Your Business?"
-          description="Send us your requirements — including quantities and delivery location — and we'll respond with a tailored quote."
+          title="Need Bulk Supplies?"
+          description="Send us your requirements, quantities, and location. We will return a tailored quote within one business day."
           center
         />
         <Link href="/quote" className="btn btn-primary mt-6 px-6 py-3">

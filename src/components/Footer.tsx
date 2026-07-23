@@ -13,8 +13,13 @@ export default function Footer() {
           <Logo dark />
 
           <p className="mt-4 max-w-xs text-sm text-teal-200">
-            {siteConfig.description}
+            Professional cleaning, hygiene, medical supply, and facility management across South Africa. Call {siteConfig.phone}
           </p>
+          <div className="mt-6">
+            <Link href="/quote" className="btn btn-primary bg-brand-500 text-white hover:bg-brand-600 border-none">
+              Get My Free Quote
+            </Link>
+          </div>
           <div className="mt-5 flex gap-3">
             {socialLinks.map((social) => (
               <a

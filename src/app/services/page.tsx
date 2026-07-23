@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image, { StaticImageData } from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import PageHero from "@/components/PageHero";
-import PlaceholderImage from "@/components/PlaceholderImage";
 import CtaBanner from "@/components/CtaBanner";
 import { serviceCategories } from "@/lib/site-data";
-import { iconMap } from "@/lib/icon-map";
+import cleaningHero from "../../../public/Services Heros/commercial and residential cleaning hero.webp";
+import sanitisingHero from "../../../public/Services Heros/Sanitising and Disinfection hero.png";
+import pestHero from "../../../public/Services Heros/pest control hero.webp";
+import medicalHero from "../../../public/Services Heros/medical supplies hero.png";
 
 export const metadata: Metadata = {
   title: "Our Services",
@@ -13,18 +16,23 @@ export const metadata: Metadata = {
     "Commercial and residential cleaning, sanitising and disinfection, pest control, and medical supplies from OptiCore Holdings.",
 };
 
+const serviceImages: Record<string, StaticImageData> = {
+  cleaning: cleaningHero,
+  sanitising: sanitisingHero,
+  "pest-control": pestHero,
+  "medical-supplies": medicalHero,
+};
+
 export default function ServicesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Our Services"
-        title="Complete Cleaning, Hygiene & Pest Control Solutions"
-        description="Explore our full range of services below, delivered by trained teams using professional-grade equipment and compliant products."
+        title="Complete Cleaning, Hygiene & Pest Control"
+        description="Executed by trained teams using professional-grade equipment and compliant chemicals."
       />
 
       <div className="divide-y divide-ink-100">
         {serviceCategories.map((service, index) => {
-          const Icon = iconMap[service.icon];
           const reversed = index % 2 === 1;
 
           return (
@@ -39,18 +47,17 @@ export default function ServicesPage() {
                 }`}
               >
                 <div className="overflow-hidden rounded-[2rem] bg-white p-3 shadow-[0_30px_60px_-40px_rgba(9,60,58,0.4)]">
-                  <PlaceholderImage
-                    label={service.title}
-                    icon={Icon}
-                    aspect="aspect-[4/3]"
-                    className="rounded-[1.5rem]"
-                  />
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem]">
+                    <Image
+                      src={serviceImages[service.slug]}
+                      alt={service.title}
+                      fill
+                      className="object-cover object-center"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                  </div>
                 </div>
                 <div>
-                  <span className="pill bg-brand-50 text-teal-700">
-                    {Icon && <Icon className="h-3.5 w-3.5" />}
-                    Service
-                  </span>
                   <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-ink-900 text-balance sm:text-3xl">
                     {service.title}
                   </h2>
@@ -67,7 +74,7 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                   <Link href="/quote" className="btn btn-primary mt-6 px-6 py-3">
-                    Request a Quote for This Service
+                    Request a Quote
                   </Link>
                 </div>
               </div>

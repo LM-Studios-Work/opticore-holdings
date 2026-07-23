@@ -3,10 +3,10 @@ export const siteConfig = {
   legalName: "OptiCore Holdings (Pty) Ltd",
   tagline: "Cleaning, Hygiene, Pest Control & Medical Supplies",
   description:
-    "OptiCore Holdings is a South African company providing professional cleaning, hygiene, medical supply, and facility management solutions to residential, commercial, industrial, and healthcare clients.",
-  phone: "061 320 2590",
-  phoneHref: "tel:+27613202590",
-  whatsappHref: "https://wa.me/27613202590",
+    "OptiCore Holdings delivers professional facility management, medical consumables, and hygiene operations across South Africa. Built for residential, commercial, industrial, and healthcare sectors.",
+  phone: "071 702 0817",
+  phoneHref: "tel:+27717020817",
+  whatsappHref: "https://wa.me/27717020817",
   email: "info@opticoreholdings.co.za",
   address: "Bryanston, Sandton, Johannesburg, South Africa",
   hours: "Mon – Fri: 07:00 – 17:00 | Sat: 08:00 – 13:00 | Emergency call-outs available",
@@ -33,7 +33,7 @@ export const navLinks = [
 export const brands = [
   {
     name: "Zenako Cleaning Co.",
-    description: "Professional Cleaning Services",
+    description: "Professional Cleaning Operations",
   },
   {
     name: "OptiCore Sanitising",
@@ -41,11 +41,11 @@ export const brands = [
   },
   {
     name: "OptiCore Pest Control",
-    description: "Pest Management Solutions",
+    description: "Pest Management",
   },
   {
     name: "OptiCore Medical Supplies",
-    description: "PPE, Hygiene & Medical Consumables",
+    description: "PPE & Consumables",
   },
 ] as const;
 
@@ -61,39 +61,52 @@ export type ServiceCategory = {
 
 export const serviceCategories: ServiceCategory[] = [
   {
+    slug: "medical-supplies",
+    title: "Medical Supplies",
+    shortDescription:
+      "High-volume PPE, hygiene products, and medical consumables for healthcare providers and businesses.",
+    description:
+      "A complete pipeline of PPE, consumables, and chemicals for clinics, offices, and industrial sites.",
+    icon: "Cross",
+    image: "medical-hero",
+    items: [
+      "PPE & Gloves",
+      "Masks & Sanitiser",
+      "Medical Consumables",
+      "Cleaning Chemicals & First Aid",
+    ],
+  },
+  {
     slug: "cleaning",
     title: "Commercial & Residential Cleaning",
     shortDescription:
-      "Professional cleaning for homes, offices and commercial properties of every size.",
+      "Scalable cleaning operations for homes, offices, and commercial properties.",
     description:
-      "From routine office cleaning to intensive post-construction clean-ups, our trained teams deliver consistent, high-quality results using professional-grade equipment and eco-conscious products.",
+      "From routine office maintenance to heavy-duty post-construction clear-outs.",
     icon: "Sparkles",
     image: "cleaning-hero",
     items: [
       "Deep Cleaning",
       "Office Cleaning",
       "Residential Cleaning",
-      "Move-in / Move-out Cleaning",
-      "Post-Construction Cleaning",
-      "Window Cleaning",
-      "Carpet Cleaning",
-      "Upholstery Cleaning",
+      "Move-in / Move-out",
+      "Post-Construction",
+      "Window & Carpet Cleaning",
     ],
   },
   {
     slug: "sanitising",
     title: "Sanitising & Disinfection",
     shortDescription:
-      "Medical-grade disinfection and fogging services to protect the people in your space.",
+      "Medical-grade fogging and targeted disinfection to protect high-traffic environments.",
     description:
-      "We use hospital-grade disinfectants and fogging equipment to eliminate harmful bacteria and viruses in offices, schools, hospitals and other high-traffic environments.",
+      "Hospital-grade disinfectants and fogging technology to eliminate pathogens in high-risk environments.",
     icon: "ShieldCheck",
     image: "sanitising-hero",
     items: [
       "Fogging Services",
       "Medical-grade Disinfection",
-      "Office Sanitising",
-      "School & Hospital Sanitising",
+      "Office & School Sanitising",
       "Virus & Bacteria Control",
     ],
   },
@@ -101,37 +114,16 @@ export const serviceCategories: ServiceCategory[] = [
     slug: "pest-control",
     title: "Pest Control",
     shortDescription:
-      "Safe, effective pest management for residential, commercial and industrial properties.",
+      "Safe, effective, and compliant pest eradication for all property types.",
     description:
-      "Our qualified pest control technicians identify, treat and prevent infestations using safe, regulation-compliant methods tailored to your property and risk profile.",
+      "Targeted identification and eradication of infestations using regulation-compliant methods.",
     icon: "Bug",
     image: "pest-hero",
     items: [
-      "Cockroaches",
+      "Cockroaches & Ants",
       "Rodents",
-      "Ants",
-      "Termites",
-      "Bed Bugs",
+      "Termites & Bed Bugs",
       "General Pest Management",
-    ],
-  },
-  {
-    slug: "medical-supplies",
-    title: "Medical Supplies",
-    shortDescription:
-      "PPE, hygiene products and medical consumables for businesses and healthcare providers.",
-    description:
-      "We supply a full range of PPE, medical consumables and cleaning chemicals to clinics, hospitals, offices and industrial sites, backed by reliable stock availability and delivery.",
-    icon: "Cross",
-    image: "medical-hero",
-    items: [
-      "PPE Equipment",
-      "Gloves",
-      "Masks",
-      "Sanitiser",
-      "Medical Consumables",
-      "Cleaning Chemicals",
-      "First Aid Supplies",
     ],
   },
 ];
@@ -142,7 +134,6 @@ export const values = [
   { title: "Affordable", description: "Transparent, competitive pricing with no hidden costs." },
   { title: "Quality Service", description: "Meticulous attention to detail on every visit." },
   { title: "Health & Safety Focused", description: "Compliant products, methods and protective equipment." },
-  { title: "Customer Satisfaction", description: "We're not done until you're happy with the result." },
 ] as const;
 
 export const targetMarkets = [
@@ -160,37 +151,37 @@ export const targetMarkets = [
 export const medicalProducts = [
   {
     title: "PPE Equipment",
-    description: "Gowns, coveralls, face shields and general protective equipment for healthcare and industrial use.",
+    description: "Gowns, coveralls, and face shields for maximum workplace protection.",
     icon: "ShieldCheck",
   },
   {
     title: "Gloves",
-    description: "Nitrile, latex and vinyl gloves suited to medical, food service and industrial environments.",
+    description: "Nitrile, latex, and vinyl options for medical and industrial applications.",
     icon: "Hand",
   },
   {
     title: "Masks",
-    description: "Surgical, N95/FFP2 and cloth masks for medical, hospitality and general workplace use.",
+    description: "Surgical and N95/FFP2 respirators built for strict compliance.",
     icon: "Cross",
   },
   {
     title: "Sanitiser",
-    description: "Hand and surface sanitisers in a range of sizes, from personal bottles to bulk dispensers.",
+    description: "Hand and surface sanitisers, available from personal issue to bulk commercial dispensers.",
     icon: "Droplet",
   },
   {
     title: "Medical Consumables",
-    description: "Swabs, dressings, syringes and other everyday consumables for clinics and practices.",
+    description: "Swabs, dressings, syringes, and daily essentials for busy practices.",
     icon: "Syringe",
   },
   {
     title: "Cleaning Chemicals",
-    description: "Industrial and commercial-grade disinfectants, detergents and specialised cleaning agents.",
+    description: "Commercial-grade disinfectants, heavy-duty detergents, and specialist agents.",
     icon: "FlaskConical",
   },
   {
     title: "First Aid Supplies",
-    description: "Fully stocked first aid kits and refill supplies for offices, vehicles and job sites.",
+    description: "Fully stocked kits and rapid-refill supplies for offices, sites, and fleets.",
     icon: "HeartPulse",
   },
 ] as const;
@@ -206,13 +197,13 @@ export const testimonials = [
     name: "T. van der Merwe",
     role: "Property Manager, Bryanston",
     quote:
-      "We use them for move-in/move-out cleaning across our units. Reliable and consistently good quality.",
+      "We use them for move-in/move-out cleaning across our units. Reliable and consistently high quality.",
   },
   {
     name: "Dr. S. Khumalo",
     role: "Clinic Owner, Randburg",
     quote:
-      "Their medical-grade disinfection service and PPE supply have made compliance so much easier for our practice.",
+      "Their medical-grade disinfection service and PPE supply have made compliance effortless for our practice.",
   },
 ] as const;
 

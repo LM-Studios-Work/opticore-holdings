@@ -63,6 +63,21 @@ export default function AboutPage() {
             </p>
           </div>
 
+          <div className="rounded-3xl border border-ink-100 bg-white p-8 shadow-[0_24px_48px_-32px_rgba(9,60,58,0.35)]">
+            <span className="bg-brand-gradient flex h-12 w-12 items-center justify-center rounded-full text-white">
+              <Eye className="h-6 w-6" />
+            </span>
+            <h3 className="mt-4 font-display text-xl font-semibold text-ink-900">
+              Our Vision
+            </h3>
+            <p className="mt-3 text-ink-600">
+              To be South Africa&apos;s most trusted provider of integrated
+              cleaning, hygiene and medical supply services — recognised for
+              our professionalism, consistency and commitment to healthier
+              environments.
+            </p>
+          </div>
+
         </div>
       </section>
 

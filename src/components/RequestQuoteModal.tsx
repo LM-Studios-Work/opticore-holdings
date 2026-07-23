@@ -2,7 +2,7 @@
 
 import { useEffect, useState, type FormEvent } from "react";
 import Image from "next/image";
-import { X, CheckCircle2, Loader2, ShieldCheck } from "lucide-react";
+import { X, CheckCircle2, Loader2 } from "lucide-react";
 import type { Product } from "./ProductCard";
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -80,8 +80,6 @@ export default function RequestQuoteModal({
 
   if (!product) return null;
 
-  const Icon = product.icon ?? ShieldCheck;
-
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
@@ -99,26 +97,25 @@ export default function RequestQuoteModal({
       {/* Modal panel — two column */}
       <div className="relative z-10 flex w-full max-w-4xl overflow-hidden rounded-3xl bg-white shadow-[0_40px_100px_-20px_rgba(0,0,0,0.35)]">
 
-        {/* ── LEFT: Image panel ── */}
-        <div className="relative hidden w-[42%] flex-shrink-0 overflow-hidden bg-ink-50 sm:flex">
-          {product.image ? (
-            <Image
-              src={product.image as string}
-              alt={product.title}
-              fill
-              className="object-cover"
-              sizes="40vw"
-            />
-          ) : (
-            <div className="flex h-full w-full flex-col items-center justify-center bg-brand-gradient px-8">
-              <Icon className="h-24 w-24 text-white/80" strokeWidth={1} />
-              <p className="mt-4 text-center text-sm font-medium text-white/70">
-                {product.category}
-              </p>
-            </div>
-          )}
-          {/* Subtle overlay gradient so text stays readable if ever added */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+        {/* ── LEFT: Image panel (square) ── */}
+        <div className="relative hidden flex-shrink-0 sm:block" style={{ width: "42%" }}>
+          <div className="aspect-square w-full overflow-hidden">
+            {product.image ? (
+              <Image
+                src={product.image as string}
+                alt={product.title}
+                fill
+                className="object-cover"
+                sizes="40vw"
+              />
+            ) : (
+              <div className="flex h-full w-full items-center justify-center bg-ink-100">
+                <span className="text-xs font-medium uppercase tracking-widest text-ink-400">
+                  Placeholder Image
+                </span>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* ── RIGHT: Info + form panel ── */}

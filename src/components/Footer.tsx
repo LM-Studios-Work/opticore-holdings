@@ -7,12 +7,12 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-ink-100 bg-ink-950 text-ink-200">
+    <footer className="border-t border-teal-900 bg-teal-900 text-teal-100">
       <div className="container-page grid gap-10 py-14 lg:grid-cols-4">
         <div>
           <Logo dark />
 
-          <p className="mt-4 max-w-xs text-sm text-ink-300">
+          <p className="mt-4 max-w-xs text-sm text-teal-200">
             {siteConfig.description}
           </p>
           <div className="mt-5 flex gap-3">
@@ -21,7 +21,7 @@ export default function Footer() {
                 key={social.name}
                 href={social.href}
                 aria-label={social.name}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-ink-700 text-ink-300 transition-colors hover:border-brand-500 hover:text-brand-400"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-teal-600 text-teal-200 transition-colors hover:border-brand-400 hover:bg-brand-500 hover:text-white"
               >
                 <span className="text-[10px] font-semibold">
                   {social.name.slice(0, 2).toUpperCase()}
@@ -94,8 +94,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-ink-800">
-        <div className="container-page flex flex-col gap-3 py-5 text-xs text-ink-400 sm:flex-row sm:items-center sm:justify-between">
+      <div className="border-t border-teal-800">
+        <div className="container-page flex flex-col gap-3 py-5 text-xs text-teal-300 sm:flex-row sm:items-center sm:justify-between">
           <p>
             &copy; {year} {siteConfig.legalName}. All rights reserved.
           </p>

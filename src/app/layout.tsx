@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Inter } from "next/font/google";
+import { Sora, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -11,9 +11,9 @@ const bodyFont = Inter({
   subsets: ["latin"],
 });
 
-const headingFont = Poppins({
+const headingFont = Sora({
   variable: "--font-heading",
-  weight: ["500", "600", "700"],
+  weight: ["500", "600", "700", "800"],
   subsets: ["latin"],
 });
 

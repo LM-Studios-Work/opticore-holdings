@@ -46,10 +46,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-ink-50 py-16 sm:py-20">
+      <section className="bg-sage-wash py-16 sm:py-20">
         <div className="container-page grid gap-6 sm:grid-cols-2">
-          <div className="rounded-2xl bg-white p-8 shadow-sm">
-            <Target className="h-8 w-8 text-brand-600" />
+          <div className="rounded-3xl border border-ink-100 bg-white p-8 shadow-[0_24px_48px_-32px_rgba(9,60,58,0.35)]">
+            <span className="bg-brand-gradient flex h-12 w-12 items-center justify-center rounded-full text-white">
+              <Target className="h-6 w-6" />
+            </span>
             <h3 className="mt-4 font-display text-xl font-semibold text-ink-900">
               Our Mission
             </h3>
@@ -77,7 +79,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-ink-50 py-16 sm:py-20">
+      <section className="bg-sage-wash py-16 sm:py-20">
         <div className="container-page">
           <SectionHeading
             eyebrow="Our Group"
@@ -88,9 +90,11 @@ export default function AboutPage() {
             {brands.map((brand) => (
               <div
                 key={brand.name}
-                className="rounded-xl border border-ink-100 bg-white p-5"
+                className="rounded-2xl border border-ink-100 bg-white p-6 transition-shadow hover:shadow-[0_20px_40px_-30px_rgba(9,60,58,0.4)]"
               >
-                <Building2 className="h-6 w-6 text-brand-600" />
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-100 text-brand-700">
+                  <Building2 className="h-5 w-5" />
+                </span>
                 <h4 className="mt-3 font-display text-base font-semibold text-ink-900">
                   {brand.name}
                 </h4>

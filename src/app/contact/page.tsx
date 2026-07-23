@@ -22,13 +22,13 @@ export default function ContactPage() {
       <section className="container-page py-16 sm:py-20">
         <div className="grid gap-10 lg:grid-cols-3">
           <div className="lg:col-span-2">
-            <div className="rounded-2xl border border-ink-100 bg-white p-6 shadow-sm sm:p-8">
+            <div className="rounded-3xl border border-ink-100 bg-white p-6 shadow-[0_30px_60px_-40px_rgba(9,60,58,0.4)] sm:p-8">
               <ContactForm />
             </div>
           </div>
 
           <aside className="space-y-4">
-            <div className="rounded-2xl border border-ink-100 bg-white p-6">
+            <div className="rounded-3xl border border-ink-100 bg-white p-6 shadow-[0_24px_48px_-32px_rgba(9,60,58,0.35)]">
               <h3 className="font-display text-base font-semibold text-ink-900">
                 Contact Details
               </h3>
@@ -67,7 +67,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-2xl border border-ink-100">
+            <div className="overflow-hidden rounded-3xl border border-ink-100 shadow-[0_24px_48px_-32px_rgba(9,60,58,0.35)]">
               <iframe
                 title="OptiCore Holdings location map"
                 src={siteConfig.mapEmbedSrc}

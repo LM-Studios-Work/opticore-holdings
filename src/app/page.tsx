@@ -127,7 +127,7 @@ export default function Home() {
               <Link
                 key={service.slug}
                 href={servicePageRoutes[service.slug] ?? `/services#${service.slug}`}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-ink-100 bg-white shadow-[0_16px_40px_-24px_rgba(9,60,58,0.30)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_56px_-24px_rgba(9,60,58,0.45)]"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-ink-100 bg-white shadow-[0_16px_40px_-24px_rgba(9,60,58,0.30)] transition-all duration-300 hover:-translate-y-1 hover:border-teal-600/40 hover:shadow-[0_24px_56px_-24px_rgba(9,60,58,0.45)] cursor-pointer"
               >
                 {/* Big image */}
                 <div className="relative h-56 w-full overflow-hidden sm:h-60 lg:h-52 xl:h-60">
@@ -147,6 +147,10 @@ export default function Home() {
                   <p className="mt-2 text-sm leading-relaxed text-ink-500">
                     {service.shortDescription}
                   </p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-teal-700 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:gap-1.5">
+                    Learn more
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+                  </span>
                 </div>
               </Link>
             ))}

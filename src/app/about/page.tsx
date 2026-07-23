@@ -47,6 +47,7 @@ export default function AboutPage() {
 
 
 
+
       {/* ── Brands ──────────────────────────────────────────────────────────── */}
       <section className="bg-sage-wash py-16 sm:py-20">
         <div className="container-page">

@@ -3,9 +3,9 @@ import { ImageIcon, type LucideIcon } from "lucide-react";
 type Tone = "brand" | "dark" | "light";
 
 const toneClasses: Record<Tone, string> = {
-  brand: "bg-brand-600 text-white",
-  dark: "bg-ink-900 text-white",
-  light: "bg-ink-100 text-ink-500",
+  brand: "bg-brand-gradient text-white",
+  dark: "bg-teal-800 text-white",
+  light: "bg-brand-50 text-teal-700",
 };
 
 export default function PlaceholderImage({

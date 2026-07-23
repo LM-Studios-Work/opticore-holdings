@@ -44,7 +44,7 @@ export default function QuoteForm() {
 
   if (status === "success") {
     return (
-      <div className="flex flex-col items-center gap-3 rounded-2xl border border-brand-200 bg-brand-50 p-10 text-center">
+      <div className="flex flex-col items-center gap-3 rounded-3xl border border-brand-200 bg-brand-50 p-10 text-center">
         <CheckCircle2 className="h-10 w-10 text-brand-600" />
         <h3 className="font-display text-lg font-semibold text-ink-900">
           Quote request received!
@@ -171,7 +171,7 @@ export default function QuoteForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="inline-flex items-center gap-2 rounded-full bg-brand-600 px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-70"
+        className="btn btn-primary px-7 py-3.5 disabled:cursor-not-allowed disabled:opacity-70"
       >
         {status === "submitting" && <Loader2 className="h-4 w-4 animate-spin" />}
         {status === "submitting" ? "Sending..." : "Request a Free Quote Today!"}

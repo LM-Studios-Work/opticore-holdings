@@ -53,19 +53,21 @@ export default function MedicalSuppliesPage() {
             return (
               <div
                 key={product.title}
-                className="overflow-hidden rounded-2xl border border-ink-100 bg-white shadow-sm"
+                className="overflow-hidden rounded-3xl border border-ink-100 bg-white shadow-[0_24px_48px_-32px_rgba(9,60,58,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_60px_-30px_rgba(9,60,58,0.45)]"
               >
-                <PlaceholderImage
-                  label={product.title}
-                  icon={Icon}
-                  aspect="aspect-[16/10]"
-                  className="rounded-none"
-                />
-                <div className="p-6">
+                <div className="p-3">
+                  <PlaceholderImage
+                    label={product.title}
+                    icon={Icon}
+                    aspect="aspect-[16/10]"
+                    className="rounded-2xl"
+                  />
+                </div>
+                <div className="p-6 pt-3">
                   <h3 className="font-display text-lg font-semibold text-ink-900">
                     {product.title}
                   </h3>
-                  <p className="mt-2 text-sm text-ink-500">
+                  <p className="mt-2 text-sm leading-relaxed text-ink-500">
                     {product.description}
                   </p>
                 </div>
@@ -75,15 +77,20 @@ export default function MedicalSuppliesPage() {
         </div>
       </section>
 
-      <section className="bg-ink-50 py-16 sm:py-20">
+      <section className="bg-sage-wash py-16 sm:py-20">
         <div className="container-page grid gap-6 sm:grid-cols-3">
           {highlights.map((item) => (
-            <div key={item.title} className="rounded-xl bg-white p-6 text-center shadow-sm">
-              <item.icon className="mx-auto h-8 w-8 text-brand-600" />
-              <h3 className="mt-3 font-display text-base font-semibold text-ink-900">
+            <div
+              key={item.title}
+              className="rounded-3xl border border-ink-100 bg-white p-8 text-center shadow-[0_24px_48px_-32px_rgba(9,60,58,0.35)]"
+            >
+              <span className="bg-brand-gradient mx-auto flex h-12 w-12 items-center justify-center rounded-full text-white">
+                <item.icon className="h-6 w-6" />
+              </span>
+              <h3 className="mt-4 font-display text-base font-semibold text-ink-900">
                 {item.title}
               </h3>
-              <p className="mt-2 text-sm text-ink-500">{item.description}</p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-500">{item.description}</p>
             </div>
           ))}
         </div>
@@ -95,10 +102,7 @@ export default function MedicalSuppliesPage() {
           description="Send us your requirements — including quantities and delivery location — and we'll respond with a tailored quote."
           center
         />
-        <Link
-          href="/quote"
-          className="mt-6 inline-flex rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
-        >
+        <Link href="/quote" className="btn btn-primary mt-6 px-6 py-3">
           Request a Quote
         </Link>
       </section>

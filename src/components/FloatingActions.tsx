@@ -7,7 +7,7 @@ export default function FloatingActions() {
       <a
         href={siteConfig.phoneHref}
         aria-label={`Call ${siteConfig.name}`}
-        className="flex h-12 w-12 items-center justify-center rounded-full bg-ink-900 text-white shadow-lg transition-transform hover:scale-105"
+        className="bg-brand-gradient flex h-12 w-12 items-center justify-center rounded-full text-white shadow-lg transition-transform hover:scale-105"
       >
         <Phone className="h-5 w-5" />
       </a>

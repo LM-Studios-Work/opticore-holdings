@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ShieldCheck, Clock, BadgeCheck, ArrowRight } from "lucide-react";
-import PlaceholderImage from "@/components/PlaceholderImage";
 import heroImg from "../../public/Hero Image/potential hero 2.jpg";
 import cleaningHero from "../../public/Services Heros/commercial and residential cleaning hero.webp";
 import sanitisingHero from "../../public/Services Heros/Sanitising and Disinfection hero.png";
@@ -9,11 +8,10 @@ import pestHero from "../../public/Services Heros/pest control hero.webp";
 import medicalHero from "../../public/Services Heros/medical supplies hero.png";
 import hygieneIntroHero from "../../public/Services Heros/professional hygiene services hero, home page.jpg";
 import SectionHeading from "@/components/SectionHeading";
-import { iconMap } from "@/lib/icon-map";
+import HomeMedicalSection from "@/components/HomeMedicalSection";
 import {
   serviceCategories,
   siteConfig,
-  medicalProducts,
 } from "@/lib/site-data";
 
 const serviceImages: Record<string, typeof cleaningHero> = {
@@ -159,48 +157,7 @@ export default function Home() {
       </section>
 
       {/* 4. Top trending products */}
-      <section className="container-page py-16 sm:py-20">
-        <SectionHeading
-          title="High-Demand Medical Supplies"
-          description="Reliable stock and fast delivery across South Africa. Order in bulk and save."
-          center
-        />
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {medicalProducts.slice(0, 3).map((product) => {
-            const Icon = iconMap[product.icon];
-            return (
-              <div
-                key={product.title}
-                className="flex flex-col overflow-hidden rounded-3xl border border-ink-100 bg-white shadow-[0_24px_48px_-32px_rgba(9,60,58,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_60px_-30px_rgba(9,60,58,0.45)]"
-              >
-                <div className="p-3">
-                  <PlaceholderImage
-                    label={product.title}
-                    icon={Icon}
-                    tone="light"
-                    aspect="aspect-[4/3]"
-                    className="rounded-2xl"
-                  />
-                </div>
-                <div className="flex flex-1 flex-col p-6 pt-3 text-center">
-                  <h3 className="font-display text-lg font-semibold text-ink-900">
-                    {product.title}
-                  </h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-500">
-                    {product.description}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <div className="mt-10 flex justify-center">
-          <Link href="/medical-supplies" className="btn btn-primary px-6 py-3">
-            View All Products
-          </Link>
-        </div>
-
-      </section>
+      <HomeMedicalSection />
 
       {/* 5. About Us teaser */}
       <section className="bg-sage-wash py-16 sm:py-20">

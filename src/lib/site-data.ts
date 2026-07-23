@@ -148,43 +148,82 @@ export const targetMarkets = [
   "Property managers",
 ] as const;
 
+/** @deprecated Use `medicalCatalog` instead — this is kept only for backward-compat. */
 export const medicalProducts = [
+  { title: "PPE Equipment", description: "Gowns, coveralls, and face shields for maximum workplace protection.", icon: "ShieldCheck" },
+  { title: "Gloves", description: "Nitrile, latex, and vinyl options for medical and industrial applications.", icon: "Hand" },
+  { title: "Masks", description: "Surgical and N95/FFP2 respirators built for strict compliance.", icon: "Cross" },
+  { title: "Sanitiser", description: "Hand and surface sanitisers, available from personal issue to bulk commercial dispensers.", icon: "Droplet" },
+  { title: "Medical Consumables", description: "Swabs, dressings, syringes, and daily essentials for busy practices.", icon: "Syringe" },
+  { title: "Cleaning Chemicals", description: "Commercial-grade disinfectants, heavy-duty detergents, and specialist agents.", icon: "FlaskConical" },
+  { title: "First Aid Supplies", description: "Fully stocked kits and rapid-refill supplies for offices, sites, and fleets.", icon: "HeartPulse" },
+] as const;
+
+export type MedicalProduct = {
+  title: string;
+  category: string;
+  description: string;
+  icon: string;
+};
+
+export const medicalCatalog: MedicalProduct[] = [
   {
     title: "PPE Equipment",
-    description: "Gowns, coveralls, and face shields for maximum workplace protection.",
+    category: "Personal Protective Equipment",
+    description:
+      "Gowns, coveralls, and face shields for maximum workplace protection in medical and industrial settings.",
     icon: "ShieldCheck",
   },
   {
     title: "Gloves",
-    description: "Nitrile, latex, and vinyl options for medical and industrial applications.",
+    category: "Protective Wear",
+    description:
+      "Nitrile, latex, and vinyl options for medical examinations, clinical procedures, and industrial applications.",
     icon: "Hand",
   },
   {
     title: "Masks",
-    description: "Surgical and N95/FFP2 respirators built for strict compliance.",
+    category: "Respiratory Protection",
+    description:
+      "Surgical and N95/FFP2 respirators built for strict compliance and reliable filtration.",
     icon: "Cross",
   },
   {
     title: "Sanitiser",
-    description: "Hand and surface sanitisers, available from personal issue to bulk commercial dispensers.",
+    category: "Hygiene Products",
+    description:
+      "Hand and surface sanitisers available from personal-issue bottles to bulk commercial dispensers.",
     icon: "Droplet",
   },
   {
     title: "Medical Consumables",
-    description: "Swabs, dressings, syringes, and daily essentials for busy practices.",
+    category: "Clinical Supplies",
+    description:
+      "Swabs, dressings, syringes, and daily-use essentials for busy healthcare practices.",
     icon: "Syringe",
   },
   {
     title: "Cleaning Chemicals",
-    description: "Commercial-grade disinfectants, heavy-duty detergents, and specialist agents.",
+    category: "Disinfection & Cleaning",
+    description:
+      "Commercial-grade disinfectants, heavy-duty detergents, and specialist cleaning agents.",
     icon: "FlaskConical",
   },
   {
     title: "First Aid Supplies",
-    description: "Fully stocked kits and rapid-refill supplies for offices, sites, and fleets.",
+    category: "Emergency & Safety",
+    description:
+      "Fully stocked first aid kits and rapid-refill supplies for offices, construction sites, and vehicle fleets.",
     icon: "HeartPulse",
   },
-] as const;
+  {
+    title: "Bulk Orders",
+    category: "Wholesale Supply",
+    description:
+      "High-volume procurement for healthcare facilities, corporate groups, and government tenders.",
+    icon: "Package",
+  },
+];
 
 export const testimonials = [
   {

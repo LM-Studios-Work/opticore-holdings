@@ -2,77 +2,15 @@
 
 import { useState, useMemo } from "react";
 import { Search, X } from "lucide-react";
-import {
-  ShieldCheck,
-  Hand,
-  Cross,
-  Droplet,
-  Syringe,
-  FlaskConical,
-  HeartPulse,
-  Package,
-} from "lucide-react";
 import ProductCard, { type Product } from "./ProductCard";
 import RequestQuoteModal from "./RequestQuoteModal";
+import { medicalCatalog } from "@/lib/site-data";
+import { iconMap } from "@/lib/icon-map";
 
-const products: Product[] = [
-  {
-    title: "PPE Equipment",
-    category: "Personal Protective Equipment",
-    description:
-      "Gowns, coveralls, and face shields for maximum workplace protection in medical and industrial settings.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Gloves",
-    category: "Protective Wear",
-    description:
-      "Nitrile, latex, and vinyl options for medical examinations, clinical procedures, and industrial applications.",
-    icon: Hand,
-  },
-  {
-    title: "Masks",
-    category: "Respiratory Protection",
-    description:
-      "Surgical and N95/FFP2 respirators built for strict compliance and reliable filtration.",
-    icon: Cross,
-  },
-  {
-    title: "Sanitiser",
-    category: "Hygiene Products",
-    description:
-      "Hand and surface sanitisers available from personal-issue bottles to bulk commercial dispensers.",
-    icon: Droplet,
-  },
-  {
-    title: "Medical Consumables",
-    category: "Clinical Supplies",
-    description:
-      "Swabs, dressings, syringes, and daily-use essentials for busy healthcare practices.",
-    icon: Syringe,
-  },
-  {
-    title: "Cleaning Chemicals",
-    category: "Disinfection & Cleaning",
-    description:
-      "Commercial-grade disinfectants, heavy-duty detergents, and specialist cleaning agents.",
-    icon: FlaskConical,
-  },
-  {
-    title: "First Aid Supplies",
-    category: "Emergency & Safety",
-    description:
-      "Fully stocked first aid kits and rapid-refill supplies for offices, construction sites, and vehicle fleets.",
-    icon: HeartPulse,
-  },
-  {
-    title: "Bulk Orders",
-    category: "Wholesale Supply",
-    description:
-      "High-volume procurement for healthcare facilities, corporate groups, and government tenders.",
-    icon: Package,
-  },
-];
+const products: Product[] = medicalCatalog.map((p) => ({
+  ...p,
+  icon: iconMap[p.icon] ?? iconMap["ShieldCheck"],
+}));
 
 export default function MedicalProductsGrid() {
   const [query, setQuery] = useState("");

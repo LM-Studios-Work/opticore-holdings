@@ -2,9 +2,13 @@ import type { Metadata } from "next";
 import { FaArrowRight, FaWandMagicSparkles, FaFlask, FaShieldHalved, FaTriangleExclamation, FaLeaf, FaStopwatch } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
-import PlaceholderImage from "@/components/PlaceholderImage";
 import heroImg from "../../../public/Services Heros/professional hygiene services hero, home page.jpg";
 import satisfactionImg from "../../../public/100-percent-satisfaction.png";
+import companyImg from "../../../public/room_with_sanitary_products.jpeg";
+import ppeImg from "../../../public/doc_with_surgical_mask.jpeg";
+import teamImg from "../../../public/cleaning_service_window_wash.jpeg";
+import operationsImg from "../../../public/worker_sanitizing.jpeg";
+import satisfactionPhoto from "../../../public/stethoscope.jpeg";
 
 export const metadata: Metadata = {
   title: "About Us | OptiCore Holdings",
@@ -60,7 +64,13 @@ export default function AboutPage() {
             </Link>
           </div>
           <div className="relative h-[500px]">
-            <PlaceholderImage label="Modern Building Lobby" tone="light" aspect="aspect-auto h-full" className="rounded-2xl shadow-xl border border-ink-100" />
+            <Image
+              src={companyImg}
+              alt="OptiCore Holdings medical and hygiene supplies ready for dispatch"
+              fill
+              className="rounded-2xl border border-ink-100 object-cover shadow-xl"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </div>
         </div>
       </section>
@@ -70,7 +80,13 @@ export default function AboutPage() {
         <div className="container-page">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div className="relative h-[600px] order-2 lg:order-1">
-              <PlaceholderImage label="Professional in PPE" tone="brand" aspect="aspect-auto h-full" className="rounded-2xl shadow-xl border border-ink-100" />
+              <Image
+                src={ppeImg}
+                alt="Healthcare professional in full personal protective equipment"
+                fill
+                className="rounded-2xl border border-ink-100 object-cover shadow-xl"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
             <div className="order-1 lg:order-2 lg:pl-10">
               <SectionHeading eyebrow="What We Provide" title="Four Specialist Divisions. One Trusted Partner." />
@@ -218,13 +234,31 @@ export default function AboutPage() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <div className="relative h-[300px]">
-            <PlaceholderImage label="Team Member" tone="brand" aspect="aspect-auto h-full" className="rounded-2xl shadow-md border border-ink-100" />
+            <Image
+              src={teamImg}
+              alt="OptiCore team member cleaning an office"
+              fill
+              className="rounded-2xl border border-ink-100 object-cover shadow-md"
+              sizes="(max-width: 640px) 100vw, 33vw"
+            />
           </div>
           <div className="relative h-[300px]">
-            <PlaceholderImage label="Operations" tone="dark" aspect="aspect-auto h-full" className="rounded-2xl shadow-md border border-ink-100" />
+            <Image
+              src={operationsImg}
+              alt="Technician carrying out professional disinfection"
+              fill
+              className="rounded-2xl border border-ink-100 object-cover shadow-md"
+              sizes="(max-width: 640px) 100vw, 33vw"
+            />
           </div>
           <div className="relative h-[300px] hidden lg:block">
-            <PlaceholderImage label="Client Satisfaction" tone="light" aspect="aspect-auto h-full" className="rounded-2xl shadow-md border border-ink-100" />
+            <Image
+              src={satisfactionPhoto}
+              alt="Professional medical diagnostic equipment"
+              fill
+              className="rounded-2xl border border-ink-100 object-cover shadow-md"
+              sizes="33vw"
+            />
           </div>
         </div>
       </section>

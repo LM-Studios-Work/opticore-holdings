@@ -1,14 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import PlaceholderImage from "./PlaceholderImage";
+import Image from "next/image";
 import { galleryImages } from "@/lib/site-data";
 
 const filters = [
   { value: "all", label: "All" },
   { value: "cleaning", label: "Cleaning" },
   { value: "sanitising", label: "Sanitising" },
-  { value: "pest-control", label: "Pest Control" },
   { value: "medical-supplies", label: "Medical Supplies" },
 ] as const;
 
@@ -41,18 +40,23 @@ export default function GalleryGrid() {
 
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((img) => (
-          <PlaceholderImage
-            key={img.image}
-            label={img.label}
-            tone={
-              img.category === "medical-supplies"
-                ? "dark"
-                : img.category === "pest-control"
-                ? "light"
-                : "brand"
-            }
-            aspect="aspect-[4/3]"
-          />
+          <div
+            key={img.label}
+            className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-ink-100 shadow-md"
+          >
+            <Image
+              src={img.image}
+              alt={img.label}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+              <span className="text-sm font-semibold text-white">
+                {img.label}
+              </span>
+            </div>
+          </div>
         ))}
       </div>
     </div>

@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import { FaCheck, FaLocationDot, FaClock, FaEnvelope, FaPhoneVolume, FaChevronRight } from "react-icons/fa6";
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
-import PlaceholderImage from "@/components/PlaceholderImage";
 import OtherServicesSection from "@/components/OtherServicesSection";
 import { siteConfig } from "@/lib/site-data";
 import pestHero from "../../../../public/Services Heros/pest control hero.webp";
+import fumigationImg from "../../../../public/sanitizing_and_defecting_service.jpeg";
+import treatmentImg from "../../../../public/sanitizing_and_defecting_service_gun_2.jpeg";
+import inspectionImg from "../../../../public/doc_with_surgical_mask.jpeg";
+import technicianImg from "../../../../public/worker_sanitizing.jpeg";
 
 export const metadata: Metadata = {
   title: "Pest Control | OptiCore Holdings",
@@ -45,8 +49,14 @@ export default function PestControlPage() {
                   Pest Control Services Offered by OptiCore Holdings. OptiCore Holdings&apos;s Pest Control Division is specially designed to tackle common pests such as roaches, ants & rodents. We locate, identify, remove, destroy, control, and repel pests. We use our knowledge of pest&apos;s biology and habits, along with an arsenal of pest management techniques — applying chemicals, setting traps, operating equipment, and even modifying structures to alleviate pest problems.
                 </p>
               </div>
-              <div className="relative h-[250px] sm:h-[350px]">
-                <PlaceholderImage label="Warehouse Fumigation" tone="brand" aspect="aspect-auto h-full" className="rounded-xl object-cover" />
+              <div className="relative h-[250px] overflow-hidden rounded-xl sm:h-[350px]">
+                <Image
+                  src={fumigationImg}
+                  alt="Professional fogging equipment used for fumigation treatments"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </div>
 
@@ -72,8 +82,14 @@ export default function PestControlPage() {
                   ))}
                 </ul>
               </div>
-              <div className="relative h-[250px] sm:h-[350px] lg:order-2">
-                <PlaceholderImage label="Rodent Control" tone="light" aspect="aspect-auto h-full" className="rounded-xl object-cover" />
+              <div className="relative h-[250px] overflow-hidden rounded-xl sm:h-[350px] lg:order-2">
+                <Image
+                  src={treatmentImg}
+                  alt="Targeted spray treatment applied in a commercial space"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </div>
 
@@ -100,8 +116,14 @@ export default function PestControlPage() {
                   OptiCore Holdings has the expertise to provide the correct diagnosis and deliver the most effective treatment for all your Pest Control Solution requirements.
                 </p>
               </div>
-              <div className="relative h-[250px] sm:h-[350px]">
-                <PlaceholderImage label="Termite Inspection" tone="dark" aspect="aspect-auto h-full" className="rounded-xl object-cover" />
+              <div className="relative h-[250px] overflow-hidden rounded-xl sm:h-[350px]">
+                <Image
+                  src={inspectionImg}
+                  alt="Specialist in protective equipment conducting an inspection"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </div>
 
@@ -126,8 +148,14 @@ export default function PestControlPage() {
                   ))}
                 </ul>
               </div>
-              <div className="relative h-[250px] sm:h-[350px] lg:order-2">
-                <PlaceholderImage label="Pest Control Technician" tone="brand" aspect="aspect-auto h-full" className="rounded-xl object-cover" />
+              <div className="relative h-[250px] overflow-hidden rounded-xl sm:h-[350px] lg:order-2">
+                <Image
+                  src={technicianImg}
+                  alt="Technician in protective gear treating a facility"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>

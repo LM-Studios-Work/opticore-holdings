@@ -134,13 +134,25 @@ export default function RequestQuoteModal({
           <div className="overflow-y-auto" style={{ maxHeight: "90vh" }}>
             {/* Product header */}
             <div className="border-b border-ink-100 px-8 pb-5 pt-8">
-              <p className="eyebrow text-[0.65rem]">{product.category}</p>
+              <div className="flex items-center justify-between gap-3">
+                <p className="eyebrow text-[0.65rem]">{product.category}</p>
+                {product.code && (
+                  <span className="shrink-0 rounded-full bg-ink-100 px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-wide text-ink-500">
+                    {product.code}
+                  </span>
+                )}
+              </div>
               <h2
                 id="quote-modal-title"
                 className="mt-1 font-display text-2xl font-bold text-ink-900"
               >
                 {product.title}
               </h2>
+              {product.price && (
+                <p className="mt-2 font-display text-2xl font-bold text-brand-700">
+                  {product.price}
+                </p>
+              )}
               <p className="mt-2 text-sm leading-relaxed text-ink-500">
                 {product.description}
               </p>

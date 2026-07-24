@@ -14,7 +14,7 @@ export default function GalleryPage() {
     <>
       <PageHero
         title="Our Work in Action"
-        description="Real teams. Real sites. Real results. (Photos coming soon)"
+        description="Real teams. Real sites. Real results."
       />
 
       <section className="container-page py-16 sm:py-20">

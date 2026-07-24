@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { FaCheck } from "react-icons/fa6";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
-import PlaceholderImage from "@/components/PlaceholderImage";
 import SectionHeading from "@/components/SectionHeading";
 import OtherServicesSection from "@/components/OtherServicesSection";
 import cleaningHero from "../../../../public/Services Heros/commercial and residential cleaning hero.webp";
+import windowWash from "../../../../public/cleaning_service_window_wash.jpeg";
+import facilityCleaning from "../../../../public/sanitizing_and_defecting_service_gun_2.jpeg";
 
 export const metadata: Metadata = {
   title: "Commercial & Residential Cleaning | OptiCore Holdings",
@@ -64,11 +66,23 @@ export default function CleaningPage() {
             </div>
             
             <div className="flex flex-col gap-6">
-              <div className="relative h-[300px] sm:h-[400px]">
-                <PlaceholderImage label="Shopping Mall Interior" tone="light" aspect="aspect-auto h-full" className="rounded-xl object-cover" />
+              <div className="relative h-[320px] overflow-hidden rounded-xl shadow-lg sm:h-[440px]">
+                <Image
+                  src={windowWash}
+                  alt="OptiCore cleaning team washing office windows"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
-              <div className="relative h-[300px] sm:h-[400px]">
-                <PlaceholderImage label="Modern Office Building" tone="brand" aspect="aspect-auto h-full" className="rounded-xl object-cover" />
+              <div className="rounded-xl bg-sage-wash border border-ink-100 p-8">
+                <p className="text-[15px] leading-relaxed text-ink-600">
+                  From routine office maintenance to intense residential deep
+                  cleaning, our dedicated teams use advanced techniques and
+                  eco-friendly products to ensure your space is not just clean,
+                  but truly pristine. We focus on the details that make an
+                  environment healthy and welcoming.
+                </p>
               </div>
             </div>
           </div>
@@ -122,7 +136,13 @@ export default function CleaningPage() {
                 </ul>
 
                 <div className="relative h-[250px] rounded-xl overflow-hidden shadow-lg">
-                  <PlaceholderImage label="Cleaning Staff in Airport" tone="dark" aspect="aspect-auto h-full" className="rounded-xl object-cover" />
+                  <Image
+                    src={facilityCleaning}
+                    alt="Commercial facility being cleaned and treated"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
                 </div>
               </div>
 

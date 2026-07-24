@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { FaCheck, FaChevronRight } from "react-icons/fa6";
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
-import PlaceholderImage from "@/components/PlaceholderImage";
 import OtherServicesSection from "@/components/OtherServicesSection";
 import sanitisingHero from "../../../../public/Services Heros/Sanitising and Disinfection hero.png";
+import workerSanitising from "../../../../public/worker_sanitizing.jpeg";
+import sanitisingMachine from "../../../../public/sanitizing_and_defecting_service.jpeg";
 
 export const metadata: Metadata = {
   title: "Sanitising & Hygiene Services | OptiCore Holdings",
@@ -68,8 +70,14 @@ export default function SanitisingPage() {
               </Link>
             </div>
             
-            <div className="relative h-[400px] sm:h-[600px]">
-              <PlaceholderImage label="Deep Cleaning Services" tone="light" aspect="aspect-auto h-full" className="rounded-sm object-cover" />
+            <div className="relative h-[400px] overflow-hidden rounded-sm sm:h-[600px]">
+              <Image
+                src={workerSanitising}
+                alt="Technician sanitising and disinfecting a workspace"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
         </section>
@@ -124,6 +132,38 @@ export default function SanitisingPage() {
 
           </div>
         </section>
+
+        {/* Advanced Disinfection band */}
+        <section className="bg-sage-wash border-t border-ink-100 py-16 sm:py-24">
+          <div className="container-page">
+            <div className="grid items-center gap-12 lg:grid-cols-2">
+              <div className="relative order-2 h-[300px] overflow-hidden rounded-2xl shadow-xl sm:h-[420px] lg:order-1">
+                <Image
+                  src={sanitisingMachine}
+                  alt="Specialised fogging machine used for high-grade disinfection"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+              <div className="order-1 lg:order-2">
+                <SectionHeading
+                  eyebrow="Sanitising & Decontamination"
+                  title="Advanced Disinfection & Sanitizing"
+                />
+                <p className="mt-6 text-[15px] leading-relaxed text-ink-600">
+                  Our professional decontamination services go beyond standard
+                  cleaning. Utilizing specialized equipment and certified
+                  high-grade disinfectants, we provide comprehensive sanitizing
+                  solutions for commercial, educational, and medical
+                  environments, ensuring safety and peace of mind in high-traffic
+                  spaces.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <OtherServicesSection currentSlug="sanitising" />
       </div>
     </>

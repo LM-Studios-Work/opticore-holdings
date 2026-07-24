@@ -8,6 +8,8 @@ export type Product = {
   description: string;
   category: string;
   icon: IconType;
+  code?: string;
+  price?: string;
   image?: StaticImageData | string;
 };
 
@@ -48,10 +50,23 @@ export default function ProductCard({
 
       {/* Content */}
       <div className="flex flex-1 flex-col p-5">
-        <p className="eyebrow mb-2 text-[0.65rem]">{product.category}</p>
+        <div className="mb-2 flex items-center justify-between gap-2">
+          <p className="eyebrow text-[0.65rem]">{product.category}</p>
+          {product.code && (
+            <span className="shrink-0 rounded-full bg-ink-100 px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wide text-ink-500">
+              {product.code}
+            </span>
+          )}
+        </div>
         <h3 className="font-display text-base font-semibold leading-snug text-ink-900">
           {product.title}
         </h3>
+
+        {product.price && (
+          <p className="mt-1 font-display text-lg font-bold text-brand-700">
+            {product.price}
+          </p>
+        )}
 
         <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-500">
           {shortDescription}

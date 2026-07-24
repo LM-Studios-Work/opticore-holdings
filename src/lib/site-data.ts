@@ -1,3 +1,36 @@
+import type { StaticImageData } from "next/image";
+
+import usbPenlight from "../../public/usb_rechargable_medical_lightpen.jpeg";
+import medicalBag from "../../public/double_layer_medical_bag.jpeg";
+import fireBlanket from "../../public/fibre_glass_fabric.jpeg";
+import firstAidKit from "../../public/first_aid_kit.jpeg";
+import emergencyBlanket from "../../public/emergency_blanket.jpeg";
+import bloodPressureCuff from "../../public/blood_pressure_cuff.jpeg";
+import wristBpMonitor from "../../public/stock_wrist_blood_pressure_monitor.jpeg";
+import electronicBpMonitor from "../../public/electronic_blood_pressure_monitor.jpeg";
+import stockElectronicBpMonitor from "../../public/stock_electronic_blood_pressure_monitor.jpeg";
+import oximeter from "../../public/stock_oximeter.jpeg";
+import autoBpMonitor from "../../public/automatic_digital_blood_pressure_monitor.jpeg";
+import wristHeatingWrap from "../../public/stock_wrist_heating_wrap.jpeg";
+import vinylGloves from "../../public/vinyl_blend_gloves.jpeg";
+import meshNebulizer from "../../public/stock_mesh_nebulizer.jpeg";
+import ultrasonicNebulizer from "../../public/ultrasonic_nebulizer.jpeg";
+import calfMassager from "../../public/portable_calf_massager.jpeg";
+
+// Gallery-only imagery
+import galleryMedicalKit from "../../public/medical_kit.jpeg";
+import gallerySurgicalMask from "../../public/surgical_mask.jpeg";
+import galleryGloves from "../../public/dispoable_gloves.jpeg";
+import galleryStethoscope from "../../public/stethoscope.jpeg";
+import galleryBpMachine from "../../public/blood_pressure_machine.jpeg";
+import galleryOxygenKit from "../../public/oxygen_kit.jpeg";
+import galleryScissors from "../../public/medical_scissors_kit.jpeg";
+import galleryBandages from "../../public/bandages_from_first_aid.jpeg";
+import galleryConsumables from "../../public/room_with_sanitary_products.jpeg";
+import galleryWorkerSanitising from "../../public/worker_sanitizing.jpeg";
+import gallerySanitisingGun from "../../public/sanitizing_and_defecting_service_gun.jpeg";
+import galleryWindowWash from "../../public/cleaning_service_window_wash.jpeg";
+
 export const siteConfig = {
   name: "OptiCore Holdings",
   legalName: "OptiCore Holdings (Pty) Ltd",
@@ -164,64 +197,171 @@ export type MedicalProduct = {
   category: string;
   description: string;
   icon: string;
+  code?: string;
+  price?: string;
+  image?: StaticImageData;
 };
 
 export const medicalCatalog: MedicalProduct[] = [
   {
-    title: "PPE Equipment",
-    category: "Personal Protective Equipment",
+    title: "USB Rechargeable Medical Penlight",
+    category: "Diagnostic Tools",
     description:
-      "Gowns, coveralls, and face shields for maximum workplace protection in medical and industrial settings.",
-    icon: "ShieldCheck",
+      "USB rechargeable medical penlight with a pupil gauge and warm/white LED light — a reliable everyday diagnostic tool for clinicians and first responders.",
+    icon: "FaHeartPulse",
+    code: "O.108-19",
+    price: "R70",
+    image: usbPenlight,
   },
   {
-    title: "Gloves",
-    category: "Protective Wear",
+    title: "Manual Blood Pressure Cuff with Stethoscope",
+    category: "Diagnostic Tools",
     description:
-      "Nitrile, latex, and vinyl options for medical examinations, clinical procedures, and industrial applications.",
-    icon: "Hand",
+      "Professional aneroid blood pressure monitor with an adult cuff, matching stethoscope, and carry bag. Accurate manual readings for clinical and home use.",
+    icon: "FaHeartPulse",
+    code: "B.AB-184",
+    price: "R165",
+    image: bloodPressureCuff,
   },
   {
-    title: "Masks",
-    category: "Respiratory Protection",
+    title: "Wrist Blood Pressure Monitor",
+    category: "Diagnostic Tools",
     description:
-      "Surgical and N95/FFP2 respirators built for strict compliance and reliable filtration.",
-    icon: "Cross",
+      "Compact, portable digital wrist monitor with automatic systolic, diastolic, and pulse readings. Features a clear LED display, auto shut-off, and irregular-heartbeat detection for easy one-touch home monitoring.",
+    icon: "FaHeartPulse",
+    code: "C.DC-570",
+    price: "R120",
+    image: wristBpMonitor,
   },
   {
-    title: "Sanitiser",
-    category: "Hygiene Products",
+    title: "Automatic Digital Blood Pressure Monitor",
+    category: "Diagnostic Tools",
     description:
-      "Hand and surface sanitisers available from personal-issue bottles to bulk commercial dispensers.",
-    icon: "Droplet",
+      "Fully automatic digital blood pressure monitor for quick, accurate readings at the press of a button.",
+    icon: "FaHeartPulse",
+    code: "J",
+    price: "R165",
+    image: autoBpMonitor,
   },
   {
-    title: "Medical Consumables",
-    category: "Clinical Supplies",
+    title: "Electronic Blood Pressure Monitor",
+    category: "Diagnostic Tools",
     description:
-      "Swabs, dressings, syringes, and daily-use essentials for busy healthcare practices.",
-    icon: "Syringe",
+      "Electronic blood pressure monitor with a large LCD display — the date is clearly visible, making it ideal for elderly users. Small, lightweight, and easy to carry for health monitoring at home or while travelling.",
+    icon: "FaHeartPulse",
+    code: "B.AD-70",
+    price: "R115",
+    image: electronicBpMonitor,
   },
   {
-    title: "Cleaning Chemicals",
-    category: "Disinfection & Cleaning",
+    title: "Electronic Blood Pressure Monitor (LCD)",
+    category: "Diagnostic Tools",
     description:
-      "Commercial-grade disinfectants, heavy-duty detergents, and specialist cleaning agents.",
-    icon: "FlaskConical",
+      "Large-screen LCD blood pressure monitor built for clear, easy reading. Compact and portable so you can keep an eye on your health anytime, anywhere — a thoughtful choice for elderly parents.",
+    icon: "FaHeartPulse",
+    code: "C.DC-32",
+    price: "R110",
+    image: stockElectronicBpMonitor,
   },
   {
-    title: "First Aid Supplies",
+    title: "Fingertip Pulse Oximeter",
+    category: "Diagnostic Tools",
+    description:
+      "Compact fingertip oximeter for fast readings of blood oxygen saturation and pulse rate.",
+    icon: "FaHeartPulse",
+    code: "B.AB-166",
+    price: "R40",
+    image: oximeter,
+  },
+  {
+    title: "Powder-Free Vinyl Blend Gloves (100pc)",
+    category: "PPE & Gloves",
+    description:
+      "Latex-free, powder-free vinyl blend gloves for multi-purpose medical and industrial use. Box of 100.",
+    icon: "FaHandHolding",
+    code: "C.DC-481",
+    price: "R100",
+    image: vinylGloves,
+  },
+  {
+    title: "Home First Aid Kit",
+    category: "First Aid",
+    description:
+      "Large-capacity first aid and medicine storage bag — a portable, durable box for travel, outdoor camping, and survival or emergency use. Contents not included.",
+    icon: "FaPlus",
+    code: "B.AD-614",
+    price: "R165",
+    image: firstAidKit,
+  },
+  {
+    title: "Emergency Fire Blanket (2m x 2m)",
     category: "Emergency & Safety",
     description:
-      "Fully stocked first aid kits and rapid-refill supplies for offices, construction sites, and vehicle fleets.",
-    icon: "HeartPulse",
+      "Best-quality 420GSM fibreglass fire blanket for emergency fire suppression. Ideal for first aid stations, disaster kits, plants, offices, schools, and other public places.",
+    icon: "FaShield",
+    code: "B.AB-293",
+    price: "R69",
+    image: fireBlanket,
   },
   {
-    title: "Bulk Orders",
-    category: "Wholesale Supply",
+    title: "Emergency Thermal Blanket",
+    category: "Emergency & Safety",
     description:
-      "High-volume procurement for healthcare facilities, corporate groups, and government tenders.",
-    icon: "Package",
+      "Foil Mylar thermal survival blanket — essential emergency gear for first aid kits, vehicles, and outdoor use.",
+    icon: "FaShield",
+    code: "C.JG-25",
+    price: "R18",
+    image: emergencyBlanket,
+  },
+  {
+    title: "Tactical Double Layer Medical Bag",
+    category: "Medical Bags & Storage",
+    description:
+      "Tactical Molle EDC double layer medical bag — durable, organised storage for first aid and medical supplies on the move.",
+    icon: "FaBox",
+    code: "C.JB-78",
+    price: "R230",
+    image: medicalBag,
+  },
+  {
+    title: "Portable Mesh Nebulizer",
+    category: "Respiratory Care",
+    description:
+      "Quiet, portable, low-power rechargeable mesh nebulizer with a mouthpiece and 2 masks for adults and kids — vapour therapy wherever you need it.",
+    icon: "FaSyringe",
+    code: "B.AB-177",
+    price: "R95",
+    image: meshNebulizer,
+  },
+  {
+    title: "Ultrasonic Nebulizer",
+    category: "Respiratory Care",
+    description:
+      "Ultrasonic nebulizer with innovative mesh technology — quiet, compact, portable, and lightweight. Suitable for all ages and ideal for children and the elderly, providing vapour therapy for colds, flu, bronchitis, and other respiratory ailments. Powered by 2 AA batteries or USB cable. Includes nebulizer, adult mask, child mask, mouthpiece, box, USB cable, and user manual. Size: 13×4.8×4cm.",
+    icon: "FaSyringe",
+    code: "O.8-1324",
+    price: "R160",
+    image: ultrasonicNebulizer,
+  },
+  {
+    title: "Wrist Heating Wrap",
+    category: "Therapy & Recovery",
+    description:
+      "Rechargeable wrist heating wrap that delivers soothing warmth for comfort and recovery.",
+    icon: "FaWandMagicSparkles",
+    code: "B.AF-87",
+    price: "R110",
+    image: wristHeatingWrap,
+  },
+  {
+    title: "Portable Calf Massager",
+    category: "Therapy & Recovery",
+    description:
+      "Portable calf massager designed for targeted relief, combining air compression and heat therapy to soothe muscle soreness and improve circulation. Offers multiple massage modes and intensity levels, switching between kneading and pushing techniques. Rechargeable and cordless for travel, home, or office use, with durable linen and breathable mesh that fits various calf sizes via adjustable Velcro straps.",
+    icon: "FaWandMagicSparkles",
+    code: "B.AF-84",
+    price: "R225",
+    image: calfMassager,
   },
 ];
 
@@ -246,20 +386,32 @@ export const testimonials = [
   },
 ] as const;
 
-export const galleryImages = [
-  { category: "cleaning", label: "Office Cleaning", image: "office-cleaning" },
-  { category: "cleaning", label: "Residential Cleaning", image: "residential-cleaning" },
-  { category: "cleaning", label: "Carpet Cleaning", image: "carpet-cleaning" },
-  { category: "cleaning", label: "Upholstery Cleaning", image: "upholstery-cleaning" },
-  { category: "cleaning", label: "Window Cleaning", image: "window-cleaning" },
-  { category: "cleaning", label: "Post-Construction Cleaning", image: "post-construction" },
-  { category: "sanitising", label: "Fogging Service", image: "fogging" },
-  { category: "sanitising", label: "Office Sanitising", image: "office-sanitising" },
-  { category: "sanitising", label: "School Sanitising", image: "school-sanitising" },
-  { category: "pest-control", label: "Pest Inspection", image: "pest-inspection" },
-  { category: "pest-control", label: "Rodent Control", image: "rodent-control" },
-  { category: "medical-supplies", label: "PPE & Medical Supplies", image: "medical-supplies" },
-] as const;
+export type GalleryImage = {
+  category: "cleaning" | "sanitising" | "medical-supplies";
+  label: string;
+  image: StaticImageData;
+};
+
+export const galleryImages: GalleryImage[] = [
+  // Cleaning
+  { category: "cleaning", label: "Window Cleaning", image: galleryWindowWash },
+  // Sanitising
+  { category: "sanitising", label: "Disinfection Service", image: galleryWorkerSanitising },
+  { category: "sanitising", label: "Fogging & Sanitising", image: gallerySanitisingGun },
+  // Medical supplies
+  { category: "medical-supplies", label: "Medical Consumables", image: galleryConsumables },
+  { category: "medical-supplies", label: "First Aid Kits", image: firstAidKit },
+  { category: "medical-supplies", label: "Medical Kits", image: galleryMedicalKit },
+  { category: "medical-supplies", label: "Surgical Masks", image: gallerySurgicalMask },
+  { category: "medical-supplies", label: "Disposable Gloves", image: galleryGloves },
+  { category: "medical-supplies", label: "Stethoscopes", image: galleryStethoscope },
+  { category: "medical-supplies", label: "Blood Pressure Monitors", image: galleryBpMachine },
+  { category: "medical-supplies", label: "Pulse Oximeters", image: oximeter },
+  { category: "medical-supplies", label: "Nebulizers", image: ultrasonicNebulizer },
+  { category: "medical-supplies", label: "Oxygen Kits", image: galleryOxygenKit },
+  { category: "medical-supplies", label: "Medical Scissors", image: galleryScissors },
+  { category: "medical-supplies", label: "Bandages & Dressings", image: galleryBandages },
+];
 
 export const services = [
   "Commercial Cleaning",

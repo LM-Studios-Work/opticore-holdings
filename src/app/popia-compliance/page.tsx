@@ -18,8 +18,8 @@ export default function PopiaPage() {
       <h2>Lawful Processing</h2>
       <p>
         We only collect personal information for specific, clearly defined
-        purposes — such as responding to enquiries, providing quotes, and
-        delivering our services — and only to the extent necessary for
+        purposes (such as responding to enquiries, providing quotes, and
+        delivering our services) and only to the extent necessary for
         those purposes.
       </p>
 

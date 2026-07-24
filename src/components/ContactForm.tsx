@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { CheckCircle2, Loader2 } from "lucide-react";
+import { FaCircleCheck, FaSpinner } from "react-icons/fa6";
 import FormField, { inputClass } from "./forms/FormField";
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -44,7 +44,7 @@ export default function ContactForm() {
   if (status === "success") {
     return (
       <div className="flex flex-col items-center gap-3 rounded-3xl border border-brand-200 bg-brand-50 p-10 text-center">
-        <CheckCircle2 className="h-10 w-10 text-brand-600" />
+        <FaCircleCheck className="h-10 w-10" style={{ fill: "url(#brand-gradient)" }} />
         <h3 className="font-display text-lg font-semibold text-ink-900">
           Message sent!
         </h3>
@@ -68,7 +68,7 @@ export default function ContactForm() {
         <FormField label="Full Name" htmlFor="c-name" required>
           <input id="c-name" name="name" required className={inputClass} />
         </FormField>
-        <FormField label="Phone Number" htmlFor="c-phone" required>
+        <FormField label="FaPhoneVolume Number" htmlFor="c-phone" required>
           <input id="c-phone" name="phone" type="tel" required className={inputClass} />
         </FormField>
         <FormField label="Email Address" htmlFor="c-email" required className="sm:col-span-2">
@@ -95,7 +95,7 @@ export default function ContactForm() {
         disabled={status === "submitting"}
         className="btn btn-primary px-7 py-3.5 disabled:cursor-not-allowed disabled:opacity-70"
       >
-        {status === "submitting" && <Loader2 className="h-4 w-4 animate-spin" />}
+        {status === "submitting" && <FaSpinner className="h-4 w-4 animate-spin" />}
         {status === "submitting" ? "Sending..." : "Send Message"}
       </button>
     </form>

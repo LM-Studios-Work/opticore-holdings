@@ -1,26 +1,15 @@
-import {
-  Sparkles,
-  ShieldCheck,
-  Bug,
-  Cross,
-  Hand,
-  Droplet,
-  Syringe,
-  FlaskConical,
-  HeartPulse,
-  Package,
-  type LucideIcon,
-} from "lucide-react";
+import { FaWandMagicSparkles, FaShield, FaBug, FaPlus, FaHandHolding, FaDroplet, FaSyringe, FaFlask, FaHeartPulse, FaBox } from "react-icons/fa6";
+import { type IconType } from "react-icons";
 
-export const iconMap: Record<string, LucideIcon> = {
-  Sparkles,
-  ShieldCheck,
-  Bug,
-  Cross,
-  Hand,
-  Droplet,
-  Syringe,
-  FlaskConical,
-  HeartPulse,
-  Package,
+export const iconMap: Record<string, IconType> = {
+  FaWandMagicSparkles,
+  FaShield,
+  FaBug,
+  FaPlus,
+  FaHandHolding,
+  FaDroplet,
+  FaSyringe,
+  FaFlask,
+  FaHeartPulse,
+  FaBox,
 };

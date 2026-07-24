@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { CheckCircle2, Loader2 } from "lucide-react";
+import { FaCircleCheck, FaSpinner } from "react-icons/fa6";
 import FormField, { inputClass } from "./forms/FormField";
 import { propertyTypes, services } from "@/lib/site-data";
 
@@ -45,7 +45,7 @@ export default function QuoteForm() {
   if (status === "success") {
     return (
       <div className="flex flex-col items-center gap-3 rounded-3xl border border-brand-200 bg-brand-50 p-10 text-center">
-        <CheckCircle2 className="h-10 w-10 text-brand-600" />
+        <FaCircleCheck className="h-10 w-10" style={{ fill: "url(#brand-gradient)" }} />
         <h3 className="font-display text-lg font-semibold text-ink-900">
           Quote request received!
         </h3>
@@ -73,7 +73,7 @@ export default function QuoteForm() {
         <FormField label="Company Name" htmlFor="company">
           <input id="company" name="company" className={inputClass} placeholder="Optional" />
         </FormField>
-        <FormField label="Phone Number" htmlFor="phone" required>
+        <FormField label="FaPhoneVolume Number" htmlFor="phone" required>
           <input
             id="phone"
             name="phone"
@@ -173,7 +173,7 @@ export default function QuoteForm() {
         disabled={status === "submitting"}
         className="btn btn-primary px-7 py-3.5 disabled:cursor-not-allowed disabled:opacity-70"
       >
-        {status === "submitting" && <Loader2 className="h-4 w-4 animate-spin" />}
+        {status === "submitting" && <FaSpinner className="h-4 w-4 animate-spin" />}
         {status === "submitting" ? "Sending..." : "Request a Free Quote Today!"}
       </button>
     </form>

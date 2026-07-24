@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ShieldCheck, Clock, BadgeCheck, ArrowRight } from "lucide-react";
+import { FaShield, FaClock, FaCertificate, FaArrowRight } from "react-icons/fa6";
 import heroImg from "../../public/Hero Image/potential hero 2.jpg";
 import cleaningHero from "../../public/Services Heros/commercial and residential cleaning hero.webp";
 import sanitisingHero from "../../public/Services Heros/Sanitising and Disinfection hero.png";
@@ -71,13 +71,13 @@ export default function Home() {
               </div>
               <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-teal-100">
                 <span className="flex items-center gap-2">
-                  <ShieldCheck className="h-4 w-4 text-brand-300" /> Health &amp; Safety Focused
+                  <FaShield className="h-4 w-4 text-brand-300" /> Health &amp; Safety Focused
                 </span>
                 <span className="flex items-center gap-2">
-                  <Clock className="h-4 w-4 text-brand-300" /> Reliable &amp; On-Time
+                  <FaClock className="h-4 w-4" style={{ fill: "url(#brand-gradient)" }} /> Reliable &amp; On-Time
                 </span>
                 <span className="flex items-center gap-2">
-                  <BadgeCheck className="h-4 w-4 text-brand-300" /> Quality Guaranteed
+                  <FaCertificate className="h-4 w-4 text-brand-300" /> Quality Guaranteed
                 </span>
               </div>
             </div>
@@ -106,18 +106,18 @@ export default function Home() {
             />
             <Link href="/services" className="btn btn-primary mt-6 px-6 py-3 w-fit">
               Explore Our Services
-              <ArrowRight className="h-4 w-4" />
+              <FaArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 3. Services — big image cards */}
+      {/* 3. Services: big image cards */}
       <section className="bg-sage-wash py-16 sm:py-20">
         <div className="container-page">
           <SectionHeading
             title="Our Services"
-            description="Professional solutions for every environment — from daily cleaning to medical-grade hygiene."
+            description="Professional solutions for every environment, from daily cleaning to medical-grade hygiene."
             center
           />
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -147,7 +147,7 @@ export default function Home() {
                   </p>
                   <span className="mt-auto pt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-teal-700 transition-all duration-300">
                     Learn more
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                    <FaArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
                 </div>
               </Link>
@@ -179,7 +179,7 @@ export default function Home() {
               </p>
               <Link href="/about" className="btn btn-primary mt-8 inline-flex w-fit px-7 py-3.5">
                 Learn About Us
-                <ArrowRight className="h-4 w-4" />
+                <FaArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>

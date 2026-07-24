@@ -1,4 +1,4 @@
-import { CheckCircle2 } from "lucide-react";
+import { FaCircleCheck } from "react-icons/fa6";
 
 export default function ValueCard({
   title,
@@ -9,8 +9,8 @@ export default function ValueCard({
 }) {
   return (
     <div className="flex gap-3.5 rounded-2xl border border-ink-100 bg-white p-5 transition-shadow hover:shadow-[0_20px_40px_-30px_rgba(9,60,58,0.4)]">
-      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-100 text-brand-700">
-        <CheckCircle2 className="h-5 w-5" />
+      <span className="flex shrink-0 items-center justify-center mt-0.5">
+        <FaCircleCheck className="h-5 w-5" style={{ fill: "url(#brand-gradient)" }} />
       </span>
       <div>
         <h3 className="font-display text-base font-semibold text-ink-900">

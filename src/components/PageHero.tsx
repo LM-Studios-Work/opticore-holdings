@@ -38,7 +38,7 @@ export default function PageHero({
         />
       )}
 
-      {/* Dark overlay — stronger when photo is present */}
+      {/* Dark overlay: stronger when photo is present */}
       <div
         className={`absolute inset-0 ${
           image
@@ -56,7 +56,12 @@ export default function PageHero({
       )}
 
       <div className="container-page relative">
-        {eyebrow && <p className="eyebrow text-brand-300">{eyebrow}</p>}
+        {eyebrow && (
+          <div className="flex items-center gap-4 mb-4">
+            <div className="h-[2px] w-8 bg-brand-400 shrink-0"></div>
+            <span className="eyebrow text-brand-300">{eyebrow}</span>
+          </div>
+        )}
         <h1 className="mt-3 font-display text-3xl font-bold tracking-tight text-balance sm:text-4xl lg:text-5xl">
           {title}
         </h1>

@@ -11,7 +11,7 @@ export const siteConfig = {
   address: "Bryanston, Sandton, Johannesburg, South Africa",
   hours: "Mon – Fri: 07:00 – 17:00 | Sat: 08:00 – 13:00 | Emergency call-outs available",
   mapEmbedSrc:
-    "https://www.google.com/maps?q=Bryanston,+Sandton,+South+Africa&output=embed",
+    "https://www.google.com/maps?q=Gauteng,+South+Africa&z=9&output=embed",
 } as const;
 
 export const socialLinks = [
@@ -148,7 +148,7 @@ export const targetMarkets = [
   "Property managers",
 ] as const;
 
-/** @deprecated Use `medicalCatalog` instead — this is kept only for backward-compat. */
+/** @deprecated Use `medicalCatalog` instead; this is kept only for backward-compat. */
 export const medicalProducts = [
   { title: "PPE Equipment", description: "Gowns, coveralls, and face shields for maximum workplace protection.", icon: "ShieldCheck" },
   { title: "Gloves", description: "Nitrile, latex, and vinyl options for medical and industrial applications.", icon: "Hand" },

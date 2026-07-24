@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Phone, Mail, Clock } from "lucide-react";
+import { FaPhoneVolume, FaEnvelope, FaClock } from "react-icons/fa6";
 import PageHero from "@/components/PageHero";
 import QuoteForm from "@/components/QuoteForm";
 import { siteConfig } from "@/lib/site-data";
@@ -40,18 +40,18 @@ export default function QuotePage() {
                   href={siteConfig.phoneHref}
                   className="flex items-center gap-2.5 hover:text-white"
                 >
-                  <Phone className="h-4 w-4 text-brand-100" />
+                  <FaPhoneVolume className="h-4 w-4" style={{ fill: "url(#brand-gradient)" }} />
                   {siteConfig.phone}
                 </a>
                 <a
                   href={`mailto:${siteConfig.email}`}
                   className="flex items-center gap-2.5 hover:text-white"
                 >
-                  <Mail className="h-4 w-4 text-brand-100" />
+                  <FaEnvelope className="h-4 w-4" style={{ fill: "url(#brand-gradient)" }} />
                   {siteConfig.email}
                 </a>
                 <p className="flex items-center gap-2.5 text-brand-50/90">
-                  <Clock className="h-4 w-4 text-brand-100" />
+                  <FaClock className="h-4 w-4" style={{ fill: "url(#brand-gradient)" }} />
                   {siteConfig.hours}
                 </p>
               </div>

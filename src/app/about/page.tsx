@@ -1,101 +1,233 @@
 import type { Metadata } from "next";
-import { Building2, ArrowRight } from "lucide-react";
+import { FaArrowRight, FaWandMagicSparkles, FaFlask, FaShieldHalved, FaTriangleExclamation, FaLeaf, FaStopwatch } from "react-icons/fa6";
 import Link from "next/link";
-import PageHero from "@/components/PageHero";
+import Image from "next/image";
 import PlaceholderImage from "@/components/PlaceholderImage";
-import CtaBanner from "@/components/CtaBanner";
-import TestimonialCard from "@/components/TestimonialCard";
-import { brands, testimonials } from "@/lib/site-data";
+import heroImg from "../../../public/Services Heros/professional hygiene services hero, home page.jpg";
+import satisfactionImg from "../../../public/100-percent-satisfaction.png";
 
 export const metadata: Metadata = {
-  title: "About Us",
-  description:
-    "Learn about OptiCore Holdings, our mission, vision and the brands that make up our group of cleaning, hygiene and medical supply services.",
+  title: "About Us | OptiCore Holdings",
+  description: "Learn about OptiCore Holdings, our mission, vision and the brands that make up our group of cleaning, hygiene and medical supply services.",
 };
+
+import SectionHeading from "@/components/SectionHeading";
 
 export default function AboutPage() {
   return (
-    <>
-      <PageHero
-        title="Building Cleaner, Safer Environments"
-        description="OptiCore Holdings (Pty) Ltd operates across South Africa, executing professional cleaning, hygiene, pest control, and medical supply operations."
-      />
+    <div className="bg-white">
+      {/* Hero Section */}
+      <section className="relative h-[400px] flex items-center justify-start overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src={heroImg}
+            alt="Professional Facility & Hygiene Operations"
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+        </div>
+        <div className="container-page relative z-10">
+          <div className="text-white/80 text-sm mb-4 font-medium tracking-wide">
+            OptiCore Holdings &gt; About Us
+          </div>
+          <h1 className="font-display text-5xl md:text-6xl font-bold text-white tracking-tight">About Us</h1>
+        </div>
+      </section>
 
-      {/* ── Who we are – editorial split ──────────────────────────────────── */}
+      {/* The Company Section */}
       <section className="container-page py-16 sm:py-24">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
-            <h2 className="font-display text-3xl font-bold tracking-tight text-ink-900 text-balance sm:text-4xl">
-              We don't believe in shortcuts.
-            </h2>
-            <p className="mt-5 text-base leading-relaxed text-ink-600">
-              Whether we are sanitising a clinic, clearing a commercial build, or supplying bulk PPE, our focus is singular: getting the job done safely, efficiently, and to the highest standard.
-            </p>
-            <p className="mt-4 text-base leading-relaxed text-ink-600">
-              We build long-term client relationships on the back of hard work and zero compromises.
-            </p>
+            <SectionHeading eyebrow="The Company" title="Facility Management, Hygiene & Medical Supplies, Under One Roof" />
+            <div className="space-y-4 text-ink-600 text-[15px] leading-relaxed mb-8">
+              <p>
+                OptiCore Holdings is a South African facility management group delivering professional commercial and residential cleaning, medical-grade sanitising and fogging, certified pest control, and bulk medical supply solutions. With over 15 years of combined operational experience, we serve residential homeowners, corporate offices, schools, hospitals, clinics, retail stores, warehouses, and industrial facilities across Gauteng.
+              </p>
+              <p>
+                Our four specialist divisions (Zenako Cleaning Co., OptiCore Sanitising, OptiCore Pest Control, and OptiCore Medical Supplies) give you a fully integrated service that removes the complexity of managing multiple contractors. One call covers everything from deep cleaning and fogging to PPE procurement and pest eradication.
+              </p>
+              <p>
+                Our teams are screened, rigorously trained, and equipped with ISO-approved products and compliant methods. Health, safety, and precision are non-negotiables at every site we touch.
+              </p>
+            </div>
             <Link
               href="/contact"
-              className="btn btn-primary mt-8 w-fit"
+              className="btn btn-primary"
             >
-              Get in touch <ArrowRight className="h-4 w-4" />
+              Get Service Now <FaArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <PlaceholderImage label="OptiCore Holdings Team" tone="brand" aspect="aspect-[4/3]" />
+          <div className="relative h-[500px]">
+            <PlaceholderImage label="Modern Building Lobby" tone="light" aspect="aspect-auto h-full" className="rounded-2xl shadow-xl border border-ink-100" />
+          </div>
         </div>
       </section>
 
-
-
-
-      {/* ── Brands ──────────────────────────────────────────────────────────── */}
-      <section className="bg-sage-wash py-16 sm:py-20">
+      {/* What We Provide Section */}
+      <section className="bg-sage-wash py-16 sm:py-24">
         <div className="container-page">
-          <div className="mb-10">
-            <h2 className="font-display text-3xl font-bold tracking-tight text-ink-900 text-balance sm:text-4xl">
-              The OptiCore Holdings Family
-            </h2>
-            <p className="mt-3 max-w-xl text-base leading-relaxed text-ink-500">
-              One holding company, four specialist divisions executing at the highest level.
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <div className="relative h-[600px] order-2 lg:order-1">
+              <PlaceholderImage label="Professional in PPE" tone="brand" aspect="aspect-auto h-full" className="rounded-2xl shadow-xl border border-ink-100" />
+            </div>
+            <div className="order-1 lg:order-2 lg:pl-10">
+              <SectionHeading eyebrow="What We Provide" title="Four Specialist Divisions. One Trusted Partner." />
+              
+              <div className="space-y-6 mt-6">
+                <div className="group bg-white p-6 rounded-2xl border border-ink-100 hover:border-brand-300 transition-colors shadow-sm">
+                  <h4 className="font-display font-semibold text-ink-900 mb-2 text-base">Commercial & Residential Cleaning</h4>
+                  <p className="text-ink-600 text-[14px] leading-relaxed">Deep cleans, routine office maintenance, post-construction clear-outs, move-in/move-out, carpet, window, and upholstery cleaning. We serve homes, offices, warehouses, schools, and hospitals.</p>
+                </div>
+                <div className="group bg-white p-6 rounded-2xl border border-ink-100 hover:border-brand-300 transition-colors shadow-sm">
+                  <h4 className="font-display font-semibold text-ink-900 mb-2 text-base">Sanitising, Fogging & Disinfection</h4>
+                  <p className="text-ink-600 text-[14px] leading-relaxed">Hospital-grade fogging, targeted disinfection, and virus/bacteria control using ISO-approved products. Ideal for clinics, offices, schools, and any high-traffic environment.</p>
+                </div>
+                <div className="group bg-white p-6 rounded-2xl border border-ink-100 hover:border-brand-300 transition-colors shadow-sm">
+                  <h4 className="font-display font-semibold text-ink-900 mb-2 text-base">Pest Control</h4>
+                  <p className="text-ink-600 text-[14px] leading-relaxed">Regulation-compliant eradication of cockroaches, ants, rodents, termites, bed bugs, and general infestations across all residential, commercial, and industrial property types.</p>
+                </div>
+                <div className="group bg-white p-6 rounded-2xl border border-ink-100 hover:border-brand-300 transition-colors shadow-sm">
+                  <h4 className="font-display font-semibold text-ink-900 mb-2 text-base">Medical Supplies & PPE</h4>
+                  <p className="text-ink-600 text-[14px] leading-relaxed">Bulk procurement of PPE, gloves, masks, sanitisers, medical consumables, cleaning chemicals, and first aid kits. Available for healthcare facilities, corporates, and government tenders.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Important Information */}
+      <section className="container-page py-16 sm:py-24 border-b border-ink-100">
+        <SectionHeading eyebrow="Important Information" title="One Partner for Cleaning, Hygiene, Pest Control & Medical Supplies" />
+        <div className="grid gap-12 md:grid-cols-[1fr_1fr_auto] mt-10">
+          <div className="space-y-6 text-ink-600 text-[15px] leading-relaxed">
+            <p className="font-bold text-ink-900 text-base">
+              Tired of juggling multiple contractors for cleaning, sanitising, pest control, and PPE procurement?
+            </p>
+            <p>
+              OptiCore Holdings removes that burden entirely. As a holding group with four specialised divisions under one roof, we coordinate every aspect of your facility's hygiene and supply needs, so you never have to chase down a different provider for each problem.
             </p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {brands.map((brand) => (
-              <div
-                key={brand.name}
-                className="group rounded-2xl border border-ink-100 bg-white p-6 transition-all hover:border-brand-300 hover:shadow-[0_20px_40px_-30px_rgba(9,60,58,0.3)]"
-              >
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-100 text-brand-700 group-hover:bg-brand-600 group-hover:text-white transition-colors">
-                  <Building2 className="h-5 w-5" />
-                </span>
-                <h4 className="mt-4 font-display text-base font-semibold text-ink-900">
-                  {brand.name}
-                </h4>
-                <p className="mt-1 text-sm text-ink-500">{brand.description}</p>
-              </div>
-            ))}
+          <div className="space-y-6 text-ink-600 text-[15px] leading-relaxed">
+            <p>
+              All our technicians are trained, certified, and equipped with ISO-approved products. Whether it's a routine office clean, a hospital-grade fogging session, a rodent eradication, or a bulk PPE order, every job is executed to the same exacting standard.
+            </p>
+            <p>
+              We provide every client with a Health & Safety file and conduct audits every 3 to 6 months, so your premises stay compliant, safe, and audit-ready at all times.
+            </p>
+          </div>
+          <div className="flex justify-center items-start px-8 md:-mt-16">
+            <div className="relative w-64 h-64 flex items-center justify-center">
+              <Image
+                src={satisfactionImg}
+                alt="100% Satisfaction Guaranteed"
+                className="object-contain"
+                width={256}
+                height={256}
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── Testimonials ──────────────────────────────────────────────────── */}
-      <section className="container-page py-16 sm:py-20">
-        <div className="mb-10">
-          <h2 className="font-display text-3xl font-bold tracking-tight text-ink-900 text-balance sm:text-4xl">
-            What Our Clients Say
-          </h2>
-          <p className="mt-3 max-w-xl text-base leading-relaxed text-ink-500">
-            Trusted by businesses, clinics, and facilities managers across South Africa.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((t) => (
-            <TestimonialCard key={t.name} name={t.name} role={t.role} quote={t.quote} />
-          ))}
+      {/* Protecting Our Environment */}
+      <section className="bg-white py-16 sm:py-32 overflow-hidden">
+        <div className="container-page">
+          <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
+            
+            {/* Circular Diagram: OptiCore's 6 service & safety pillars */}
+            <div className="relative w-[320px] h-[320px] sm:w-[450px] sm:h-[450px] mx-auto lg:mx-0">
+              {/* Center */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center z-20">
+                <span className="font-display text-xl sm:text-2xl font-black text-ink-900 leading-tight text-center">OptiCore<br/>Standard</span>
+              </div>
+
+              {/* Decorative dashed circle */}
+              <div className="absolute inset-12 border-2 border-dashed border-ink-200 rounded-full"></div>
+
+              {/* Top: Fogging & Disinfection */}
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-28 h-28 bg-white rounded-full border border-brand-200 shadow-xl flex flex-col items-center justify-center text-center p-2 z-10">
+                <FaTriangleExclamation className="text-brand-500 mb-1" size={28} />
+                <span className="text-[11px] font-bold text-ink-900 leading-tight mt-1">Fogging &<br/>Disinfection</span>
+                <div className="absolute w-[80%] h-0.5 bg-brand-500 -rotate-45"></div>
+              </div>
+
+              {/* Top Right: Commercial Cleaning */}
+              <div className="absolute top-[12%] -right-4 w-28 h-28 bg-white rounded-full shadow-xl border border-ink-100 flex flex-col items-center justify-center text-center p-2 z-10">
+                <FaWandMagicSparkles className="text-teal-600 mb-1" size={28} />
+                <span className="text-[11px] font-bold text-ink-900 leading-tight mt-1">Commercial<br/>Cleaning</span>
+              </div>
+
+              {/* Bottom Right: Pest Control */}
+              <div className="absolute bottom-[12%] -right-4 w-28 h-28 bg-white rounded-full shadow-xl border border-ink-100 flex flex-col items-center justify-center text-center p-2 z-10">
+                <FaLeaf className="text-teal-600 mb-1" size={28} />
+                <span className="text-[11px] font-bold text-ink-900 leading-tight mt-1">Pest<br/>Control</span>
+              </div>
+
+              {/* Bottom: ISO Approved Products */}
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-28 h-28 bg-white rounded-full shadow-xl border border-ink-100 flex flex-col items-center justify-center text-center p-2 z-10">
+                <FaStopwatch className="text-teal-600 mb-1" size={28} />
+                <span className="text-[11px] font-bold text-ink-900 leading-tight mt-1">ISO Approved<br/>Products</span>
+              </div>
+
+              {/* Bottom Left: Medical Supplies */}
+              <div className="absolute bottom-[12%] -left-4 w-28 h-28 bg-white rounded-full border border-brand-200 shadow-xl flex flex-col items-center justify-center text-center p-2 z-10">
+                <FaFlask className="text-brand-500 mb-1" size={28} />
+                <span className="text-[11px] font-bold text-ink-900 leading-tight mt-1">Medical<br/>Supplies & PPE</span>
+                <div className="absolute w-[80%] h-0.5 bg-brand-500 -rotate-45"></div>
+              </div>
+
+              {/* Top Left: Health & Safety */}
+              <div className="absolute top-[12%] -left-4 w-28 h-28 bg-white rounded-full shadow-xl border border-ink-100 flex flex-col items-center justify-center text-center p-2 z-10">
+                <FaShieldHalved className="text-teal-600 mb-1" size={28} />
+                <span className="text-[11px] font-bold text-ink-900 leading-tight mt-1">Health &<br/>Safety First</span>
+              </div>
+            </div>
+
+            <div className="lg:pl-10">
+              <SectionHeading eyebrow="Our Commitment" title="Why Choose OptiCore Holdings?" />
+              <div className="space-y-4 text-ink-600 text-[15px] leading-relaxed mb-8">
+                <p>
+                  Every service we deliver is backed by the same commitment: ISO-approved products, trained and screened personnel, and zero compromise on safety. That applies whether it's a routine office clean, a hospital fogging session, rodent eradication, or a bulk PPE order.
+                </p>
+                <p>
+                  We are the only partner you need. Our integrated group structure means your office can be cleaned, fogged, pest-treated, and fully stocked with medical supplies by a single, accountable team. No coordination headaches, no finger-pointing between contractors.
+                </p>
+              </div>
+              <Link
+                href="/quote"
+                className="btn btn-primary"
+              >
+                Request a Quote <FaArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
-      <CtaBanner />
-    </>
+      {/* We Care for People */}
+      <section className="container-page py-16 sm:py-24">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <SectionHeading eyebrow="We Care for People" title="How OptiCore Operates" center={true} />
+          <p className="text-ink-500 text-[15px]">
+            From the first call to the final sign-off, we manage everything. Site assessment, scheduling, execution, and follow-up audits are all coordinated by a single team across cleaning, sanitising, pest control, and medical supply operations.
+          </p>
+        </div>
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="relative h-[300px]">
+            <PlaceholderImage label="Team Member" tone="brand" aspect="aspect-auto h-full" className="rounded-2xl shadow-md border border-ink-100" />
+          </div>
+          <div className="relative h-[300px]">
+            <PlaceholderImage label="Operations" tone="dark" aspect="aspect-auto h-full" className="rounded-2xl shadow-md border border-ink-100" />
+          </div>
+          <div className="relative h-[300px] hidden lg:block">
+            <PlaceholderImage label="Client Satisfaction" tone="light" aspect="aspect-auto h-full" className="rounded-2xl shadow-md border border-ink-100" />
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

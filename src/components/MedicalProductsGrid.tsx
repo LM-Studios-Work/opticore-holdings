@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { Search, X } from "lucide-react";
+import { FaMagnifyingGlass, FaXmark } from "react-icons/fa6";
 import ProductCard, { type Product } from "./ProductCard";
 import RequestQuoteModal from "./RequestQuoteModal";
 import { medicalCatalog } from "@/lib/site-data";
@@ -30,16 +30,16 @@ export default function MedicalProductsGrid() {
   return (
     <>
       <section className="container-page py-16 sm:py-20">
-        {/* Search bar */}
+        {/* FaMagnifyingGlass bar */}
         <div className="mx-auto mb-10 max-w-xl">
           <div className="relative">
-            <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-400" />
+            <FaMagnifyingGlass className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-400" />
             <input
               type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search products..."
-              aria-label="Search medical products"
+              placeholder="FaMagnifyingGlass products..."
+              aria-label="FaMagnifyingGlass medical products"
               className="w-full rounded-full border border-ink-200 bg-white py-3 pl-11 pr-11 text-sm text-ink-900 placeholder:text-ink-400 shadow-[0_4px_16px_-8px_rgba(9,60,58,0.15)] focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-200 transition-shadow"
             />
             {query && (
@@ -49,7 +49,7 @@ export default function MedicalProductsGrid() {
                 aria-label="Clear search"
                 className="absolute right-4 top-1/2 -translate-y-1/2 text-ink-400 hover:text-ink-600 transition-colors"
               >
-                <X className="h-4 w-4" />
+                <FaXmark className="h-4 w-4" />
               </button>
             )}
           </div>
@@ -75,7 +75,7 @@ export default function MedicalProductsGrid() {
           </div>
         ) : (
           <div className="flex flex-col items-center gap-3 py-24 text-center">
-            <Search className="h-10 w-10 text-ink-300" />
+            <FaMagnifyingGlass className="h-10 w-10 text-ink-300" />
             <p className="font-display text-lg font-semibold text-ink-700">
               No products found
             </p>

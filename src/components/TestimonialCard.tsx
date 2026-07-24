@@ -1,4 +1,4 @@
-import { Quote } from "lucide-react";
+import { FaQuoteLeft } from "react-icons/fa6";
 
 export default function TestimonialCard({
   name,
@@ -11,7 +11,7 @@ export default function TestimonialCard({
 }) {
   return (
     <div className="flex h-full flex-col rounded-3xl border border-ink-100 bg-white p-6 shadow-[0_24px_48px_-32px_rgba(9,60,58,0.35)]">
-      <Quote className="h-7 w-7 text-brand-400" />
+      <FaQuoteLeft className="h-7 w-7" style={{ fill: "url(#brand-gradient)" }} />
       <p className="mt-4 flex-1 text-sm leading-relaxed text-ink-600">&ldquo;{quote}&rdquo;</p>
       <div className="mt-5 flex items-center gap-3 border-t border-ink-100 pt-5">
         <div className="bg-brand-gradient flex h-10 w-10 items-center justify-center rounded-full text-sm font-semibold text-white">

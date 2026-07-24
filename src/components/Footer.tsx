@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { FaPhoneVolume, FaEnvelope, FaLocationDot } from "react-icons/fa6";
 import Logo from "./Logo";
 import { navLinks, serviceCategories, siteConfig, socialLinks } from "@/lib/site-data";
 
@@ -80,17 +80,17 @@ export default function Footer() {
           </h3>
           <ul className="mt-4 space-y-3 text-sm">
             <li className="flex items-start gap-2.5">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-500" />
+              <FaLocationDot className="mt-0.5 h-4 w-4 shrink-0" style={{ fill: "url(#brand-gradient)" }} />
               <span>{siteConfig.address}</span>
             </li>
             <li className="flex items-center gap-2.5">
-              <Phone className="h-4 w-4 shrink-0 text-brand-500" />
+              <FaPhoneVolume className="h-4 w-4 shrink-0" style={{ fill: "url(#brand-gradient)" }} />
               <a href={siteConfig.phoneHref} className="hover:text-brand-400">
                 {siteConfig.phone}
               </a>
             </li>
             <li className="flex items-center gap-2.5">
-              <Mail className="h-4 w-4 shrink-0 text-brand-500" />
+              <FaEnvelope className="h-4 w-4 shrink-0" style={{ fill: "url(#brand-gradient)" }} />
               <a href={`mailto:${siteConfig.email}`} className="hover:text-brand-400">
                 {siteConfig.email}
               </a>

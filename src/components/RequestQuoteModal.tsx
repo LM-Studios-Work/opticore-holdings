@@ -2,7 +2,7 @@
 
 import { useEffect, useState, type FormEvent } from "react";
 import Image from "next/image";
-import { X, CheckCircle2, Loader2 } from "lucide-react";
+import { FaXmark, FaCircleCheck, FaSpinner } from "react-icons/fa6";
 import type { Product } from "./ProductCard";
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -94,7 +94,7 @@ export default function RequestQuoteModal({
         aria-hidden="true"
       />
 
-      {/* Modal panel — two column */}
+      {/* Modal panel: two column */}
       <div className="relative z-10 flex w-full max-w-4xl overflow-hidden rounded-3xl bg-white shadow-[0_40px_100px_-20px_rgba(0,0,0,0.35)]">
 
         {/* ── LEFT: Image panel (square) ── */}
@@ -127,7 +127,7 @@ export default function RequestQuoteModal({
             aria-label="Close modal"
             className="absolute right-5 top-5 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-ink-200 bg-white text-ink-400 transition-colors hover:border-ink-300 hover:text-ink-700"
           >
-            <X className="h-4 w-4" />
+            <FaXmark className="h-4 w-4" />
           </button>
 
           {/* Scrollable content */}
@@ -154,7 +154,7 @@ export default function RequestQuoteModal({
 
               {status === "success" ? (
                 <div className="flex flex-col items-center gap-3 py-10 text-center">
-                  <CheckCircle2 className="h-12 w-12 text-brand-600" />
+                  <FaCircleCheck className="h-12 w-12" style={{ fill: "url(#brand-gradient)" }} />
                   <h3 className="font-display text-lg font-semibold text-ink-900">
                     Enquiry received!
                   </h3>
@@ -199,10 +199,10 @@ export default function RequestQuoteModal({
                       />
                     </div>
 
-                    {/* Phone */}
+                    {/* FaPhoneVolume */}
                     <div className="flex flex-col gap-1.5">
                       <label htmlFor="q-phone" className="text-xs font-semibold text-ink-700">
-                        Phone Number <span className="text-red-500">*</span>
+                        FaPhoneVolume Number <span className="text-red-500">*</span>
                       </label>
                       <input
                         id="q-phone"
@@ -267,7 +267,7 @@ export default function RequestQuoteModal({
                     className="btn btn-primary mt-1 w-full py-3 disabled:cursor-not-allowed disabled:opacity-70"
                   >
                     {status === "submitting" && (
-                      <Loader2 className="h-4 w-4 animate-spin" />
+                      <FaSpinner className="h-4 w-4 animate-spin" />
                     )}
                     {status === "submitting" ? "Sending…" : "Submit Enquiry"}
                   </button>

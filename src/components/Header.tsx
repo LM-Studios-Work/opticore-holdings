@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone } from "lucide-react";
+import { FaBars, FaXmark, FaPhoneVolume } from "react-icons/fa6";
 import Logo from "./Logo";
 import { navLinks, siteConfig } from "@/lib/site-data";
 
@@ -42,7 +42,7 @@ export default function Header() {
             href={siteConfig.phoneHref}
             className="flex items-center gap-2 text-sm font-medium text-ink-700 hover:text-brand-600"
           >
-            <Phone className="h-4 w-4" />
+            <FaPhoneVolume className="h-4 w-4" />
             {siteConfig.phone}
           </a>
           <Link href="/quote" className="btn btn-primary">
@@ -56,7 +56,7 @@ export default function Header() {
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
         >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {open ? <FaXmark className="h-6 w-6" /> : <FaBars className="h-6 w-6" />}
         </button>
       </div>
 
@@ -84,7 +84,7 @@ export default function Header() {
               href={siteConfig.phoneHref}
               className="flex items-center gap-2 rounded-md px-3 py-2.5 text-sm font-medium text-ink-700 hover:bg-ink-50"
             >
-              <Phone className="h-4 w-4" />
+              <FaPhoneVolume className="h-4 w-4" />
               {siteConfig.phone}
             </a>
             <Link

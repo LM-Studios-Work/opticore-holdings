@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { FaArrowRight } from "react-icons/fa6";
 import SectionHeading from "@/components/SectionHeading";
 import ProductCard from "@/components/ProductCard";
 import RequestQuoteModal from "@/components/RequestQuoteModal";
@@ -40,7 +40,7 @@ export default function HomeMedicalSection() {
         <div className="mt-10 flex justify-center">
           <Link href="/medical-supplies" className="btn btn-primary px-6 py-3">
             View All Products
-            <ArrowRight className="h-4 w-4" />
+            <FaArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </section>

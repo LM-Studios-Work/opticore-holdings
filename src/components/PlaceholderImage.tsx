@@ -1,4 +1,5 @@
-import { ImageIcon, type LucideIcon } from "lucide-react";
+import { FaImage } from "react-icons/fa6";
+import { type IconType } from "react-icons";
 
 type Tone = "brand" | "dark" | "light";
 
@@ -10,13 +11,13 @@ const toneClasses: Record<Tone, string> = {
 
 export default function PlaceholderImage({
   label,
-  icon: Icon = ImageIcon,
+  icon: Icon = FaImage,
   tone = "brand",
   className = "",
   aspect = "aspect-[4/3]",
 }: {
   label: string;
-  icon?: LucideIcon;
+  icon?: IconType;
   tone?: Tone;
   className?: string;
   aspect?: string;
@@ -34,7 +35,7 @@ export default function PlaceholderImage({
         }}
       />
       <div className="relative flex h-full w-full flex-col items-center justify-center gap-2 p-4 text-center">
-        <Icon className="h-10 w-10 opacity-90" strokeWidth={1.5} />
+        <Icon className="h-10 w-10 opacity-90"  />
         <span className="text-xs font-medium uppercase tracking-wide opacity-90 sm:text-sm">
           {label}
         </span>

@@ -1,13 +1,13 @@
 "use client";
 
 import Image, { type StaticImageData } from "next/image";
-import { type LucideIcon } from "lucide-react";
+import { type IconType } from "react-icons";
 
 export type Product = {
   title: string;
   description: string;
   category: string;
-  icon: LucideIcon;
+  icon: IconType;
   image?: StaticImageData | string;
 };
 

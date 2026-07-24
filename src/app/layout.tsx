@@ -36,6 +36,15 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${headingFont.variable} h-full antialiased bg-background`}
     >
       <body className="min-h-full flex flex-col bg-background text-ink-900">
+        <svg width="0" height="0" className="absolute opacity-0 pointer-events-none w-0 h-0">
+          <defs>
+            <linearGradient id="brand-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="var(--color-teal-700)" />
+              <stop offset="60%" stopColor="var(--color-brand-600)" />
+              <stop offset="100%" stopColor="var(--color-brand-500)" />
+            </linearGradient>
+          </defs>
+        </svg>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

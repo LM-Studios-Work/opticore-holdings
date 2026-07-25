@@ -11,7 +11,7 @@ import facilityCleaning from "../../../../public/sanitizing_and_defecting_servic
 export const metadata: Metadata = {
   title: "Commercial & Residential Cleaning | OptiCore Holdings",
   description:
-    "Professional cleaning services for homes, offices, and commercial properties across South Africa. Deep cleaning, move-in/move-out, post-construction and more.",
+    "Professional cleaning services for homes, offices, and commercial properties across Johannesburg and South Africa. Deep cleaning, move-in/move-out, post-construction and more.",
 };
 
 export default function CleaningPage() {
@@ -88,10 +88,10 @@ export default function CleaningPage() {
                 />
                 <div className="space-y-4 text-ink-600 text-[14px] leading-relaxed mb-10">
                   <p>
-                    There are only a few companies that offer commercial cleaning packages due to profit margins, but we believe that with over 15 years' experience in the Commercial Cleaning Industry and a responsibility as a South African based Cleaning Company that this is no time to think about profits, we believe that package pricing gives value to our commercial customers, especially in the times we are in today.
+                    There are only a few companies that offer commercial cleaning packages due to profit margins, but we believe that with over 15 years' experience in the Commercial Cleaning Industry and a responsibility as a Johannesburg and South Africa-based Cleaning Company that this is no time to think about profits, we believe that package pricing gives value to our commercial customers, especially in the times we are in today.
                   </p>
                   <p>
-                    OptiCore Holdings is a major commercial cleaning contract specialist in South Africa, as one of the best in the cleaning sector of the top companies in the country. OptiCore Holdings is well positioned to give specialized commercial cleaning services in Gauteng, with over a decade of experience and properly trained workers.
+                    OptiCore Holdings is a major commercial cleaning contract specialist in Johannesburg and South Africa, as one of the best in the cleaning sector of the top companies in the country. OptiCore Holdings is well positioned to give specialized commercial cleaning services in Gauteng, with over a decade of experience and properly trained workers.
                   </p>
                   <p>
                     OptiCore Holdings has a long history of providing services to a diverse range of industries, including commercial, retail, hotel, education, healthcare and industrial.

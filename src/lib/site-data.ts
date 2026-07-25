@@ -36,7 +36,7 @@ export const siteConfig = {
   legalName: "OptiCore Holdings (Pty) Ltd",
   tagline: "Cleaning, Hygiene, Pest Control & Medical Supplies",
   description:
-    "OptiCore Holdings delivers professional facility management, medical consumables, and hygiene operations across South Africa. Built for residential, commercial, industrial, and healthcare sectors.",
+    "OptiCore Holdings delivers professional facility management, medical consumables, and hygiene operations across Johannesburg and South Africa. Built for residential, commercial, industrial, and healthcare sectors.",
   phone: "071 702 0817",
   phoneHref: "tel:+27717020817",
   whatsappHref: "https://wa.me/27717020817",

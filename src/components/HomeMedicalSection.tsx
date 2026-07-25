@@ -25,7 +25,7 @@ export default function HomeMedicalSection() {
       <section className="container-page py-16 sm:py-20">
         <SectionHeading
           title="High-Demand Medical Supplies"
-          description="Reliable stock and fast delivery across South Africa. Order in bulk and save."
+          description="Reliable stock and fast delivery across Johannesburg and South Africa. Order in bulk and save."
           center
         />
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

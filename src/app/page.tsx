@@ -56,7 +56,7 @@ export default function Home() {
             {/* Content */}
             <div className="relative flex h-full w-full flex-col justify-center p-8 sm:p-12 lg:max-w-3xl lg:p-16">
               <span className="pill w-fit bg-white/15 text-brand-100 backdrop-blur-sm">
-                Trusted across South Africa
+                Trusted across Johannesburg
               </span>
               <h1 className="mt-5 max-w-2xl text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
                 Cleaning, Hygiene &amp; Medical Supplies You Can Rely On.
@@ -175,7 +175,7 @@ export default function Home() {
                 Built on hard work &amp; zero compromises.
               </h2>
               <p className="mt-5 text-base leading-relaxed text-teal-100">
-                OptiCore Holdings operates four specialist divisions across South Africa, from professional cleaning and hygiene to pest control and medical supplies. One holding company, one standard of excellence.
+                OptiCore Holdings operates four specialist divisions across Johannesburg and South Africa, from professional cleaning and hygiene to pest control and medical supplies. One holding company, one standard of excellence.
               </p>
               <Link href="/about" className="btn btn-primary mt-8 inline-flex w-fit px-7 py-3.5">
                 Learn About Us

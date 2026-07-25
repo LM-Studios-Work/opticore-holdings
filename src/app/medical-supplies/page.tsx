@@ -19,7 +19,7 @@ export default function MedicalSuppliesPage() {
       <PageHero
         eyebrow="Our Products"
         title="PPE, Hygiene & Medical Consumables"
-        description="Consistent stock. Fast delivery. Trusted quality. We supply healthcare providers, corporate offices, and industrial sites across South Africa."
+        description="Consistent stock. Fast delivery. Trusted quality. We supply healthcare providers, corporate offices, and industrial sites across Johannesburg and South Africa."
         image={medicalHero}
         imageAlt="Medical supplies and PPE products"
       />

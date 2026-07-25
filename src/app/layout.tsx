@@ -28,6 +28,18 @@ export const metadata: Metadata = {
     apple: "/logo/favicon.png",
     shortcut: "/logo/favicon.png",
   },
+  openGraph: {
+    title: `${siteConfig.name} | Cleaning, Hygiene, Pest Control & Medical Supplies`,
+    description: siteConfig.description,
+    images: [{ url: "/logo/favicon.png", width: 512, height: 512 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: `${siteConfig.name} | Cleaning, Hygiene, Pest Control & Medical Supplies`,
+    description: siteConfig.description,
+    images: ["/logo/favicon.png"],
+  },
 };
 
 export default function RootLayout({

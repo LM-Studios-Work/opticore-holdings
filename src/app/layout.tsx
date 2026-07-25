@@ -31,14 +31,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${siteConfig.name} | Cleaning, Hygiene, Pest Control & Medical Supplies`,
     description: siteConfig.description,
-    images: [{ url: "/logo/favicon.png", width: 512, height: 512 }],
+    images: [{ url: "/logo.png", width: 800, height: 600 }],
     type: "website",
   },
   twitter: {
     card: "summary",
     title: `${siteConfig.name} | Cleaning, Hygiene, Pest Control & Medical Supplies`,
     description: siteConfig.description,
-    images: ["/logo/favicon.png"],
+    images: ["/logo.png"],
   },
 };
 

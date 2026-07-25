@@ -52,7 +52,7 @@ export default function Home() {
               sizes="100vw"
             />
             {/* Gradient overlay for legibility */}
-            <div className="absolute inset-0 bg-gradient-to-r from-teal-950/85 via-teal-900/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-teal-950/80 to-teal-900/20 sm:bg-gradient-to-r sm:from-teal-950/85 sm:via-teal-900/60 sm:to-transparent" />
             {/* Content */}
             <div className="relative flex h-full w-full flex-col justify-center p-8 sm:p-12 lg:max-w-3xl lg:p-16">
               <span className="pill w-fit bg-white/15 text-brand-100 backdrop-blur-sm">
@@ -66,7 +66,7 @@ export default function Home() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href="/quote" className="btn btn-primary px-6 py-3.5">
-                  Request a Free Quote Today - 071 702 0817
+                  Request a Quote
                 </Link>
               </div>
               <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-teal-100">

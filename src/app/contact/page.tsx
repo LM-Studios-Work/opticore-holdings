@@ -15,23 +15,24 @@ import SectionHeading from "@/components/SectionHeading";
 export default function ContactPage() {
   return (
     <div className="bg-white">
-      {/* Hero Section: no dark overlay, gradient only */}
-      <section className="relative h-[400px] flex items-center justify-start overflow-hidden">
-        <Image
-          src={heroImg}
-          alt="Professional Facility & Hygiene Operations"
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
-        />
-        {/* Subtle left-side gradient for text legibility only */}
-        <div className="absolute inset-0 bg-gradient-to-r from-ink-900/70 via-ink-900/30 to-transparent" />
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-teal-800 py-16 text-white sm:py-20 lg:py-28">
+        <div className="absolute inset-0">
+          <Image
+            src={heroImg}
+            alt="Professional Facility & Hygiene Operations"
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-teal-950/80 to-teal-900/20 sm:bg-gradient-to-r sm:from-teal-950/85 sm:via-teal-900/60 sm:to-teal-900/30" />
         <div className="container-page relative z-10">
-          <div className="text-white/80 text-sm mb-4 font-medium tracking-wide">
+          <div className="text-teal-100 text-sm mb-4 font-medium tracking-wide">
             OptiCore Holdings &gt; Contact
           </div>
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-white tracking-tight">Contact</h1>
+          <h1 className="mt-3 font-display text-3xl font-bold tracking-tight text-balance sm:text-4xl lg:text-5xl">Contact</h1>
         </div>
       </section>
 

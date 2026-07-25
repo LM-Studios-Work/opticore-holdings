@@ -1,69 +1,35 @@
 import type { Metadata } from "next";
-import LegalPage from "@/components/LegalPage";
-import { siteConfig } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions",
+  title: "Terms & Conditions | OptiCore Holdings",
+  description: "Terms & Conditions for OptiCore Holdings.",
 };
 
-export default function TermsPage() {
+export default function TermsConditionsPage() {
   return (
-    <LegalPage title="Terms & Conditions" updated="20 July 2026">
-      <p>
-        These Terms &amp; Conditions govern your use of the{" "}
-        {siteConfig.name} website and the services provided by{" "}
-        {siteConfig.legalName}. By using our website or engaging our
-        services, you agree to these terms.
-      </p>
-
-      <h2>Quotes & Bookings</h2>
-      <p>
-        Quotes provided through our website, by phone or via email are
-        estimates based on the information supplied and may be subject to
-        change following a site visit or inspection. Bookings are confirmed
-        once agreed between OptiCore Holdings and the client.
-      </p>
-
-      <h2>Service Delivery</h2>
-      <p>
-        We aim to deliver all services professionally and within the agreed
-        timeframes. Access to the property, availability of utilities (such
-        as water and electricity), and accurate information about the site
-        are the client&apos;s responsibility and may affect service delivery.
-      </p>
-
-      <h2>Payment</h2>
-      <p>
-        Payment terms will be communicated at the time of quoting or
-        invoicing. Late payment may result in a delay or suspension of
-        ongoing services.
-      </p>
-
-      <h2>Cancellations</h2>
-      <p>
-        We appreciate as much notice as possible if you need to cancel or
-        reschedule a booking. Late cancellations may be subject to a
-        call-out fee.
-      </p>
-
-      <h2>Limitation of Liability</h2>
-      <p>
-        While we take great care in delivering our services, OptiCore
-        Holdings will not be held liable for pre-existing damage or issues
-        beyond our reasonable control.
-      </p>
-
-      <h2>Governing Law</h2>
-      <p>
-        These terms are governed by the laws of the Republic of South
-        Africa.
-      </p>
-
-      <h2>Contact Us</h2>
-      <p>
-        For any questions regarding these Terms &amp; Conditions, contact us
-        at {siteConfig.email} or {siteConfig.phone}.
-      </p>
-    </LegalPage>
+    <div className="bg-white py-16 sm:py-24">
+      <div className="container-page max-w-3xl">
+        <h1 className="font-display text-4xl font-bold tracking-tight text-ink-900 mb-8">
+          Terms & Conditions
+        </h1>
+        <div className="prose prose-teal max-w-none text-ink-600">
+          <p>Last updated: {new Date().toLocaleDateString()}</p>
+          <p>
+            Welcome to OptiCore Holdings. By accessing this website, we assume you accept these terms and conditions. Do not continue to use OptiCore Holdings if you do not agree to take all of the terms and conditions stated on this page.
+          </p>
+          <h2>License</h2>
+          <p>
+            Unless otherwise stated, OptiCore Holdings and/or its licensors own the intellectual property rights for all material on OptiCore Holdings. All intellectual property rights are reserved.
+          </p>
+          <h2>Restrictions</h2>
+          <p>You are specifically restricted from all of the following:</p>
+          <ul>
+            <li>Publishing any website material in any other media</li>
+            <li>Selling, sublicensing and/or otherwise commercializing any website material</li>
+            <li>Using this website in any way that is or may be damaging to this website</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   );
 }

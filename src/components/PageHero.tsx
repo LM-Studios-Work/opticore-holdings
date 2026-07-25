@@ -42,7 +42,7 @@ export default function PageHero({
       <div
         className={`absolute inset-0 ${
           image
-            ? "bg-gradient-to-r from-teal-950/85 via-teal-900/60 to-teal-900/30"
+            ? "bg-gradient-to-t from-teal-950/80 to-teal-900/20 sm:bg-gradient-to-r sm:from-teal-950/85 sm:via-teal-900/60 sm:to-teal-900/30"
             : "bg-transparent"
         }`}
       />

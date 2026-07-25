@@ -21,7 +21,7 @@ export default function AboutPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative h-[400px] flex items-center justify-start overflow-hidden">
+      <section className="relative overflow-hidden bg-teal-800 py-16 text-white sm:py-20 lg:py-28">
         <div className="absolute inset-0">
           <Image
             src={heroImg}
@@ -32,11 +32,12 @@ export default function AboutPage() {
             sizes="100vw"
           />
         </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-teal-950/80 to-teal-900/20 sm:bg-gradient-to-r sm:from-teal-950/85 sm:via-teal-900/60 sm:to-teal-900/30" />
         <div className="container-page relative z-10">
-          <div className="text-white/80 text-sm mb-4 font-medium tracking-wide">
+          <div className="text-teal-100 text-sm mb-4 font-medium tracking-wide">
             OptiCore Holdings &gt; About Us
           </div>
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-white tracking-tight">About Us</h1>
+          <h1 className="mt-3 font-display text-3xl font-bold tracking-tight text-balance sm:text-4xl lg:text-5xl">About Us</h1>
         </div>
       </section>
 
@@ -149,44 +150,69 @@ export default function AboutPage() {
               </div>
 
               {/* Decorative dashed circle */}
-              <div className="absolute inset-12 border-2 border-dashed border-ink-200 rounded-full"></div>
+              <div className="absolute inset-12 border-2 border-dashed border-ink-200 rounded-full animate-[spin_40s_linear_infinite]"></div>
 
-              {/* Top: Fogging & Disinfection */}
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-28 h-28 bg-white rounded-full border border-brand-200 shadow-xl flex flex-col items-center justify-center text-center p-2 z-10">
-                <FaTriangleExclamation className="text-brand-500 mb-1" size={28} />
-                <span className="text-[11px] font-bold text-ink-900 leading-tight mt-1">Fogging &<br/>Disinfection</span>
-                <div className="absolute w-[80%] h-0.5 bg-brand-500 -rotate-45"></div>
-              </div>
+              {/* Rotating Container for Pillars */}
+              <div className="absolute inset-0 z-10 animate-[spin_40s_linear_infinite]">
+                {/* Top: Fogging & Disinfection */}
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-28 h-28">
+                  <div className="w-full h-full animate-[spin_40s_linear_infinite_reverse]">
+                    <div className="w-full h-full bg-white rounded-full border border-brand-200 shadow-xl flex flex-col items-center justify-center text-center p-2 hover:scale-110 transition-transform duration-300">
+                      <FaTriangleExclamation className="text-brand-500 mb-1" size={28} />
+                      <span className="text-[11px] font-bold text-ink-900 leading-tight mt-1">Fogging &<br/>Disinfection</span>
+                    </div>
+                  </div>
+                </div>
 
-              {/* Top Right: Commercial Cleaning */}
-              <div className="absolute top-[12%] -right-4 w-28 h-28 bg-white rounded-full shadow-xl border border-ink-100 flex flex-col items-center justify-center text-center p-2 z-10">
-                <FaWandMagicSparkles className="text-teal-600 mb-1" size={28} />
-                <span className="text-[11px] font-bold text-ink-900 leading-tight mt-1">Commercial<br/>Cleaning</span>
-              </div>
+                {/* Top Right: Commercial Cleaning */}
+                <div className="absolute top-[12%] -right-4 w-28 h-28">
+                  <div className="w-full h-full animate-[spin_40s_linear_infinite_reverse]">
+                    <div className="w-full h-full bg-white rounded-full shadow-xl border border-ink-100 flex flex-col items-center justify-center text-center p-2 hover:scale-110 transition-transform duration-300">
+                      <FaWandMagicSparkles className="text-teal-600 mb-1" size={28} />
+                      <span className="text-[11px] font-bold text-ink-900 leading-tight mt-1">Commercial<br/>Cleaning</span>
+                    </div>
+                  </div>
+                </div>
 
-              {/* Bottom Right: Pest Control */}
-              <div className="absolute bottom-[12%] -right-4 w-28 h-28 bg-white rounded-full shadow-xl border border-ink-100 flex flex-col items-center justify-center text-center p-2 z-10">
-                <FaLeaf className="text-teal-600 mb-1" size={28} />
-                <span className="text-[11px] font-bold text-ink-900 leading-tight mt-1">Pest<br/>Control</span>
-              </div>
+                {/* Bottom Right: Pest Control */}
+                <div className="absolute bottom-[12%] -right-4 w-28 h-28">
+                  <div className="w-full h-full animate-[spin_40s_linear_infinite_reverse]">
+                    <div className="w-full h-full bg-white rounded-full shadow-xl border border-ink-100 flex flex-col items-center justify-center text-center p-2 hover:scale-110 transition-transform duration-300">
+                      <FaLeaf className="text-teal-600 mb-1" size={28} />
+                      <span className="text-[11px] font-bold text-ink-900 leading-tight mt-1">Pest<br/>Control</span>
+                    </div>
+                  </div>
+                </div>
 
-              {/* Bottom: ISO Approved Products */}
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-28 h-28 bg-white rounded-full shadow-xl border border-ink-100 flex flex-col items-center justify-center text-center p-2 z-10">
-                <FaStopwatch className="text-teal-600 mb-1" size={28} />
-                <span className="text-[11px] font-bold text-ink-900 leading-tight mt-1">ISO Approved<br/>Products</span>
-              </div>
+                {/* Bottom: ISO Approved Products */}
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-28 h-28">
+                  <div className="w-full h-full animate-[spin_40s_linear_infinite_reverse]">
+                    <div className="w-full h-full bg-white rounded-full shadow-xl border border-ink-100 flex flex-col items-center justify-center text-center p-2 hover:scale-110 transition-transform duration-300">
+                      <FaStopwatch className="text-teal-600 mb-1" size={28} />
+                      <span className="text-[11px] font-bold text-ink-900 leading-tight mt-1">ISO Approved<br/>Products</span>
+                    </div>
+                  </div>
+                </div>
 
-              {/* Bottom Left: Medical Supplies */}
-              <div className="absolute bottom-[12%] -left-4 w-28 h-28 bg-white rounded-full border border-brand-200 shadow-xl flex flex-col items-center justify-center text-center p-2 z-10">
-                <FaFlask className="text-brand-500 mb-1" size={28} />
-                <span className="text-[11px] font-bold text-ink-900 leading-tight mt-1">Medical<br/>Supplies & PPE</span>
-                <div className="absolute w-[80%] h-0.5 bg-brand-500 -rotate-45"></div>
-              </div>
+                {/* Bottom Left: Medical Supplies */}
+                <div className="absolute bottom-[12%] -left-4 w-28 h-28">
+                  <div className="w-full h-full animate-[spin_40s_linear_infinite_reverse]">
+                    <div className="w-full h-full bg-white rounded-full border border-brand-200 shadow-xl flex flex-col items-center justify-center text-center p-2 hover:scale-110 transition-transform duration-300">
+                      <FaFlask className="text-brand-500 mb-1" size={28} />
+                      <span className="text-[11px] font-bold text-ink-900 leading-tight mt-1">Medical<br/>Supplies & PPE</span>
+                    </div>
+                  </div>
+                </div>
 
-              {/* Top Left: Health & Safety */}
-              <div className="absolute top-[12%] -left-4 w-28 h-28 bg-white rounded-full shadow-xl border border-ink-100 flex flex-col items-center justify-center text-center p-2 z-10">
-                <FaShieldHalved className="text-teal-600 mb-1" size={28} />
-                <span className="text-[11px] font-bold text-ink-900 leading-tight mt-1">Health &<br/>Safety First</span>
+                {/* Top Left: Health & Safety */}
+                <div className="absolute top-[12%] -left-4 w-28 h-28">
+                  <div className="w-full h-full animate-[spin_40s_linear_infinite_reverse]">
+                    <div className="w-full h-full bg-white rounded-full shadow-xl border border-ink-100 flex flex-col items-center justify-center text-center p-2 hover:scale-110 transition-transform duration-300">
+                      <FaShieldHalved className="text-teal-600 mb-1" size={28} />
+                      <span className="text-[11px] font-bold text-ink-900 leading-tight mt-1">Health &<br/>Safety First</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 

@@ -67,19 +67,17 @@ export default function ProductCard({
         </p>
 
         <div className="mt-5 flex gap-2">
-          {isTruncated && (
-            <button
-              type="button"
-              onClick={() => onQuote(product)}
-              className="flex-1 rounded-xl border border-ink-200 px-4 py-2.5 text-sm font-semibold text-ink-700 transition-colors hover:border-brand-400 hover:text-brand-700 focus:outline-none"
-            >
-              View Full Product
-            </button>
-          )}
           <button
             type="button"
             onClick={() => onQuote(product)}
-            className={`btn btn-primary py-2.5 text-sm ${isTruncated ? "" : "flex-1"}`}
+            className="flex-1 rounded-xl border border-ink-200 px-4 py-2.5 text-sm font-semibold text-ink-700 transition-colors hover:border-brand-400 hover:text-brand-700 focus:outline-none"
+          >
+            View Full Product
+          </button>
+          <button
+            type="button"
+            onClick={() => onQuote(product)}
+            className="btn btn-primary py-2.5 text-sm"
           >
             Enquire
           </button>

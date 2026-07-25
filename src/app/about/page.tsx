@@ -64,13 +64,7 @@ export default function AboutPage() {
             </Link>
           </div>
           <div className="relative h-[500px]">
-            <Image
-              src={companyImg}
-              alt="OptiCore Holdings medical and hygiene supplies ready for dispatch"
-              fill
-              className="rounded-2xl border border-ink-100 object-cover shadow-xl"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
+            <Image src="/About Page/About page modern facilities placeholder.jpg" alt="Modern Building Lobby" fill className="rounded-2xl shadow-xl border border-ink-100 object-cover" />
           </div>
         </div>
       </section>
@@ -80,13 +74,7 @@ export default function AboutPage() {
         <div className="container-page">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div className="relative h-[600px] order-2 lg:order-1">
-              <Image
-                src={ppeImg}
-                alt="Healthcare professional in full personal protective equipment"
-                fill
-                className="rounded-2xl border border-ink-100 object-cover shadow-xl"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+              <Image src="/About Page/ppe professional.webp" alt="Professional in PPE" fill className="rounded-2xl shadow-xl border border-ink-100 object-cover" />
             </div>
             <div className="order-1 lg:order-2 lg:pl-10">
               <SectionHeading eyebrow="What We Provide" title="Four Specialist Divisions. One Trusted Partner." />

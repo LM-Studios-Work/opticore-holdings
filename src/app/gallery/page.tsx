@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import GalleryGrid from "@/components/GalleryGrid";
 import CtaBanner from "@/components/CtaBanner";
+import medicalHero from "../../../public/Services Heros/medical supplies hero.png";
 
 export const metadata: Metadata = {
   title: "Gallery",
@@ -15,6 +16,8 @@ export default function GalleryPage() {
       <PageHero
         title="Our Work in Action"
         description="Real teams. Real sites. Real results."
+        image={medicalHero}
+        imageAlt="Gallery banner"
       />
 
       <section className="container-page py-16 sm:py-20">

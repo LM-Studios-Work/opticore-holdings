@@ -19,14 +19,17 @@ export default function CtaBanner() {
               no-obligation quote, usually within one business day.
             </p>
           </div>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
             <Link
               href="/quote"
-              className="btn bg-white text-teal-700 hover:bg-brand-50"
+              className="btn bg-white text-teal-700 hover:bg-brand-50 w-full sm:w-auto"
             >
               Get My Free Quote
             </Link>
-            <a href={siteConfig.phoneHref} className="btn btn-ghost-light">
+            <a
+              href={siteConfig.phoneHref}
+              className="btn btn-ghost-light w-full sm:w-auto"
+            >
               Call {siteConfig.phone}
             </a>
           </div>

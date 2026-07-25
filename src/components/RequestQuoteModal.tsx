@@ -148,11 +148,7 @@ export default function RequestQuoteModal({
               >
                 {product.title}
               </h2>
-              {product.price && (
-                <p className="mt-2 font-display text-2xl font-bold text-brand-700">
-                  {product.price}
-                </p>
-              )}
+
               <p className="mt-2 text-sm leading-relaxed text-ink-500">
                 {product.description}
               </p>

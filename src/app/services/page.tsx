@@ -29,6 +29,8 @@ export default function ServicesPage() {
       <PageHero
         title="Complete Cleaning, Hygiene & Pest Control"
         description="Executed by trained teams using professional-grade equipment and compliant chemicals."
+        image={medicalHero}
+        imageAlt="Services banner"
       />
 
       <div className="divide-y divide-ink-100">

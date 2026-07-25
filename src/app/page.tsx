@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FaShield, FaClock, FaCertificate, FaArrowRight } from "react-icons/fa6";
-import heroImg from "../../public/Hero Image/potential hero 2.jpg";
+import heroImg from "../../public/Hero Image/Home hero.jpg";
 import cleaningHero from "../../public/Services Heros/commercial and residential cleaning hero.webp";
 import sanitisingHero from "../../public/Services Heros/Sanitising and Disinfection hero.png";
 import pestHero from "../../public/Services Heros/pest control hero.webp";
@@ -48,7 +48,7 @@ export default function Home() {
               alt="OptiCore Holdings team on site"
               fill
               priority
-              className="object-cover object-center"
+              className="object-cover object-[35%_center] sm:object-center"
               sizes="100vw"
             />
             {/* Gradient overlay for legibility */}

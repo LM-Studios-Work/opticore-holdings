@@ -9,7 +9,6 @@ export type Product = {
   category: string;
   icon: IconType;
   code?: string;
-  price?: string;
   image?: StaticImageData | string;
 };
 
@@ -62,11 +61,6 @@ export default function ProductCard({
           {product.title}
         </h3>
 
-        {product.price && (
-          <p className="mt-1 font-display text-lg font-bold text-brand-700">
-            {product.price}
-          </p>
-        )}
 
         <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-500">
           {shortDescription}

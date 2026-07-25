@@ -70,14 +70,8 @@ export default function SanitisingPage() {
               </Link>
             </div>
             
-            <div className="relative h-[400px] overflow-hidden rounded-sm sm:h-[600px]">
-              <Image
-                src={workerSanitising}
-                alt="Technician sanitising and disinfecting a workspace"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+            <div className="relative h-[400px] sm:h-[600px]">
+              <Image src="/Sanitising and Hygiene/deep cleaning.webp" alt="Deep Cleaning Services" fill className="rounded-sm object-cover" />
             </div>
           </div>
         </section>

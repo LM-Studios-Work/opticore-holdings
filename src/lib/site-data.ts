@@ -198,7 +198,6 @@ export type MedicalProduct = {
   description: string;
   icon: string;
   code?: string;
-  price?: string;
   image?: StaticImageData;
 };
 
@@ -210,7 +209,6 @@ export const medicalCatalog: MedicalProduct[] = [
       "USB rechargeable medical penlight with a pupil gauge and warm/white LED light — a reliable everyday diagnostic tool for clinicians and first responders.",
     icon: "FaHeartPulse",
     code: "O.108-19",
-    price: "R70",
     image: usbPenlight,
   },
   {
@@ -220,7 +218,6 @@ export const medicalCatalog: MedicalProduct[] = [
       "Professional aneroid blood pressure monitor with an adult cuff, matching stethoscope, and carry bag. Accurate manual readings for clinical and home use.",
     icon: "FaHeartPulse",
     code: "B.AB-184",
-    price: "R165",
     image: bloodPressureCuff,
   },
   {
@@ -230,7 +227,6 @@ export const medicalCatalog: MedicalProduct[] = [
       "Compact, portable digital wrist monitor with automatic systolic, diastolic, and pulse readings. Features a clear LED display, auto shut-off, and irregular-heartbeat detection for easy one-touch home monitoring.",
     icon: "FaHeartPulse",
     code: "C.DC-570",
-    price: "R120",
     image: wristBpMonitor,
   },
   {
@@ -240,7 +236,6 @@ export const medicalCatalog: MedicalProduct[] = [
       "Fully automatic digital blood pressure monitor for quick, accurate readings at the press of a button.",
     icon: "FaHeartPulse",
     code: "J",
-    price: "R165",
     image: autoBpMonitor,
   },
   {
@@ -250,7 +245,6 @@ export const medicalCatalog: MedicalProduct[] = [
       "Electronic blood pressure monitor with a large LCD display — the date is clearly visible, making it ideal for elderly users. Small, lightweight, and easy to carry for health monitoring at home or while travelling.",
     icon: "FaHeartPulse",
     code: "B.AD-70",
-    price: "R115",
     image: electronicBpMonitor,
   },
   {
@@ -260,7 +254,6 @@ export const medicalCatalog: MedicalProduct[] = [
       "Large-screen LCD blood pressure monitor built for clear, easy reading. Compact and portable so you can keep an eye on your health anytime, anywhere — a thoughtful choice for elderly parents.",
     icon: "FaHeartPulse",
     code: "C.DC-32",
-    price: "R110",
     image: stockElectronicBpMonitor,
   },
   {
@@ -270,7 +263,6 @@ export const medicalCatalog: MedicalProduct[] = [
       "Compact fingertip oximeter for fast readings of blood oxygen saturation and pulse rate.",
     icon: "FaHeartPulse",
     code: "B.AB-166",
-    price: "R40",
     image: oximeter,
   },
   {
@@ -280,7 +272,6 @@ export const medicalCatalog: MedicalProduct[] = [
       "Latex-free, powder-free vinyl blend gloves for multi-purpose medical and industrial use. Box of 100.",
     icon: "FaHandHolding",
     code: "C.DC-481",
-    price: "R100",
     image: vinylGloves,
   },
   {
@@ -290,7 +281,6 @@ export const medicalCatalog: MedicalProduct[] = [
       "Large-capacity first aid and medicine storage bag — a portable, durable box for travel, outdoor camping, and survival or emergency use. Contents not included.",
     icon: "FaPlus",
     code: "B.AD-614",
-    price: "R165",
     image: firstAidKit,
   },
   {
@@ -300,7 +290,6 @@ export const medicalCatalog: MedicalProduct[] = [
       "Best-quality 420GSM fibreglass fire blanket for emergency fire suppression. Ideal for first aid stations, disaster kits, plants, offices, schools, and other public places.",
     icon: "FaShield",
     code: "B.AB-293",
-    price: "R69",
     image: fireBlanket,
   },
   {
@@ -310,7 +299,6 @@ export const medicalCatalog: MedicalProduct[] = [
       "Foil Mylar thermal survival blanket — essential emergency gear for first aid kits, vehicles, and outdoor use.",
     icon: "FaShield",
     code: "C.JG-25",
-    price: "R18",
     image: emergencyBlanket,
   },
   {
@@ -320,7 +308,6 @@ export const medicalCatalog: MedicalProduct[] = [
       "Tactical Molle EDC double layer medical bag — durable, organised storage for first aid and medical supplies on the move.",
     icon: "FaBox",
     code: "C.JB-78",
-    price: "R230",
     image: medicalBag,
   },
   {
@@ -330,7 +317,6 @@ export const medicalCatalog: MedicalProduct[] = [
       "Quiet, portable, low-power rechargeable mesh nebulizer with a mouthpiece and 2 masks for adults and kids — vapour therapy wherever you need it.",
     icon: "FaSyringe",
     code: "B.AB-177",
-    price: "R95",
     image: meshNebulizer,
   },
   {
@@ -340,7 +326,6 @@ export const medicalCatalog: MedicalProduct[] = [
       "Ultrasonic nebulizer with innovative mesh technology — quiet, compact, portable, and lightweight. Suitable for all ages and ideal for children and the elderly, providing vapour therapy for colds, flu, bronchitis, and other respiratory ailments. Powered by 2 AA batteries or USB cable. Includes nebulizer, adult mask, child mask, mouthpiece, box, USB cable, and user manual. Size: 13×4.8×4cm.",
     icon: "FaSyringe",
     code: "O.8-1324",
-    price: "R160",
     image: ultrasonicNebulizer,
   },
   {
@@ -350,7 +335,6 @@ export const medicalCatalog: MedicalProduct[] = [
       "Rechargeable wrist heating wrap that delivers soothing warmth for comfort and recovery.",
     icon: "FaWandMagicSparkles",
     code: "B.AF-87",
-    price: "R110",
     image: wristHeatingWrap,
   },
   {
@@ -360,7 +344,6 @@ export const medicalCatalog: MedicalProduct[] = [
       "Portable calf massager designed for targeted relief, combining air compression and heat therapy to soothe muscle soreness and improve circulation. Offers multiple massage modes and intensity levels, switching between kneading and pushing techniques. Rechargeable and cordless for travel, home, or office use, with durable linen and breathable mesh that fits various calf sizes via adjustable Velcro straps.",
     icon: "FaWandMagicSparkles",
     code: "B.AF-84",
-    price: "R225",
     image: calfMassager,
   },
 ];

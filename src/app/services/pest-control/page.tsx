@@ -49,14 +49,8 @@ export default function PestControlPage() {
                   Pest Control Services Offered by OptiCore Holdings. OptiCore Holdings&apos;s Pest Control Division is specially designed to tackle common pests such as roaches, ants & rodents. We locate, identify, remove, destroy, control, and repel pests. We use our knowledge of pest&apos;s biology and habits, along with an arsenal of pest management techniques — applying chemicals, setting traps, operating equipment, and even modifying structures to alleviate pest problems.
                 </p>
               </div>
-              <div className="relative h-[250px] overflow-hidden rounded-xl sm:h-[350px]">
-                <Image
-                  src={fumigationImg}
-                  alt="Professional fogging equipment used for fumigation treatments"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
+              <div className="relative h-[250px] sm:h-[350px]">
+                <Image src="/Pest Control/Warehouse fumigation.jpg" alt="Warehouse Fumigation" fill className="rounded-xl object-cover" />
               </div>
             </div>
 
@@ -82,14 +76,8 @@ export default function PestControlPage() {
                   ))}
                 </ul>
               </div>
-              <div className="relative h-[250px] overflow-hidden rounded-xl sm:h-[350px] lg:order-2">
-                <Image
-                  src={treatmentImg}
-                  alt="Targeted spray treatment applied in a commercial space"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
+              <div className="relative h-[250px] sm:h-[350px] lg:order-2">
+                <Image src="/Pest Control/rodent control.avif" alt="Rodent Control" fill className="rounded-xl object-cover" />
               </div>
             </div>
 
@@ -116,14 +104,8 @@ export default function PestControlPage() {
                   OptiCore Holdings has the expertise to provide the correct diagnosis and deliver the most effective treatment for all your Pest Control Solution requirements.
                 </p>
               </div>
-              <div className="relative h-[250px] overflow-hidden rounded-xl sm:h-[350px]">
-                <Image
-                  src={inspectionImg}
-                  alt="Specialist in protective equipment conducting an inspection"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
+              <div className="relative h-[250px] sm:h-[350px]">
+                <Image src="/Pest Control/termite inspection.jpg" alt="Termite Inspection" fill className="rounded-xl object-cover" />
               </div>
             </div>
 
@@ -148,14 +130,8 @@ export default function PestControlPage() {
                   ))}
                 </ul>
               </div>
-              <div className="relative h-[250px] overflow-hidden rounded-xl sm:h-[350px] lg:order-2">
-                <Image
-                  src={technicianImg}
-                  alt="Technician in protective gear treating a facility"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
+              <div className="relative h-[250px] sm:h-[350px] lg:order-2">
+                <Image src="/Pest Control/Untitled-design-39.png" alt="Pest Control Technician" fill className="rounded-xl object-cover" />
               </div>
             </div>
           </div>

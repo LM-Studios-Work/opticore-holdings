@@ -1,7 +1,22 @@
 import Link from "next/link";
-import { FaPhoneVolume, FaEnvelope, FaLocationDot } from "react-icons/fa6";
+import {
+  FaPhoneVolume,
+  FaEnvelope,
+  FaLocationDot,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTiktok,
+} from "react-icons/fa6";
 import Logo from "./Logo";
 import { navLinks, serviceCategories, siteConfig, socialLinks } from "@/lib/site-data";
+
+const socialIconMap: Record<string, React.ElementType> = {
+  Facebook: FaFacebook,
+  Instagram: FaInstagram,
+  LinkedIn: FaLinkedin,
+  TikTok: FaTiktok,
+};
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -28,9 +43,10 @@ export default function Footer() {
                 aria-label={social.name}
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-teal-600 text-teal-200 transition-colors hover:border-brand-400 hover:bg-brand-500 hover:text-white"
               >
-                <span className="text-[10px] font-semibold">
-                  {social.name.slice(0, 2).toUpperCase()}
-                </span>
+                {(() => {
+                  const Icon = socialIconMap[social.name];
+                  return Icon ? <Icon className="h-4 w-4" /> : null;
+                })()}
               </a>
             ))}
           </div>
@@ -64,7 +80,7 @@ export default function Footer() {
             {serviceCategories.map((service) => (
               <li key={service.slug}>
                 <Link
-                  href={`/services#${service.slug}`}
+                  href={service.slug === 'medical-supplies' ? '/medical-supplies' : `/services/${service.slug}`}
                   className="hover:text-brand-400"
                 >
                   {service.title}

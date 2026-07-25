@@ -66,23 +66,11 @@ export default function CleaningPage() {
             </div>
             
             <div className="flex flex-col gap-6">
-              <div className="relative h-[320px] overflow-hidden rounded-xl shadow-lg sm:h-[440px]">
-                <Image
-                  src={windowWash}
-                  alt="OptiCore cleaning team washing office windows"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
+              <div className="relative h-[300px] sm:h-[400px]">
+                <Image src="/Commercial cleaning page/Shopping Mall interior.webp" alt="Shopping Mall Interior" fill className="rounded-xl object-cover" />
               </div>
-              <div className="rounded-xl bg-sage-wash border border-ink-100 p-8">
-                <p className="text-[15px] leading-relaxed text-ink-600">
-                  From routine office maintenance to intense residential deep
-                  cleaning, our dedicated teams use advanced techniques and
-                  eco-friendly products to ensure your space is not just clean,
-                  but truly pristine. We focus on the details that make an
-                  environment healthy and welcoming.
-                </p>
+              <div className="relative h-[300px] sm:h-[400px]">
+                <Image src="/Commercial cleaning page/office interior.jpg" alt="Modern Office Building" fill className="rounded-xl object-cover" />
               </div>
             </div>
           </div>
@@ -136,13 +124,7 @@ export default function CleaningPage() {
                 </ul>
 
                 <div className="relative h-[250px] rounded-xl overflow-hidden shadow-lg">
-                  <Image
-                    src={facilityCleaning}
-                    alt="Commercial facility being cleaned and treated"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
+                  <Image src="/Commercial cleaning page/airport staff cleaning.jpg" alt="Cleaning Staff in Airport" fill className="rounded-xl object-cover" />
                 </div>
               </div>
 

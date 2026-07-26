@@ -28,7 +28,7 @@ export default function HomeMedicalSection() {
           description="Reliable stock and fast delivery across Johannesburg and South Africa. Order in bulk and save."
           center
         />
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
           {products.slice(0, PREVIEW_COUNT).map((product) => (
             <ProductCard
               key={product.title}

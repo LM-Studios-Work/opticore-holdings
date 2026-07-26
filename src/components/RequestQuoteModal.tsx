@@ -210,10 +210,10 @@ export default function RequestQuoteModal({
                       />
                     </div>
 
-                    {/* FaPhoneVolume */}
+                    {/* Phone */}
                     <div className="flex flex-col gap-1.5">
                       <label htmlFor="q-phone" className="text-xs font-semibold text-ink-700">
-                        FaPhoneVolume Number <span className="text-red-500">*</span>
+                        Phone Number <span className="text-red-500">*</span>
                       </label>
                       <input
                         id="q-phone"

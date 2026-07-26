@@ -1,47 +1,47 @@
 @import "tailwindcss";
 
 :root {
-  /* Soft sage-cream canvas + near-black ink, per the Omni brand board */
-  --background: #f3f7ee;
-  --foreground: #17201a;
+  /* Crisp ice white canvas + dark corporate navy ink, matching Opticore Holdings brand */
+  --background: #f8fafc;
+  --foreground: #0f172a;
 
-  /* Primary brand green, anchored on #66BB5A (brand-500) */
-  --color-brand-50: #eef8ea;
-  --color-brand-100: #d8efcf;
-  --color-brand-200: #b6e2a8;
-  --color-brand-300: #8ed07d;
-  --color-brand-400: #74c463;
-  --color-brand-500: #66bb5a;
-  --color-brand-600: #4fa244;
-  --color-brand-700: #3e8036;
-  --color-brand-800: #34662f;
-  --color-brand-900: #2b5228;
+  /* Primary brand blue, anchored on #1D69A6 (brand-600/500) */
+  --color-brand-50: #eff7ff;
+  --color-brand-100: #dbeeff;
+  --color-brand-200: #bee1ff;
+  --color-brand-300: #90cdff;
+  --color-brand-400: #5bb0ff;
+  --color-brand-500: #368ffd;
+  --color-brand-600: #1d69a6;
+  --color-brand-700: #16528e;
+  --color-brand-800: #144372;
+  --color-brand-900: #12375c;
 
-  /* Deep teal-green, anchored on #0B4D4B; used for premium/dark surfaces */
-  --color-teal-50: #e8f2f0;
-  --color-teal-100: #c6ddda;
-  --color-teal-200: #97c0bc;
-  --color-teal-300: #5f9c97;
-  --color-teal-400: #2f7a75;
-  --color-teal-500: #14615d;
-  --color-teal-600: #0f5551;
-  --color-teal-700: #0b4d4b;
-  --color-teal-800: #093c3a;
-  --color-teal-900: #062a29;
-  --color-teal-950: #041c1b;
+  /* Deep corporate navy blue, anchored on #0B2545; used for premium/dark surfaces & badges */
+  --color-teal-50: #edf4fa;
+  --color-teal-100: #d3e4f3;
+  --color-teal-200: #a3c9e7;
+  --color-teal-300: #68a6d7;
+  --color-teal-400: #3984c3;
+  --color-teal-500: #1d66a6;
+  --color-teal-600: #134e85;
+  --color-teal-700: #0f3d6b;
+  --color-teal-800: #0e345a;
+  --color-teal-900: #0b2545;
+  --color-teal-950: #07182e;
 
-  /* Warm-neutral scale for text, borders and subtle fills */
-  --color-ink-50: #f4f7f2;
-  --color-ink-100: #e9efe6;
-  --color-ink-200: #dbe4d7;
-  --color-ink-300: #bcc7b8;
-  --color-ink-400: #8d978a;
-  --color-ink-500: #667063;
-  --color-ink-600: #4c554a;
-  --color-ink-700: #3a4238;
-  --color-ink-800: #262c25;
-  --color-ink-900: #17201a;
-  --color-ink-950: #0e1611;
+  /* Cool-neutral slate scale for text, borders and subtle fills */
+  --color-ink-50: #f8fafc;
+  --color-ink-100: #f1f5f9;
+  --color-ink-200: #e2e8f0;
+  --color-ink-300: #cbd5e1;
+  --color-ink-400: #94a3b8;
+  --color-ink-500: #64748b;
+  --color-ink-600: #475569;
+  --color-ink-700: #334155;
+  --color-ink-800: #1e293b;
+  --color-ink-900: #0f172a;
+  --color-ink-950: #020617;
 
   --radius: 1rem;
 }
@@ -113,7 +113,7 @@ body {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1536px) {
   .container-page {
     padding-left: 3.5rem;
     padding-right: 3.5rem;
@@ -122,7 +122,7 @@ body {
 
 /* ---- Reusable brand primitives ---------------------------------------- */
 
-/* The signature Omni gradient: deep teal easing into fresh green */
+/* The signature OptiCore gradient: deep corporate navy easing into fresh brand blue */
 .bg-brand-gradient {
   background-image: linear-gradient(
     100deg,
@@ -132,7 +132,7 @@ body {
   );
 }
 
-/* Soft sage wash used behind heroes and feature sections */
+/* Soft sky-blue wash used behind heroes and feature sections */
 .bg-sage-wash {
   background-image: radial-gradient(
       120% 120% at 85% -10%,
@@ -160,6 +160,8 @@ body {
   font-size: 0.9rem;
   font-weight: 600;
   line-height: 1;
+  white-space: nowrap;
+  flex-shrink: 0;
   transition:
     transform 0.15s ease,
     box-shadow 0.2s ease,
@@ -212,7 +214,7 @@ body {
   background-color: #fff;
   border-radius: 1.5rem;
   border: 1px solid var(--color-ink-100);
-  box-shadow: 0 24px 48px -32px rgba(9, 60, 58, 0.35);
+  box-shadow: 0 24px 48px -32px rgba(11, 37, 69, 0.25);
 }
 
 .pill {
@@ -225,4 +227,6 @@ body {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
 }

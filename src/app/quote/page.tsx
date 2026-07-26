@@ -22,13 +22,13 @@ export default function QuotePage() {
       <section className="container-page py-16 sm:py-20">
         <div className="grid gap-10 lg:grid-cols-3">
           <div className="lg:col-span-2">
-            <div className="rounded-3xl border border-ink-100 bg-white p-6 shadow-[0_30px_60px_-40px_rgba(9,60,58,0.4)] sm:p-8">
+            <div className="rounded-3xl border border-ink-100 bg-white p-6 shadow-[0_30px_60px_-40px_rgba(11,37,69,0.35)] sm:p-8">
               <QuoteForm />
             </div>
           </div>
 
           <aside className="space-y-5">
-            <div className="bg-brand-gradient rounded-3xl p-6 text-white shadow-[0_30px_60px_-40px_rgba(9,60,58,0.5)]">
+            <div className="bg-brand-gradient rounded-3xl p-6 text-white shadow-[0_30px_60px_-40px_rgba(11,37,69,0.45)]">
               <h3 className="font-display text-lg font-semibold">
                 Prefer to talk to us directly?
               </h3>

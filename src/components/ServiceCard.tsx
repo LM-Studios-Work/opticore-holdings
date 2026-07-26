@@ -41,7 +41,7 @@ export default function ServiceCard({ service }: { service: ServiceCategory }) {
         </p>
         <Link
           href={targetHref}
-          className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 group-hover:gap-2.5"
+          className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 group-hover:gap-2.5 whitespace-nowrap"
         >
           Learn more
           <FaArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />

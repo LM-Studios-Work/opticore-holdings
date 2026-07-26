@@ -47,13 +47,13 @@ export default function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-ink-100 bg-white/85 backdrop-blur-md">
-        <div className="container-page flex h-16 items-center justify-between lg:h-20">
-          <Link href="/" onClick={() => setOpen(false)}>
+        <div className="container-page flex h-16 items-center justify-between lg:h-20 gap-2 xl:gap-4">
+          <Link href="/" onClick={() => setOpen(false)} className="shrink-0">
             <Logo />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-1 rounded-full border border-ink-100 bg-ink-50/70 p-1 lg:flex relative">
+          <nav className="hidden items-center gap-0.5 xl:gap-1 rounded-full border border-ink-100 bg-ink-50/70 p-1 lg:flex relative shrink-0">
             {navLinks.map((link) => {
               const active = pathname === link.href;
               
@@ -62,14 +62,14 @@ export default function Header() {
                   <div key={link.href} className="relative group" ref={dropdownRef}>
                     <Link
                       href={link.href}
-                      className={`flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                      className={`flex items-center gap-1.5 rounded-full px-2.5 py-1.5 text-xs xl:px-3 xl:py-2 xl:text-[13px] 2xl:px-4 2xl:py-2 2xl:text-sm font-medium transition-colors whitespace-nowrap shrink-0 ${
                         active || pathname.startsWith('/services')
                           ? "bg-white text-teal-700 shadow-sm"
                           : "text-ink-600 hover:text-teal-700"
                       }`}
                     >
                       {link.name}
-                      <FaChevronDown className="h-3 w-3 transition-transform group-hover:rotate-180" />
+                      <FaChevronDown className="h-3 w-3 transition-transform group-hover:rotate-180 shrink-0" />
                     </Link>
                     
                     {/* Desktop Dropdown */}
@@ -103,7 +103,7 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                  className={`rounded-full px-2.5 py-1.5 text-xs xl:px-3.5 xl:py-2 xl:text-[13px] 2xl:px-4 2xl:py-2 2xl:text-sm font-medium transition-colors whitespace-nowrap shrink-0 ${
                     active
                       ? "bg-white text-teal-700 shadow-sm"
                       : "text-ink-600 hover:text-teal-700"
@@ -115,15 +115,15 @@ export default function Header() {
             })}
           </nav>
 
-          <div className="hidden items-center gap-4 lg:flex">
+          <div className="hidden items-center gap-2 xl:gap-4 lg:flex shrink-0">
             <a
               href={siteConfig.phoneHref}
-              className="flex items-center gap-2 text-sm font-medium text-ink-700 hover:text-brand-600"
+              className="flex items-center gap-1.5 xl:gap-2 text-xs xl:text-sm font-medium text-ink-700 hover:text-brand-600 whitespace-nowrap shrink-0"
             >
-              <FaPhoneVolume className="h-4 w-4" />
+              <FaPhoneVolume className="h-3.5 w-3.5 xl:h-4 xl:w-4 shrink-0" />
               {siteConfig.phone}
             </a>
-            <Link href="/quote" className="btn btn-primary">
+            <Link href="/quote" className="btn btn-primary px-3.5 py-2 text-xs xl:px-4.5 xl:py-2.5 xl:text-sm 2xl:px-6 2xl:py-2.5 2xl:text-sm whitespace-nowrap shrink-0">
               Request a Free Quote
             </Link>
           </div>

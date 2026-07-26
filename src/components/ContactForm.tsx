@@ -71,7 +71,7 @@ export default function ContactForm() {
         <FormField label="Full Name" htmlFor="c-name" required>
           <input id="c-name" name="name" required className={inputClass} />
         </FormField>
-        <FormField label="FaPhoneVolume Number" htmlFor="c-phone" required>
+        <FormField label="Phone Number" htmlFor="c-phone" required>
           <input id="c-phone" name="phone" type="tel" required className={inputClass} />
         </FormField>
         <FormField label="Email Address" htmlFor="c-email" required className="sm:col-span-2">

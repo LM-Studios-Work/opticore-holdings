@@ -27,7 +27,7 @@ export default function ProductCard({
     : product.description;
 
   return (
-    <div className="group flex flex-col overflow-hidden rounded-2xl border border-ink-100 bg-white shadow-[0_8px_32px_-12px_rgba(9,60,58,0.18)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_48px_-12px_rgba(9,60,58,0.28)]">
+    <div className="group flex flex-col overflow-hidden rounded-2xl border border-ink-100 bg-white shadow-[0_8px_32px_-12px_rgba(11,37,69,0.15)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_48px_-12px_rgba(11,37,69,0.25)]">
       {/* Image area */}
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-ink-50">
         {product.image ? (
@@ -66,18 +66,18 @@ export default function ProductCard({
           {shortDescription}
         </p>
 
-        <div className="mt-5 flex gap-2">
+        <div className="mt-5 flex items-center gap-2">
           <button
             type="button"
             onClick={() => onQuote(product)}
-            className="flex-1 rounded-xl border border-ink-200 px-4 py-2.5 text-sm font-semibold text-ink-700 transition-colors hover:border-brand-400 hover:text-brand-700 focus:outline-none"
+            className="flex-1 rounded-xl border border-ink-200 px-2.5 sm:px-3 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-ink-700 transition-colors hover:border-brand-400 hover:text-brand-700 focus:outline-none text-center whitespace-nowrap"
           >
-            View Full Product
+            View Details
           </button>
           <button
             type="button"
             onClick={() => onQuote(product)}
-            className="btn btn-primary py-2.5 text-sm"
+            className="btn btn-primary px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm shrink-0 whitespace-nowrap"
           >
             Enquire
           </button>

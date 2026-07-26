@@ -8,7 +8,7 @@ export default function ValueCard({
   description: string;
 }) {
   return (
-    <div className="flex gap-3.5 rounded-2xl border border-ink-100 bg-white p-5 transition-shadow hover:shadow-[0_20px_40px_-30px_rgba(9,60,58,0.4)]">
+    <div className="flex gap-3.5 rounded-2xl border border-ink-100 bg-white p-5 transition-shadow hover:shadow-[0_20px_40px_-30px_rgba(11,37,69,0.35)]">
       <span className="flex shrink-0 items-center justify-center mt-0.5">
         <FaCircleCheck className="h-5 w-5" style={{ fill: "url(#brand-gradient)" }} />
       </span>

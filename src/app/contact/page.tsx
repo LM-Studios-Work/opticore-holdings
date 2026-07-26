@@ -71,10 +71,10 @@ export default function ContactPage() {
         <div className="container-page relative z-10 -mt-20">
           <div className="grid gap-5 sm:grid-cols-3 max-w-4xl mx-auto">
 
-            {/* FaPhoneVolume */}
+            {/* Phone */}
             <a
               href={siteConfig.phoneHref}
-              className="bg-white p-8 rounded-2xl shadow-[0_24px_48px_-20px_rgba(9,60,58,0.18)] border border-ink-100 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform"
+              className="bg-white p-8 rounded-2xl shadow-[0_24px_48px_-20px_rgba(11,37,69,0.15)] border border-ink-100 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform"
             >
               <span className="flex items-center justify-center mb-4">
                 <FaPhoneVolume className="h-8 w-8" style={{ fill: "url(#brand-gradient)" }} />
@@ -86,7 +86,7 @@ export default function ContactPage() {
             {/* Email */}
             <a
               href={`mailto:${siteConfig.email}`}
-              className="bg-white p-8 rounded-2xl shadow-[0_24px_48px_-20px_rgba(9,60,58,0.18)] border border-ink-100 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform"
+              className="bg-white p-8 rounded-2xl shadow-[0_24px_48px_-20px_rgba(11,37,69,0.15)] border border-ink-100 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform"
             >
               <span className="flex items-center justify-center mb-4">
                 <FaEnvelope className="h-8 w-8" style={{ fill: "url(#brand-gradient)" }} />
@@ -96,7 +96,7 @@ export default function ContactPage() {
             </a>
 
             {/* Hours */}
-            <div className="bg-white p-8 rounded-2xl shadow-[0_24px_48px_-20px_rgba(9,60,58,0.18)] border border-ink-100 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform">
+            <div className="bg-white p-8 rounded-2xl shadow-[0_24px_48px_-20px_rgba(11,37,69,0.15)] border border-ink-100 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform">
               <span className="flex items-center justify-center mb-4">
                 <FaClock className="h-8 w-8" style={{ fill: "url(#brand-gradient)" }} />
               </span>
@@ -123,7 +123,7 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="bg-white p-8 sm:p-12 rounded-3xl border border-ink-100 shadow-[0_30px_60px_-40px_rgba(9,60,58,0.2)]">
+        <div className="bg-white p-8 sm:p-12 rounded-3xl border border-ink-100 shadow-[0_30px_60px_-40px_rgba(11,37,69,0.18)]">
           <ContactForm />
         </div>
       </section>

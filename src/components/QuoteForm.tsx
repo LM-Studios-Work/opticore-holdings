@@ -76,7 +76,7 @@ export default function QuoteForm() {
         <FormField label="Company Name" htmlFor="company">
           <input id="company" name="company" className={inputClass} placeholder="Optional" />
         </FormField>
-        <FormField label="FaPhoneVolume Number" htmlFor="phone" required>
+        <FormField label="Phone Number" htmlFor="phone" required>
           <input
             id="phone"
             name="phone"

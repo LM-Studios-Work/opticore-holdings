@@ -13,6 +13,14 @@ export default function Header() {
   const pathname = usePathname();
   const dropdownRef = useRef<HTMLDivElement>(null);
 
+  const serviceHref = (slug: string) =>
+    slug === "medical-supplies" ? "/medical-supplies" : `/services/${slug}`;
+  const isServiceHrefActive = (href: string) =>
+    pathname === href || pathname.startsWith(`${href}/`);
+  const isServicesActive =
+    pathname.startsWith("/services") ||
+    serviceCategories.some((s) => isServiceHrefActive(serviceHref(s.slug)));
+
   useEffect(() => {
     // Close mobile menu on resize to desktop
     const handleResize = () => {
@@ -63,7 +71,7 @@ export default function Header() {
                     <Link
                       href={link.href}
                       className={`flex items-center gap-1.5 rounded-full px-2.5 py-1.5 text-xs xl:px-3 xl:py-2 xl:text-[13px] 2xl:px-4 2xl:py-2 2xl:text-sm font-medium transition-colors whitespace-nowrap shrink-0 ${
-                        active || pathname.startsWith('/services')
+                        active || isServicesActive
                           ? "bg-white text-teal-700 shadow-sm"
                           : "text-ink-600 hover:text-teal-700"
                       }`}
@@ -83,15 +91,23 @@ export default function Header() {
                             View All Services
                           </Link>
                           <div className="h-px bg-ink-100 my-1 mx-2" />
-                          {serviceCategories.map((service) => (
-                            <Link
-                              key={service.slug}
-                              href={service.slug === 'medical-supplies' ? '/medical-supplies' : `/services/${service.slug}`}
-                              className="block rounded-lg px-3 py-2 text-[14px] font-medium text-ink-700 hover:bg-ink-50 hover:text-brand-600 transition-colors"
-                            >
-                              {service.title}
-                            </Link>
-                          ))}
+                          {serviceCategories.map((service) => {
+                            const href = serviceHref(service.slug);
+                            return (
+                              <Link
+                                key={service.slug}
+                                href={href}
+                                aria-current={isServiceHrefActive(href) ? "page" : undefined}
+                                className={`block rounded-lg px-3 py-2 text-[14px] font-medium transition-colors ${
+                                  isServiceHrefActive(href)
+                                    ? "bg-brand-50 text-brand-700"
+                                    : "text-ink-700 hover:bg-ink-50 hover:text-brand-600"
+                                }`}
+                              >
+                                {service.title}
+                              </Link>
+                            );
+                          })}
                         </div>
                       </div>
                     </div>
@@ -169,7 +185,7 @@ export default function Header() {
         <div className="flex-1 overflow-y-auto py-6 px-4 bg-white">
           <nav className="flex flex-col gap-3">
             {navLinks.map((link) => {
-              const active = pathname === link.href || (link.name === "Our Services" && pathname.startsWith('/services'));
+              const active = pathname === link.href || (link.name === "Our Services" && isServicesActive);
               
               if (link.name === "Our Services") {
                 return (
@@ -196,16 +212,24 @@ export default function Header() {
                         >
                           View All Services
                         </Link>
-                        {serviceCategories.map((service) => (
-                          <Link
-                            key={service.slug}
-                            href={service.slug === 'medical-supplies' ? '/medical-supplies' : `/services/${service.slug}`}
-                            onClick={() => setOpen(false)}
-                            className="block rounded-lg px-4 py-2.5 text-[14px] font-medium text-ink-700 hover:bg-sage-wash hover:text-brand-700 transition-colors"
-                          >
-                            {service.title}
-                          </Link>
-                        ))}
+                        {serviceCategories.map((service) => {
+                          const href = serviceHref(service.slug);
+                          return (
+                            <Link
+                              key={service.slug}
+                              href={href}
+                              onClick={() => setOpen(false)}
+                              aria-current={isServiceHrefActive(href) ? "page" : undefined}
+                              className={`block rounded-lg px-4 py-2.5 text-[14px] font-medium transition-colors ${
+                                isServiceHrefActive(href)
+                                  ? "bg-brand-50 text-brand-700"
+                                  : "text-ink-700 hover:bg-sage-wash hover:text-brand-700"
+                              }`}
+                            >
+                              {service.title}
+                            </Link>
+                          );
+                        })}
                       </div>
                     </div>
                   </div>

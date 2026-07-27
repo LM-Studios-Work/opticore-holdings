@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FaShield, FaClock, FaCertificate, FaArrowRight } from "react-icons/fa6";
-import heroImg from "../../public/Hero Image/Home hero.jpg";
 import cleaningHero from "../../public/Services Heros/commercial and residential cleaning hero.webp";
 import sanitisingHero from "../../public/Services Heros/Sanitising and Disinfection hero.png";
 import pestHero from "../../public/Services Heros/pest control hero.webp";
@@ -9,6 +8,7 @@ import medicalHero from "../../public/Services Heros/medical supplies hero.png";
 import hygieneIntroHero from "../../public/Services Heros/professional hygiene services hero, home page.jpg";
 import SectionHeading from "@/components/SectionHeading";
 import HomeMedicalSection from "@/components/HomeMedicalSection";
+import HeroSlideshow from "@/components/HeroSlideshow";
 import {
   serviceCategories,
   siteConfig,
@@ -42,15 +42,8 @@ export default function Home() {
       <section className="bg-sage-wash">
         <div className="container-page py-6 sm:py-8">
           <div className="relative flex min-h-[28rem] sm:min-h-[32rem] lg:min-h-[32rem] xl:min-h-[36rem] 2xl:min-h-[40rem] overflow-hidden rounded-[2rem] text-white shadow-[0_40px_80px_-40px_rgba(11,37,69,0.45)]">
-            {/* Background photo */}
-            <Image
-              src={heroImg}
-              alt="OptiCore Holdings team on site"
-              fill
-              priority
-              className="object-cover object-[35%_center] sm:object-center"
-              sizes="100vw"
-            />
+            {/* Background photo slideshow */}
+            <HeroSlideshow />
             {/* Gradient overlay for legibility */}
             <div className="absolute inset-0 bg-gradient-to-t from-teal-950/80 to-teal-900/20 sm:bg-gradient-to-r sm:from-teal-950/85 sm:via-teal-900/60 sm:to-transparent" />
             {/* Content */}

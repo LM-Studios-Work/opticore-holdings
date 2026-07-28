@@ -6,6 +6,7 @@ import sanitisingHero from "../../public/Services Heros/Sanitising and Disinfect
 import pestHero from "../../public/Services Heros/pest control hero.webp";
 import medicalHero from "../../public/Services Heros/medical supplies hero.png";
 import hygieneIntroHero from "../../public/Services Heros/professional hygiene services hero, home page.jpg";
+import posterMedicalSuppliesStock from "../../public/poster/medical supplies stock.jpeg";
 import SectionHeading from "@/components/SectionHeading";
 import HomeMedicalSection from "@/components/HomeMedicalSection";
 import HeroSlideshow from "@/components/HeroSlideshow";
@@ -152,7 +153,36 @@ export default function Home() {
       {/* 4. Top trending products */}
       <HomeMedicalSection />
 
-      {/* 5. About Us teaser */}
+      {/* 5. Medical Supplies Stock Poster */}
+      <section className="container-page py-16 sm:py-24">
+        <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div>
+            <SectionHeading
+              eyebrow="Consistent Stock & Reliable Delivery"
+              title="Bulk Medical Consumables & PPE Supply"
+            />
+            <p className="mt-6 text-[15px] leading-relaxed text-ink-600">
+              OptiCore Holdings maintains consistent inventory of hospital-grade personal protective equipment (PPE), surgical consumables, and diagnostic supplies across Johannesburg and South Africa. Whether supplying healthcare clinics, educational institutions, or corporate facilities, our products conform to stringent quality and safety standards.
+            </p>
+            <Link href="/medical-supplies" className="btn btn-primary mt-8 inline-flex px-7 py-3.5">
+              Explore Medical Supplies
+              <FaArrowRight className="h-4 w-4 ml-2" />
+            </Link>
+          </div>
+
+          <div className="w-full max-w-[250px] sm:max-w-[270px] mx-auto lg:max-w-none lg:w-[250px] xl:w-[270px] self-center">
+            <Image
+              src={posterMedicalSuppliesStock}
+              alt="Medical Consumables and PPE Stock Poster"
+              className="w-full h-auto rounded-xl shadow-md"
+              sizes="(max-width: 1024px) 270px, 270px"
+              placeholder="blur"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* 6. About Us teaser */}
       <section className="bg-sage-wash py-16 sm:py-20">
         <div className="container-page">
           <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-teal-900 to-teal-700 px-8 py-10 text-white shadow-[0_40px_80px_-40px_rgba(11,37,69,0.45)] sm:px-12 sm:py-14 lg:px-20 lg:py-16">
@@ -178,8 +208,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-
     </>
   );
 }

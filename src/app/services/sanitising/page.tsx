@@ -8,6 +8,7 @@ import OtherServicesSection from "@/components/OtherServicesSection";
 import sanitisingHero from "../../../../public/Services Heros/Sanitising and Disinfection hero.png";
 import workerSanitising from "../../../../public/worker_sanitizing.jpeg";
 import sanitisingMachine from "../../../../public/sanitizing_and_defecting_service.jpeg";
+import posterSanitizedCleaningV2 from "../../../../public/poster/sanitized cleaning services v2.jpeg";
 
 export const metadata: Metadata = {
   title: "Sanitising & Hygiene Services | OptiCore Holdings",
@@ -70,8 +71,14 @@ export default function SanitisingPage() {
               </Link>
             </div>
             
-            <div className="relative h-[400px] sm:h-[600px]">
-              <Image src="/Sanitising and Hygiene/deep cleaning.webp" alt="Deep Cleaning Services" fill className="rounded-sm object-cover" />
+            <div className="w-full max-w-md mx-auto lg:max-w-none lg:w-[420px] xl:w-[460px] self-center">
+              <Image
+                src={posterSanitizedCleaningV2}
+                alt="Sanitising and Hygiene Services Official Poster"
+                className="w-full h-auto rounded-xl shadow-xl"
+                sizes="(max-width: 1024px) 100vw, 460px"
+                placeholder="blur"
+              />
             </div>
           </div>
         </section>
@@ -157,6 +164,7 @@ export default function SanitisingPage() {
             </div>
           </div>
         </section>
+
 
         <OtherServicesSection currentSlug="sanitising" />
       </div>

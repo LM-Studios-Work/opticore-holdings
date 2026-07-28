@@ -38,26 +38,32 @@ export default function GalleryGrid() {
         ))}
       </div>
 
-      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((img) => (
-          <div
-            key={img.label}
-            className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-ink-100 shadow-md"
-          >
-            <Image
-              src={img.image}
-              alt={img.label}
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-              <span className="text-sm font-semibold text-white">
-                {img.label}
-              </span>
+      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {filtered.map((img) => {
+          const isPoster = img.label.includes("Poster");
+          return (
+            <div
+              key={img.label}
+              className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-ink-100 bg-ink-900/5 shadow-md transition-all duration-300 hover:shadow-xl"
+            >
+              <Image
+                src={img.image}
+                alt={img.label}
+                fill
+                className={`${
+                  isPoster ? "object-contain p-3" : "object-cover"
+                } transition-transform duration-500 group-hover:scale-105`}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                placeholder="blur"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 pt-10">
+                <span className="text-sm font-bold text-white tracking-wide">
+                  {img.label}
+                </span>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

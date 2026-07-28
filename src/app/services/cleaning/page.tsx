@@ -7,6 +7,8 @@ import OtherServicesSection from "@/components/OtherServicesSection";
 import cleaningHero from "../../../../public/Services Heros/commercial and residential cleaning hero.webp";
 import windowWash from "../../../../public/cleaning_service_window_wash.jpeg";
 import facilityCleaning from "../../../../public/sanitizing_and_defecting_service_gun_2.jpeg";
+import posterAdvancedCleaning from "../../../../public/poster/advanced cleaning solutiobs.jpeg";
+import posterSanitizedCleaning from "../../../../public/poster/sanitized cleaning services.jpeg";
 
 export const metadata: Metadata = {
   title: "Commercial & Residential Cleaning | OptiCore Holdings",
@@ -217,6 +219,95 @@ export default function CleaningPage() {
                     </div>
                   ))}
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 3: Service Guides & Posters */}
+        <section className="container-page py-16 sm:py-24 border-t border-ink-100">
+          <SectionHeading
+            eyebrow="Service Guides & Specifications"
+            title="Professional Cleaning Capabilities & Protocols"
+          />
+          <p className="text-ink-600 text-[15px] leading-relaxed max-w-3xl mt-4 mb-12">
+            Explore our official cleaning infographics outlining our commercial and residential service standards, specialized equipment, and certified hygiene packages designed for corporate offices, medical facilities, and industrial premises.
+          </p>
+
+          <div className="grid gap-10 lg:grid-cols-2 items-start max-w-4xl mx-auto">
+            {/* Guide Card 1 */}
+            <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-ink-200 bg-white shadow-lg transition-all duration-300 hover:shadow-2xl w-full max-w-md mx-auto">
+              <div className="flex items-center justify-between border-b border-ink-100 bg-ink-50 px-6 py-3.5">
+                <div className="flex items-center gap-2">
+                  <span className="inline-block h-2.5 w-2.5 rounded-full bg-brand-600"></span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-ink-700">
+                    Official Infographic Guide
+                  </span>
+                </div>
+                <span className="rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700">
+                  Certified &amp; Verified
+                </span>
+              </div>
+
+              <div className="w-full">
+                <Image
+                  src={posterAdvancedCleaning}
+                  alt="Advanced Cleaning Solutions Official Guide"
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                  sizes="(max-width: 1024px) 100vw, 450px"
+                  placeholder="blur"
+                />
+              </div>
+
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-ink-100 bg-white px-6 py-4">
+                <div>
+                  <h4 className="font-bold text-ink-900 text-[15px]">Advanced Cleaning Solutions</h4>
+                  <p className="text-xs text-ink-500">Comprehensive cleaning protocols &amp; methods</p>
+                </div>
+                <a
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-lg bg-brand-600 px-4 py-2 text-xs font-bold text-white shadow-sm transition-colors hover:bg-brand-700"
+                >
+                  Request Consultation
+                </a>
+              </div>
+            </div>
+
+            {/* Guide Card 2 */}
+            <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-ink-200 bg-white shadow-lg transition-all duration-300 hover:shadow-2xl w-full max-w-md mx-auto">
+              <div className="flex items-center justify-between border-b border-ink-100 bg-ink-50 px-6 py-3.5">
+                <div className="flex items-center gap-2">
+                  <span className="inline-block h-2.5 w-2.5 rounded-full bg-brand-600"></span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-ink-700">
+                    Official Infographic Guide
+                  </span>
+                </div>
+                <span className="rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700">
+                  Sanitized &amp; Reliable
+                </span>
+              </div>
+
+              <div className="w-full">
+                <Image
+                  src={posterSanitizedCleaning}
+                  alt="Sanitized Cleaning Services Official Guide"
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                  sizes="(max-width: 1024px) 100vw, 450px"
+                  placeholder="blur"
+                />
+              </div>
+
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-ink-100 bg-white px-6 py-4">
+                <div>
+                  <h4 className="font-bold text-ink-900 text-[15px]">Sanitized Cleaning Services</h4>
+                  <p className="text-xs text-ink-500">Key cleaning services &amp; commercial packages</p>
+                </div>
+                <a
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-lg bg-brand-600 px-4 py-2 text-xs font-bold text-white shadow-sm transition-colors hover:bg-brand-700"
+                >
+                  Request Consultation
+                </a>
               </div>
             </div>
           </div>

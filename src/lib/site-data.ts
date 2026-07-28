@@ -31,6 +31,12 @@ import galleryWorkerSanitising from "../../public/worker_sanitizing.jpeg";
 import gallerySanitisingGun from "../../public/sanitizing_and_defecting_service_gun.jpeg";
 import galleryWindowWash from "../../public/cleaning_service_window_wash.jpeg";
 
+// Poster imagery
+import posterAdvancedCleaning from "../../public/poster/advanced cleaning solutiobs.jpeg";
+import posterSanitizedCleaning from "../../public/poster/sanitized cleaning services.jpeg";
+import posterSanitizedCleaningV2 from "../../public/poster/sanitized cleaning services v2.jpeg";
+import posterMedicalSuppliesStock from "../../public/poster/medical supplies stock.jpeg";
+
 export const siteConfig = {
   name: "OptiCore Holdings",
   legalName: "OptiCore Holdings (Pty) Ltd",
@@ -376,6 +382,11 @@ export type GalleryImage = {
 };
 
 export const galleryImages: GalleryImage[] = [
+  // Featured Posters
+  { category: "cleaning", label: "Advanced Cleaning Solutions Poster", image: posterAdvancedCleaning },
+  { category: "cleaning", label: "Sanitized Cleaning Services Poster", image: posterSanitizedCleaning },
+  { category: "sanitising", label: "Sanitized Cleaning & Disinfection Poster", image: posterSanitizedCleaningV2 },
+  { category: "medical-supplies", label: "Medical Consumables & PPE Stock Poster", image: posterMedicalSuppliesStock },
   // Cleaning
   { category: "cleaning", label: "Window Cleaning", image: galleryWindowWash },
   // Sanitising

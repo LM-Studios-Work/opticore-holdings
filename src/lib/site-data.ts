@@ -30,12 +30,23 @@ import galleryConsumables from "../../public/room_with_sanitary_products.jpeg";
 import galleryWorkerSanitising from "../../public/worker_sanitizing.jpeg";
 import gallerySanitisingGun from "../../public/sanitizing_and_defecting_service_gun.jpeg";
 import galleryWindowWash from "../../public/cleaning_service_window_wash.jpeg";
+import galleryBathroom from "../../public/gallery_bathroom.webp";
+import galleryCarpet from "../../public/gallery_carpet.jpeg";
+import galleryMattress from "../../public/gallery_mattress.jpg";
+import galleryMoveInOut from "../../public/gallery_move_in_out.webp";
+import galleryOven from "../../public/gallery_oven.webp";
+import galleryCouchHero from "../../public/gallery_couch_hero.png";
+import galleryCouch from "../../public/gallery_couch.webp";
+import galleryKitchenSink from "../../public/gallery_kitchen_sink.webp";
+import galleryAtom from "../../public/gallery_atom.jpeg";
+import galleryAtomizer from "../../public/gallery_atomizer.jpeg";
+import galleryFogMachine from "../../public/gallery_fog_machine.jpeg";
+import galleryFogger from "../../public/gallery_fogger.jpeg";
+import galleryMiteRemover from "../../public/gallery_mite_remover.jpeg";
+import gallerySanitizer from "../../public/gallery_sanitizer.jpeg";
+import galleryVirus from "../../public/gallery_virus.jpeg";
 
-// Poster imagery
-import posterAdvancedCleaning from "../../public/poster/advanced cleaning solutiobs.jpeg";
-import posterSanitizedCleaning from "../../public/poster/sanitized cleaning services.jpeg";
-import posterSanitizedCleaningV2 from "../../public/poster/sanitized cleaning services v2.jpeg";
-import posterMedicalSuppliesStock from "../../public/poster/medical supplies stock.jpeg";
+// Poster imagery (not used in gallery)
 
 export const siteConfig = {
   name: "OptiCore Holdings",
@@ -382,16 +393,26 @@ export type GalleryImage = {
 };
 
 export const galleryImages: GalleryImage[] = [
-  // Featured Posters
-  { category: "cleaning", label: "Advanced Cleaning Solutions Poster", image: posterAdvancedCleaning },
-  { category: "cleaning", label: "Sanitized Cleaning Services Poster", image: posterSanitizedCleaning },
-  { category: "sanitising", label: "Sanitized Cleaning & Disinfection Poster", image: posterSanitizedCleaningV2 },
-  { category: "medical-supplies", label: "Medical Consumables & PPE Stock Poster", image: posterMedicalSuppliesStock },
   // Cleaning
   { category: "cleaning", label: "Window Cleaning", image: galleryWindowWash },
+  { category: "cleaning", label: "Bathroom Cleaning", image: galleryBathroom },
+  { category: "cleaning", label: "Carpet Cleaning", image: galleryCarpet },
+  { category: "cleaning", label: "Mattress Cleaning", image: galleryMattress },
+  { category: "cleaning", label: "Move-In / Move-Out Cleaning", image: galleryMoveInOut },
+  { category: "cleaning", label: "Oven Cleaning", image: galleryOven },
+  { category: "cleaning", label: "Couch Cleaning", image: galleryCouchHero },
+  { category: "cleaning", label: "Upholstery Cleaning", image: galleryCouch },
+  { category: "cleaning", label: "Kitchen Sink Cleaning", image: galleryKitchenSink },
   // Sanitising
   { category: "sanitising", label: "Disinfection Service", image: galleryWorkerSanitising },
   { category: "sanitising", label: "Fogging & Sanitising", image: gallerySanitisingGun },
+  { category: "sanitising", label: "Atom Sanitiser", image: galleryAtom },
+  { category: "sanitising", label: "Atomizer", image: galleryAtomizer },
+  { category: "sanitising", label: "Fog Machine", image: galleryFogMachine },
+  { category: "sanitising", label: "Fogger", image: galleryFogger },
+  { category: "sanitising", label: "Mite Remover", image: galleryMiteRemover },
+  { category: "sanitising", label: "Sanitizer", image: gallerySanitizer },
+  { category: "sanitising", label: "Virus Treatment", image: galleryVirus },
   // Medical supplies
   { category: "medical-supplies", label: "Medical Consumables", image: galleryConsumables },
   { category: "medical-supplies", label: "First Aid Kits", image: firstAidKit },

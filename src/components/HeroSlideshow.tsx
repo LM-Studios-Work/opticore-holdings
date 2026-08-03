@@ -16,7 +16,7 @@ const slides = [
   { src: medicalSuppliesRoom, alt: "Room with medical supplies" },
 ] as const;
 
-const INTERVAL_MS = 5000;
+const INTERVAL_MS = 4000;
 
 export default function HeroSlideshow() {
   const [active, setActive] = useState(0);
@@ -52,23 +52,6 @@ export default function HeroSlideshow() {
         />
       ))}
 
-      {/* Slide indicators */}
-      <div className="absolute bottom-6 right-6 z-20 flex gap-2 sm:bottom-8 sm:right-8">
-        {slides.map((slide, index) => (
-          <button
-            key={slide.alt}
-            type="button"
-            onClick={() => setActive(index)}
-            aria-label={`Show slide ${index + 1}`}
-            aria-current={index === active}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              index === active
-                ? "w-6 bg-white"
-                : "w-2 bg-white/50 hover:bg-white/80"
-            }`}
-          />
-        ))}
-      </div>
     </>
   );
 }

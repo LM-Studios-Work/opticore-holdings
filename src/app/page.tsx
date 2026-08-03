@@ -83,7 +83,7 @@ export default function Home() {
       <section className="container-page py-16 sm:py-20 lg:py-24">
         <div className="grid min-h-[450px] lg:min-h-0 overflow-hidden rounded-[2.5rem] border border-ink-100 bg-white shadow-[0_30px_60px_-40px_rgba(11,37,69,0.35)] lg:grid-cols-[1.1fr_1fr]">
           <div className="p-3.5 flex flex-col justify-center">
-            <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] lg:aspect-[4/3] xl:aspect-auto xl:h-full min-h-[260px] sm:min-h-[320px] lg:min-h-[360px] overflow-hidden rounded-[1.8rem]">
+            <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] lg:aspect-[4/3] xl:aspect-auto xl:h-full xl:min-h-[360px] overflow-hidden rounded-[1.8rem]">
               <Image
                 src={hygieneIntroHero}
                 alt="Professional Facility & Hygiene Operations"

@@ -5,6 +5,7 @@ import cleaningHero from "../../public/Services Heros/commercial and residential
 import sanitisingHero from "../../public/Services Heros/Sanitising and Disinfection hero.png";
 import pestHero from "../../public/Services Heros/pest control hero.webp";
 import medicalHero from "../../public/Services Heros/medical supplies hero.png";
+import webHero from "../../public/Services Heros/web development hero.jpg";
 import hygieneIntroHero from "../../public/Services Heros/professional hygiene services hero, home page.jpg";
 import posterMedicalSuppliesStock from "../../public/poster/medical supplies stock.jpeg";
 import SectionHeading from "@/components/SectionHeading";
@@ -20,6 +21,7 @@ const serviceImages: Record<string, typeof cleaningHero> = {
   sanitising: sanitisingHero,
   "pest-control": pestHero,
   "medical-supplies": medicalHero,
+  "web-development": webHero,
 };
 
 const servicePageRoutes: Record<string, string> = {
@@ -27,6 +29,7 @@ const servicePageRoutes: Record<string, string> = {
   sanitising: "/services/sanitising",
   "pest-control": "/services/pest-control",
   "medical-supplies": "/medical-supplies",
+  "web-development": "/services/web-development",
 };
 
 const accreditations = [
@@ -114,38 +117,40 @@ export default function Home() {
             description="Professional solutions for every environment, from daily cleaning to medical-grade hygiene."
             center
           />
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
-            {serviceCategories.map((service) => (
-              <Link
-                key={service.slug}
-                href={servicePageRoutes[service.slug] ?? `/services#${service.slug}`}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-ink-100 bg-white shadow-[0_16px_40px_-24px_rgba(11,37,69,0.25)] transition-all duration-300 hover:-translate-y-1 hover:border-teal-600/40 hover:shadow-[0_24px_56px_-24px_rgba(11,37,69,0.4)] cursor-pointer"
-              >
-                {/* Big image */}
-                <div className="relative h-56 w-full overflow-hidden sm:h-60 lg:h-52 xl:h-60">
-                  <Image
-                    src={serviceImages[service.slug]}
-                    alt={service.title}
-                    fill
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  />
-                </div>
-                {/* Text below */}
-                <div className="flex flex-1 flex-col p-5">
-                  <h3 className="font-display text-base font-bold text-ink-900">
-                    {service.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-500">
-                    {service.shortDescription}
-                  </p>
-                  <span className="mt-auto pt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-teal-700 transition-all duration-300 whitespace-nowrap">
-                    Learn more
-                    <FaArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
-                  </span>
-                </div>
-              </Link>
-            ))}
+          <div className="mt-10 flex flex-wrap justify-center gap-6">
+            {serviceCategories.map((service) => {
+              return (
+                <Link
+                  key={service.slug}
+                  href={servicePageRoutes[service.slug] ?? `/services#${service.slug}`}
+                  className="group w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] flex flex-col overflow-hidden rounded-2xl border border-ink-100 bg-white shadow-[0_16px_40px_-24px_rgba(11,37,69,0.25)] transition-all duration-300 hover:-translate-y-1 hover:border-teal-600/40 hover:shadow-[0_24px_56px_-24px_rgba(11,37,69,0.4)] cursor-pointer"
+                >
+                  {/* Big image */}
+                  <div className="relative h-56 w-full overflow-hidden sm:h-60 lg:h-52 xl:h-60">
+                    <Image
+                      src={serviceImages[service.slug]}
+                      alt={service.title}
+                      fill
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                  {/* Text below */}
+                  <div className="flex flex-1 flex-col p-5">
+                    <h3 className="font-display text-base font-bold text-ink-900">
+                      {service.title}
+                    </h3>
+                    <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-500">
+                      {service.shortDescription}
+                    </p>
+                    <span className="mt-4 pt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-teal-700 transition-all duration-300 whitespace-nowrap">
+                      Learn more
+                      <FaArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                    </span>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

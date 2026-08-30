@@ -19,7 +19,7 @@ export default function OtherServicesSection({ currentSlug }: OtherServicesSecti
           Discover how OptiCore Holdings can provide a complete facility management solution.
         </p>
       </div>
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
         {others.map((service) => (
           <ServiceCard key={service.slug} service={service} />
         ))}

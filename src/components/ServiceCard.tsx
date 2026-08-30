@@ -6,12 +6,14 @@ import cleaningHero from "../../public/Services Heros/commercial and residential
 import sanitisingHero from "../../public/Services Heros/Sanitising and Disinfection hero.png";
 import pestHero from "../../public/Services Heros/pest control hero.webp";
 import medicalHero from "../../public/Services Heros/medical supplies hero.png";
+import webHero from "../../public/Services Heros/web development hero.jpg";
 
 const serviceImages: Record<string, StaticImageData> = {
   cleaning: cleaningHero,
   sanitising: sanitisingHero,
   "pest-control": pestHero,
   "medical-supplies": medicalHero,
+  "web-development": webHero,
 };
 
 export default function ServiceCard({ service }: { service: ServiceCategory }) {

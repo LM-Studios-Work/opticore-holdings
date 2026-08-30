@@ -9,6 +9,7 @@ import cleaningHero from "../../../public/Services Heros/commercial and resident
 import sanitisingHero from "../../../public/Services Heros/Sanitising and Disinfection hero.png";
 import pestHero from "../../../public/Services Heros/pest control hero.webp";
 import medicalHero from "../../../public/Services Heros/medical supplies hero.png";
+import webHero from "../../../public/Services Heros/web development hero.jpg";
 
 export const metadata: Metadata = {
   title: "Our Services",
@@ -21,6 +22,7 @@ const serviceImages: Record<string, StaticImageData> = {
   sanitising: sanitisingHero,
   "pest-control": pestHero,
   "medical-supplies": medicalHero,
+  "web-development": webHero,
 };
 
 export default function ServicesPage() {

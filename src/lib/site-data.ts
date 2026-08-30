@@ -97,6 +97,10 @@ export const brands = [
     name: "OptiCore Medical Supplies",
     description: "PPE & Consumables",
   },
+  {
+    name: "OptiCore Digital",
+    description: "Web Development & IT Solutions",
+  },
 ] as const;
 
 export type ServiceCategory = {
@@ -174,6 +178,22 @@ export const serviceCategories: ServiceCategory[] = [
       "Rodents",
       "Termites & Bed Bugs",
       "General Pest Management",
+    ],
+  },
+  {
+    slug: "web-development",
+    title: "Web Development",
+    shortDescription:
+      "High-performance, custom web development bridging the gap between your physical business and your digital presence.",
+    description:
+      "OptiCore Digital builds and manages your online presence. From responsive landing pages to fully-fledged digital platforms, we bring our standard of excellence to your digital assets.",
+    icon: "Code",
+    image: "web-hero",
+    items: [
+      "Custom Web Applications",
+      "Responsive & Mobile-First Design",
+      "SEO & Performance Optimization",
+      "Hosting & Ongoing Maintenance",
     ],
   },
 ];
@@ -440,6 +460,7 @@ export const services = [
   "Sanitising & Disinfection / Fogging",
   "Pest Control",
   "Medical Supplies",
+  "Web Development",
   "Other",
 ] as const;
 

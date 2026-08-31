@@ -6,6 +6,8 @@ import sanitisingHero from "../../public/Services Heros/Sanitising and Disinfect
 import pestHero from "../../public/Services Heros/pest control hero.webp";
 import medicalHero from "../../public/Services Heros/medical supplies hero.png";
 import webHero from "../../public/Services Heros/web development hero.jpg";
+import landscapingHero from "../../public/Services Heros/landscaping_hero.jpg";
+import transportationHero from "../../public/Services Heros/transportation_hero.jpg";
 import hygieneIntroHero from "../../public/Services Heros/professional hygiene services hero, home page.jpg";
 import posterMedicalSuppliesStock from "../../public/poster/medical supplies stock.jpeg";
 import SectionHeading from "@/components/SectionHeading";
@@ -22,6 +24,8 @@ const serviceImages: Record<string, typeof cleaningHero> = {
   "pest-control": pestHero,
   "medical-supplies": medicalHero,
   "web-development": webHero,
+  landscaping: landscapingHero,
+  transportation: transportationHero,
 };
 
 const servicePageRoutes: Record<string, string> = {
@@ -30,6 +34,8 @@ const servicePageRoutes: Record<string, string> = {
   "pest-control": "/services/pest-control",
   "medical-supplies": "/medical-supplies",
   "web-development": "/services/web-development",
+  landscaping: "/services/landscaping",
+  transportation: "/services/transportation",
 };
 
 const accreditations = [

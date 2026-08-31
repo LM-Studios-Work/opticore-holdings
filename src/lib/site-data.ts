@@ -196,6 +196,40 @@ export const serviceCategories: ServiceCategory[] = [
       "Hosting & Ongoing Maintenance",
     ],
   },
+  {
+    slug: "landscaping",
+    title: "Commercial & Residential Landscaping",
+    shortDescription:
+      "Professional lawn care, tree felling, and hardscaping services to elevate your property.",
+    description:
+      "Our expert landscaping teams transform and maintain outdoor spaces with precision. From routine garden maintenance and lawn care to complex hardscaping and tree felling, we ensure your grounds reflect the high standards of your business or home.",
+    icon: "Leaf",
+    image: "landscaping-hero",
+    items: [
+      "Lawn care",
+      "Garden maintenance",
+      "Tree felling",
+      "Hardscaping",
+    ],
+  },
+  {
+    slug: "transportation",
+    title: "Heavy Equipment Transportation",
+    shortDescription:
+      "Reliable and secure transportation of heavy machinery and abnormal loads up to 95 tons.",
+    description:
+      "Specialized logistics solutions for moving massive construction equipment, mining machinery, and industrial components. Our fleet handles loads up to 95 tons safely, including flatbed and lowbed services, with full route surveying and escort vehicle support.",
+    icon: "Truck",
+    image: "transportation-hero",
+    items: [
+      "Heavy equipment transport (up to 95 tons)",
+      "Abnormal loads",
+      "Flatbed trailers",
+      "Lowbed services",
+      "Local and cross-border transport",
+      "Route surveying & Escort vehicles",
+    ],
+  },
 ];
 
 export const values = [
@@ -461,6 +495,8 @@ export const services = [
   "Pest Control",
   "Medical Supplies",
   "Web Development",
+  "Landscaping",
+  "Transportation",
   "Other",
 ] as const;
 

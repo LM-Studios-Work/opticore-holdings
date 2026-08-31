@@ -10,6 +10,7 @@ type Status = "idle" | "submitting" | "success" | "error";
 export default function QuoteForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [selectedService, setSelectedService] = useState("");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -37,6 +38,7 @@ export default function QuoteForm() {
 
       setStatus("success");
       form.reset();
+      setSelectedService("");
     } catch (err) {
       setStatus("error");
       setErrorMessage(
@@ -66,6 +68,25 @@ export default function QuoteForm() {
       </div>
     );
   }
+
+  const isFacilityService = [
+    "Commercial Cleaning",
+    "Residential Cleaning",
+    "Deep Cleaning",
+    "Move-in / Move-out Cleaning",
+    "Post-Construction Cleaning",
+    "Window Cleaning",
+    "Carpet Cleaning",
+    "Upholstery Cleaning",
+    "Sanitising & Disinfection / Fogging",
+    "Pest Control",
+    "Landscaping",
+  ].includes(selectedService);
+
+  const isMedicalSupplies = selectedService === "Medical Supplies";
+  const isWebDev = selectedService === "Web Development";
+  const isTransportation = selectedService === "Transportation";
+  const isUpholstery = selectedService === "Upholstery Cleaning";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -97,7 +118,14 @@ export default function QuoteForm() {
           />
         </FormField>
         <FormField label="Service Required" htmlFor="service" required>
-          <select id="service" name="service" required className={inputClass} defaultValue="">
+          <select 
+            id="service" 
+            name="service" 
+            required 
+            className={inputClass} 
+            value={selectedService}
+            onChange={(e) => setSelectedService(e.target.value)}
+          >
             <option value="" disabled>
               Select a service
             </option>
@@ -108,54 +136,173 @@ export default function QuoteForm() {
             ))}
           </select>
         </FormField>
-        <FormField label="Property Type" htmlFor="propertyType" required>
-          <select
-            id="propertyType"
-            name="propertyType"
-            required
-            className={inputClass}
-            defaultValue=""
-          >
-            <option value="" disabled>
-              Select a property type
-            </option>
-            {propertyTypes.map((type) => (
-              <option key={type} value={type}>
-                {type}
-              </option>
-            ))}
-          </select>
-        </FormField>
-        <FormField label="Number of Rooms / Offices" htmlFor="rooms">
-          <input
-            id="rooms"
-            name="rooms"
-            type="number"
-            min="0"
-            className={inputClass}
-            placeholder="e.g. 5"
-          />
-        </FormField>
-        <FormField label="Preferred Date" htmlFor="preferredDate">
-          <input
-            id="preferredDate"
-            name="preferredDate"
-            type="date"
-            className={inputClass}
-          />
-        </FormField>
-        <FormField
-          label="Upholstery Items (couches, mattresses, chairs, etc.)"
-          htmlFor="upholstery"
-          className="sm:col-span-2"
-        >
-          <input
-            id="upholstery"
-            name="upholstery"
-            className={inputClass}
-            placeholder="e.g. 2 couches, 1 mattress, 4 dining chairs"
-          />
-        </FormField>
+
+        {/* --- Facility Services Fields --- */}
+        {isFacilityService && (
+          <>
+            <FormField label="Property Type" htmlFor="propertyType" required>
+              <select
+                id="propertyType"
+                name="propertyType"
+                required
+                className={inputClass}
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Select a property type
+                </option>
+                {propertyTypes.map((type) => (
+                  <option key={type} value={type}>
+                    {type}
+                  </option>
+                ))}
+              </select>
+            </FormField>
+            <FormField label="Number of Rooms / Offices" htmlFor="rooms">
+              <input
+                id="rooms"
+                name="rooms"
+                type="number"
+                min="0"
+                className={inputClass}
+                placeholder="e.g. 5"
+              />
+            </FormField>
+            <FormField label="Preferred Date" htmlFor="preferredDate">
+              <input
+                id="preferredDate"
+                name="preferredDate"
+                type="date"
+                className={inputClass}
+              />
+            </FormField>
+            {isUpholstery && (
+              <FormField
+                label="Upholstery Items (couches, mattresses, chairs, etc.)"
+                htmlFor="upholstery"
+                className="sm:col-span-2"
+              >
+                <input
+                  id="upholstery"
+                  name="upholstery"
+                  className={inputClass}
+                  placeholder="e.g. 2 couches, 1 mattress, 4 dining chairs"
+                />
+              </FormField>
+            )}
+          </>
+        )}
+
+        {/* --- Medical Supplies Fields --- */}
+        {isMedicalSupplies && (
+          <>
+            <FormField label="Facility / Clinic Name" htmlFor="facilityName" required>
+              <input
+                id="facilityName"
+                name="facilityName"
+                required
+                className={inputClass}
+                placeholder="e.g. Sandton MediClinic"
+              />
+            </FormField>
+            <FormField label="Expected Monthly Volume" htmlFor="volume">
+              <input
+                id="volume"
+                name="volume"
+                className={inputClass}
+                placeholder="e.g. 500 boxes of gloves"
+              />
+            </FormField>
+          </>
+        )}
+
+        {/* --- Web Development Fields --- */}
+        {isWebDev && (
+          <>
+            <FormField label="Current Website URL" htmlFor="websiteUrl">
+              <input
+                id="websiteUrl"
+                name="websiteUrl"
+                type="url"
+                className={inputClass}
+                placeholder="https://yourwebsite.com (Optional)"
+              />
+            </FormField>
+            <FormField label="Estimated Budget" htmlFor="budget">
+              <input
+                id="budget"
+                name="budget"
+                className={inputClass}
+                placeholder="e.g. R15,000"
+              />
+            </FormField>
+            <FormField label="Project Type" htmlFor="projectType" required>
+              <select
+                id="projectType"
+                name="projectType"
+                required
+                className={inputClass}
+                defaultValue=""
+              >
+                <option value="" disabled>Select project type</option>
+                <option value="Landing Page">Landing Page</option>
+                <option value="Corporate / Brochure Website">Corporate / Brochure Website</option>
+                <option value="E-commerce">E-commerce</option>
+                <option value="Custom Web App">Custom Web App</option>
+              </select>
+            </FormField>
+            <FormField label="Target Launch Date" htmlFor="launchDate">
+              <input
+                id="launchDate"
+                name="launchDate"
+                type="date"
+                className={inputClass}
+              />
+            </FormField>
+          </>
+        )}
+
+        {/* --- Transportation Fields --- */}
+        {isTransportation && (
+          <>
+            <FormField label="Pickup Location" htmlFor="pickupLocation" required>
+              <input
+                id="pickupLocation"
+                name="pickupLocation"
+                required
+                className={inputClass}
+                placeholder="e.g. Johannesburg"
+              />
+            </FormField>
+            <FormField label="Delivery Location" htmlFor="deliveryLocation" required>
+              <input
+                id="deliveryLocation"
+                name="deliveryLocation"
+                required
+                className={inputClass}
+                placeholder="e.g. Cape Town"
+              />
+            </FormField>
+            <FormField label="Preferred Transport Date" htmlFor="transportDate">
+              <input
+                id="transportDate"
+                name="transportDate"
+                type="date"
+                className={inputClass}
+              />
+            </FormField>
+            <FormField label="Load Description / Weight" htmlFor="loadDescription" className="sm:col-span-2" required>
+              <input
+                id="loadDescription"
+                name="loadDescription"
+                required
+                className={inputClass}
+                placeholder="e.g. 50-ton Excavator, dimensions 5m x 3m x 3m"
+              />
+            </FormField>
+          </>
+        )}
+
         <FormField label="Message" htmlFor="message" className="sm:col-span-2">
           <textarea
             id="message"

@@ -82,10 +82,6 @@ export const navLinks = [
 
 export const brands = [
   {
-    name: "Zenako Cleaning Co.",
-    description: "Professional Cleaning Operations",
-  },
-  {
     name: "OptiCore Sanitising",
     description: "Disinfection & Fogging",
   },

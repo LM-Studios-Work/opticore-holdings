@@ -445,14 +445,14 @@ export type GalleryImage = {
 export const galleryImages: GalleryImage[] = [
   // Cleaning
   { category: "cleaning", label: "Window Cleaning", image: galleryWindowWash },
-  { category: "cleaning", label: "Bathroom Cleaning", image: galleryBathroom },
-  { category: "cleaning", label: "Carpet Cleaning", image: galleryCarpet },
-  { category: "cleaning", label: "Mattress Cleaning", image: galleryMattress },
-  { category: "cleaning", label: "Move-In / Move-Out Cleaning", image: galleryMoveInOut },
-  { category: "cleaning", label: "Oven Cleaning", image: galleryOven },
-  { category: "cleaning", label: "Couch Cleaning", image: galleryCouchHero },
-  { category: "cleaning", label: "Upholstery Cleaning", image: galleryCouch },
-  { category: "cleaning", label: "Kitchen Sink Cleaning", image: galleryKitchenSink },
+  // { category: "cleaning", label: "Bathroom Cleaning", image: galleryBathroom },
+  // { category: "cleaning", label: "Carpet Cleaning", image: galleryCarpet },
+  // { category: "cleaning", label: "Mattress Cleaning", image: galleryMattress },
+  // { category: "cleaning", label: "Move-In / Move-Out Cleaning", image: galleryMoveInOut },
+  // { category: "cleaning", label: "Oven Cleaning", image: galleryOven },
+  // { category: "cleaning", label: "Couch Cleaning", image: galleryCouchHero },
+  // { category: "cleaning", label: "Upholstery Cleaning", image: galleryCouch },
+  // { category: "cleaning", label: "Kitchen Sink Cleaning", image: galleryKitchenSink },
   // Sanitising
   { category: "sanitising", label: "Disinfection Service", image: galleryWorkerSanitising },
   { category: "sanitising", label: "Fogging & Sanitising", image: gallerySanitisingGun },

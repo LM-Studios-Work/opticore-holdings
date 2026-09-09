@@ -51,7 +51,7 @@ export default function AboutPage() {
                 OptiCore Holdings is a South African facility management group delivering professional commercial and residential cleaning, medical-grade sanitising and fogging, certified pest control, and bulk medical supply solutions. With over 15 years of combined operational experience, we serve residential homeowners, corporate offices, schools, hospitals, clinics, retail stores, warehouses, and industrial facilities across Gauteng.
               </p>
               <p>
-                Our specialist divisions (OptiCore Sanitising, OptiCore Pest Control, and OptiCore Medical Supplies) give you a fully integrated service that removes the complexity of managing multiple contractors. One call covers everything from deep cleaning and fogging to PPE procurement and pest eradication.
+                Our four specialist divisions (OptiCore Cleaning, OptiCore Sanitising, OptiCore Pest Control, and OptiCore Medical Supplies) give you a fully integrated service that removes the complexity of managing multiple contractors. One call covers everything from deep cleaning and fogging to PPE procurement and pest eradication.
               </p>
               <p>
                 Our teams are screened, rigorously trained, and equipped with ISO-approved products and compliant methods. Health, safety, and precision are non-negotiables at every site we touch.

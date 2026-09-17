@@ -51,7 +51,7 @@ import galleryVirus from "../../public/gallery_virus.jpeg";
 export const siteConfig = {
   name: "OptiCore Holdings",
   legalName: "OptiCore Holdings (Pty) Ltd",
-  tagline: "Cleaning, Hygiene, Pest Control & Medical Supplies",
+  tagline: "Facility Care | Commercial Logistics | Digital & Business Solutions",
   description:
     "OptiCore Holdings delivers professional facility management, medical consumables, and hygiene operations across Johannesburg and South Africa. Built for residential, commercial, industrial, and healthcare sectors.",
   phone: "071 702 0817",
@@ -174,6 +174,22 @@ export const serviceCategories: ServiceCategory[] = [
       "Rodents",
       "Termites & Bed Bugs",
       "General Pest Management",
+    ],
+  },
+  {
+    slug: "waste-management",
+    title: "Waste Management",
+    shortDescription:
+      "Comprehensive waste disposal, hazardous material clean-up, and recycling solutions.",
+    description:
+      "OptiCore Logistics offers specialized waste management solutions including hazmat response, industrial cleaning, and safe disposal of all types of waste materials.",
+    icon: "Recycle",
+    image: "waste-hero",
+    items: [
+      "24hr Hazmat Response",
+      "Industrial Cleaning",
+      "Waste & Safe Disposal",
+      "Tyre & Rubber Disposal",
     ],
   },
   {
@@ -489,6 +505,7 @@ export const services = [
   "Upholstery Cleaning",
   "Sanitising & Disinfection / Fogging",
   "Pest Control",
+  "Waste Management",
   "Medical Supplies",
   "Web Development",
   "Landscaping",

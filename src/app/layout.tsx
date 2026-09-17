@@ -20,7 +20,7 @@ const headingFont = Sora({
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.name} | Cleaning, Hygiene, Pest Control & Medical Supplies`,
+    default: `${siteConfig.name} | ${siteConfig.tagline}`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -34,14 +34,14 @@ export const metadata: Metadata = {
     shortcut: "/logo/favicon.png",
   },
   openGraph: {
-    title: `${siteConfig.name} | Cleaning, Hygiene, Pest Control & Medical Supplies`,
+    title: `${siteConfig.name} | ${siteConfig.tagline}`,
     description: siteConfig.description,
     images: [{ url: "/logo.png", width: 800, height: 600 }],
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: `${siteConfig.name} | Cleaning, Hygiene, Pest Control & Medical Supplies`,
+    title: `${siteConfig.name} | ${siteConfig.tagline}`,
     description: siteConfig.description,
     images: ["/logo.png"],
   },

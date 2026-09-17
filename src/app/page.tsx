@@ -23,6 +23,7 @@ const serviceImages: Record<string, typeof cleaningHero> = {
   sanitising: sanitisingHero,
   "pest-control": pestHero,
   "medical-supplies": medicalHero,
+  "waste-management": cleaningHero,
   "web-development": webHero,
   landscaping: landscapingHero,
   transportation: transportationHero,
@@ -33,6 +34,7 @@ const servicePageRoutes: Record<string, string> = {
   sanitising: "/services/sanitising",
   "pest-control": "/services/pest-control",
   "medical-supplies": "/medical-supplies",
+  "waste-management": "/services/waste-management",
   "web-development": "/services/web-development",
   landscaping: "/services/landscaping",
   transportation: "/services/transportation",
@@ -62,7 +64,7 @@ export default function Home() {
                 Trusted across Johannesburg
               </span>
               <h1 className="mt-4 max-w-2xl text-balance font-display text-3xl font-bold leading-[1.08] tracking-tight sm:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
-                Cleaning, Hygiene &amp; Medical Supplies You Can Rely On.
+                Facility Care, Logistics &amp; Digital Solutions You Can Rely On.
               </h1>
               <p className="mt-4 max-w-xl text-pretty text-sm leading-relaxed text-teal-50 sm:text-base xl:text-lg">
                 {siteConfig.description}

@@ -15,6 +15,7 @@ const serviceImages: Record<string, StaticImageData> = {
   sanitising: sanitisingHero,
   "pest-control": pestHero,
   "medical-supplies": medicalHero,
+  "waste-management": cleaningHero,
   "web-development": webHero,
   landscaping: landscapingHero,
   transportation: transportationHero,

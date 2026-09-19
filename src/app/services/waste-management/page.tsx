@@ -134,7 +134,7 @@ export default function WasteManagementPage() {
         </section>
 
         {/* Section 2: Sidebar Layout with Hazmat Focus */}
-        <section className="bg-sage-wash py-16 sm:py-24 border-t border-ink-100">
+        <section className="lg:bg-sage-wash py-16 sm:py-24 border-t border-ink-100">
           <div className="container-page">
             <div className="grid gap-12 lg:grid-cols-[300px_1fr] items-start">
               
@@ -192,7 +192,7 @@ export default function WasteManagementPage() {
               </div>
 
               {/* Main Content: Hazmat Response */}
-              <div className="bg-white p-8 sm:p-12 rounded-xl border border-ink-100 shadow-sm">
+              <div className="lg:bg-white lg:p-12 lg:rounded-xl lg:border lg:border-ink-100 lg:shadow-sm">
                 <h2 className="font-display text-3xl font-bold tracking-tight text-ink-900 mb-6 text-brand-600">
                   HAZMAT RESPONSE
                 </h2>
@@ -211,7 +211,7 @@ export default function WasteManagementPage() {
                   </p>
                 </div>
 
-                <div className="bg-sage-wash border border-ink-200 rounded-xl p-6 mb-10">
+                <div className="bg-brand-50 border border-brand-100 rounded-xl p-6 mb-10">
                   <h3 className="text-xl font-bold text-ink-900 mb-4 flex items-center gap-3">
                     <FaClock className="text-brand-600" />
                     Available 24 Hours a Day

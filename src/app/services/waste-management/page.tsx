@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { FaCheck, FaLocationDot, FaClock, FaEnvelope, FaPhoneVolume, FaChevronRight } from "react-icons/fa6";
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
 import OtherServicesSection from "@/components/OtherServicesSection";
 import { siteConfig } from "@/lib/site-data";
 import heroImg from "../../../../public/Services Heros/commercial and residential cleaning hero.webp";
+import envProtectionImg from "../../../../public/waste-management/environmental_protection.jpg";
+import heavyDutyImg from "../../../../public/waste-management/heavy_duty_cleaning.jpg";
+import rubberImg from "../../../../public/waste-management/rubber_repurposing.jpg";
 
 export const metadata: Metadata = {
   title: "Waste Management | OptiCore Holdings",
@@ -44,7 +48,7 @@ export default function WasteManagementPage() {
                   We continually strive to institute best practice of waste management policies in all our work. OptiCore Logistics provides a full-spectrum approach to handling waste for commercial, industrial, and specialized sectors.
                 </p>
                 <p className="text-ink-600 text-[15px] leading-relaxed mb-6">
-                  Our comprehensive services span across <strong>Waste Treatment, Demolition, Recycling, and Safe Disposal</strong>. We locate, identify, and manage hazardous and non-hazardous materials to ensure a safe environment while reducing your company's financial and environmental burden.
+                  Our comprehensive services span across <strong>Waste Treatment, Demolition, Recycling, and Safe Disposal</strong>. We locate, identify, and manage hazardous and non-hazardous materials to ensure a safe environment while reducing your company's financial and environmental burden. We focus on sustainable practices, reduction, and recycling to ensure a cleaner future.
                 </p>
                 <ul className="space-y-3">
                   {[
@@ -61,12 +65,8 @@ export default function WasteManagementPage() {
                   ))}
                 </ul>
               </div>
-              <div className="relative h-[300px] sm:h-[400px] bg-sage-wash rounded-xl flex items-center justify-center p-8 text-center border border-ink-100 shadow-sm">
-                <div className="flex flex-col items-center max-w-sm">
-                  <span className="pill bg-brand-100 text-brand-700 mb-4 font-semibold px-4 py-1.5 rounded-full text-xs">Sustainability</span>
-                  <h4 className="font-display font-bold text-2xl text-ink-900 mb-3">Environmental Protection</h4>
-                  <p className="text-ink-600 text-sm leading-relaxed">Focused on reduction, recycling, and sustainable safe disposal to ensure a cleaner future for your business and the environment.</p>
-                </div>
+              <div className="relative h-[300px] sm:h-[400px] rounded-xl overflow-hidden border border-ink-100 shadow-sm">
+                <Image src={envProtectionImg} alt="Environmental Protection" fill className="object-cover" />
               </div>
             </div>
 
@@ -77,7 +77,7 @@ export default function WasteManagementPage() {
                   Industrial Cleaning
                 </h3>
                 <p className="text-ink-600 text-[15px] leading-relaxed mb-6">
-                  Our Industrial Cleaning division is equipped to handle complex and high-risk environments, ensuring that your facilities remain safe, compliant, and operational.
+                  Our Industrial Cleaning division is equipped to handle complex and high-risk environments, ensuring that your facilities remain safe, compliant, and operational using state-of-the-art equipment designed for optimal containment.
                 </p>
                 <ul className="space-y-4">
                   {[
@@ -98,11 +98,8 @@ export default function WasteManagementPage() {
                   ))}
                 </ul>
               </div>
-              <div className="relative h-[300px] sm:h-[400px] lg:order-2 bg-sage-wash rounded-xl flex items-center justify-center p-8 border border-ink-100 shadow-sm text-center">
-                <div className="flex flex-col items-center max-w-sm">
-                  <h4 className="font-display font-bold text-2xl text-ink-900 mb-3">Heavy Duty Cleaning</h4>
-                  <p className="text-ink-600 text-sm leading-relaxed">State-of-the-art equipment designed for optimal containment and secure transport in high-risk zones.</p>
-                </div>
+              <div className="relative h-[300px] sm:h-[400px] lg:order-2 rounded-xl overflow-hidden border border-ink-100 shadow-sm">
+                <Image src={heavyDutyImg} alt="Heavy Duty Cleaning" fill className="object-cover" />
               </div>
             </div>
 
@@ -113,7 +110,7 @@ export default function WasteManagementPage() {
                   Tyre and Rubber Disposal
                 </h3>
                 <p className="text-ink-600 text-[15px] leading-relaxed mb-6">
-                  We offer comprehensive tyre and rubber disposal solutions designed to effectively manage and repurpose rubber waste, contributing to a sustainable and compliant environmental strategy.
+                  We offer comprehensive tyre and rubber disposal solutions designed to effectively manage and repurpose rubber waste, contributing to a sustainable and compliant environmental strategy through innovative repurposing into durable materials.
                 </p>
                 <ul className="space-y-4">
                   {[
@@ -128,11 +125,8 @@ export default function WasteManagementPage() {
                   ))}
                 </ul>
               </div>
-              <div className="relative h-[300px] sm:h-[400px] bg-sage-wash rounded-xl flex items-center justify-center p-8 border border-ink-100 shadow-sm text-center">
-                 <div className="flex flex-col items-center max-w-sm">
-                  <h4 className="font-display font-bold text-2xl text-ink-900 mb-3">Rubber Repurposing</h4>
-                  <p className="text-ink-600 text-sm leading-relaxed">Innovative repurposing of rubber waste into durable materials like bi-product tar mixes.</p>
-                </div>
+              <div className="relative h-[300px] sm:h-[400px] rounded-xl overflow-hidden border border-ink-100 shadow-sm">
+                <Image src={rubberImg} alt="Rubber Repurposing" fill className="object-cover" />
               </div>
             </div>
 

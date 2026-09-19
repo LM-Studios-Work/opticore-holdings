@@ -46,6 +46,10 @@ import galleryMiteRemover from "../../public/gallery_mite_remover.jpeg";
 import gallerySanitizer from "../../public/gallery_sanitizer.jpeg";
 import galleryVirus from "../../public/gallery_virus.jpeg";
 
+import galleryResCleaningLivingRoom from "../../public/gallery/res_cleaning_living_room.jpg";
+import galleryResCleaningKitchen from "../../public/gallery/res_cleaning_kitchen.jpg";
+import galleryResCleaningBedroom from "../../public/gallery/res_cleaning_bedroom.jpg";
+
 // Poster imagery (not used in gallery)
 
 export const siteConfig = {
@@ -460,6 +464,9 @@ export type GalleryImage = {
 
 export const galleryImages: GalleryImage[] = [
   // Cleaning
+  { category: "cleaning", label: "Residential Living Room Cleaning", image: galleryResCleaningLivingRoom },
+  { category: "cleaning", label: "Residential Kitchen Cleaning", image: galleryResCleaningKitchen },
+  { category: "cleaning", label: "Residential Bedroom Cleaning", image: galleryResCleaningBedroom },
   { category: "cleaning", label: "Window Cleaning", image: galleryWindowWash },
   // { category: "cleaning", label: "Bathroom Cleaning", image: galleryBathroom },
   // { category: "cleaning", label: "Carpet Cleaning", image: galleryCarpet },

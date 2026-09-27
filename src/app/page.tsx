@@ -8,6 +8,7 @@ import medicalHero from "../../public/Services Heros/medical supplies hero.png";
 import webHero from "../../public/Services Heros/web development hero.jpg";
 import landscapingHero from "../../public/Services Heros/landscaping_hero.jpg";
 import transportationHero from "../../public/Services Heros/transportation_hero.jpg";
+import wasteHero from "../../public/waste-management/waste management.jpeg";
 import hygieneIntroHero from "../../public/Services Heros/professional hygiene services hero, home page.jpg";
 import posterMedicalSuppliesStock from "../../public/poster/medical supplies stock.jpeg";
 import SectionHeading from "@/components/SectionHeading";
@@ -23,7 +24,7 @@ const serviceImages: Record<string, typeof cleaningHero> = {
   sanitising: sanitisingHero,
   "pest-control": pestHero,
   "medical-supplies": medicalHero,
-  "waste-management": cleaningHero,
+  "waste-management": wasteHero,
   "web-development": webHero,
   landscaping: landscapingHero,
   transportation: transportationHero,

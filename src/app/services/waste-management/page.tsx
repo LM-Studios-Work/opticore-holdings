@@ -6,7 +6,7 @@ import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
 import OtherServicesSection from "@/components/OtherServicesSection";
 import { siteConfig } from "@/lib/site-data";
-import heroImg from "../../../../public/Services Heros/commercial and residential cleaning hero.webp";
+import heroImg from "../../../../public/waste-management/waste management.jpeg";
 import envProtectionImg from "../../../../public/waste-management/environmental_protection.jpg";
 import heavyDutyImg from "../../../../public/waste-management/heavy_duty_cleaning.jpg";
 import rubberImg from "../../../../public/waste-management/rubber_repurposing.jpg";

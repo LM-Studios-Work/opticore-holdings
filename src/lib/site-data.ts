@@ -136,7 +136,7 @@ export const serviceCategories: ServiceCategory[] = [
     shortDescription:
       "Scalable cleaning operations for homes, offices, and commercial properties.",
     description:
-      "From routine office maintenance to heavy-duty post-construction clear-outs.",
+      "Opticore Holdings delivers professional commercial and residential cleaning services in Bryanston, Sandton, and surrounding areas to ensure your property stays immaculate.",
     icon: "Sparkles",
     image: "cleaning-hero",
     items: [

@@ -34,14 +34,14 @@ export default function CleaningPage() {
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
               <SectionHeading 
-                eyebrow="Our Commercial Cleaning Services" 
-                title="Best Corporate and Commercial Cleaning" 
+                eyebrow="Our Commercial and Residential Cleaning Services" 
+                title="Best Corporate, Commercial, and Residential Cleaning" 
               />
               <h3 className="text-lg font-bold text-ink-900 mb-4">
-                Professional Commercial Cleaning and Sanitizing Services you can Trust!
+                Professional Commercial and Residential Cleaning and Sanitizing Services you can Trust!
               </h3>
               <p className="text-ink-600 text-[15px] leading-relaxed mb-8">
-                Contract cleaning services are tailored to your specific requirements and include the provision of cleaning personnel, equipment and consumables. At OptiCore Holdings we know that cleanliness and hygiene are vital to your business. First impressions count, and that's why a clean environment (whether it is a shop floor, a reception area or a meeting room) gives a positive message to your customers, enables your staff to perform efficiently and safely, and helps to maintain a more healthy workspace. Our commercial cleaning services are offered to different types of commercial premises:
+                Contract cleaning services are tailored to your specific requirements and include the provision of cleaning personnel, equipment and consumables. At OptiCore Holdings we know that cleanliness and hygiene are vital to your business or home. First impressions count, and that's why a clean environment (whether it is a shop floor, a reception area, a meeting room, or a living room) gives a positive message to your customers or guests, enables your staff to perform efficiently and safely, and helps to maintain a more healthy space. Our commercial and residential cleaning services are offered to different types of commercial and residential premises:
               </p>
               
               <ul className="space-y-3">
@@ -57,7 +57,8 @@ export default function CleaningPage() {
                   "Warehouse Cleaning",
                   "Factory Cleaning",
                   "Complex and Estate Cleaning",
-                  "Retirement Estate Cleaning"
+                  "Retirement Estate Cleaning",
+                  "Residential Home Cleaning"
                 ].map(item => (
                   <li key={item} className="flex items-start gap-3">
                     <FaCheck className="h-5 w-5 shrink-0 mt-0.5" style={{ fill: "url(#brand-gradient)" }} />
@@ -85,21 +86,21 @@ export default function CleaningPage() {
               {/* Left Column */}
               <div>
                 <SectionHeading 
-                  eyebrow="Our Commercial Cleaning Packages:" 
-                  title="Commercial Cleaning Packages:" 
+                  eyebrow="Our Commercial and Residential Cleaning Packages:" 
+                  title="Commercial and Residential Cleaning Packages:" 
                 />
                 <div className="space-y-4 text-ink-600 text-[14px] leading-relaxed mb-10">
                   <p>
-                    There are only a few companies that offer commercial cleaning packages due to profit margins, but we believe that with over 15 years' experience in the Commercial Cleaning Industry and a responsibility as a Johannesburg and South Africa-based Cleaning Company that this is no time to think about profits, we believe that package pricing gives value to our commercial customers, especially in the times we are in today.
+                    There are only a few companies that offer commercial and residential cleaning packages due to profit margins, but we believe that with over 15 years' experience in the Cleaning Industry and a responsibility as a Johannesburg and South Africa-based Cleaning Company that this is no time to think about profits, we believe that package pricing gives value to our commercial and residential customers, especially in the times we are in today.
                   </p>
                   <p>
-                    OptiCore Holdings is a major commercial cleaning contract specialist in Johannesburg and South Africa, as one of the best in the cleaning sector of the top companies in the country. OptiCore Holdings is well positioned to give specialized commercial cleaning services in Gauteng, with over a decade of experience and properly trained workers.
+                    OptiCore Holdings is a major commercial and residential cleaning contract specialist in Johannesburg and South Africa, as one of the best in the cleaning sector of the top companies in the country. OptiCore Holdings is well positioned to give specialized commercial and residential cleaning services in Gauteng, with over a decade of experience and properly trained workers.
                   </p>
                   <p>
-                    OptiCore Holdings has a long history of providing services to a diverse range of industries, including commercial, retail, hotel, education, healthcare and industrial.
+                    OptiCore Holdings has a long history of providing services to a diverse range of sectors, including commercial, residential, retail, hotel, education, healthcare and industrial.
                   </p>
                   <p>
-                    We do not tie our customers into long-term commercial cleaning contracts! Our commercial cleaning packages are flexible and if a client wishes to cancel, they may do so with a one-month notice period.
+                    We do not tie our customers into long-term cleaning contracts! Our cleaning packages are flexible and if a client wishes to cancel, they may do so with a one-month notice period.
                   </p>
                 </div>
 
@@ -117,7 +118,7 @@ export default function CleaningPage() {
                   </li>
                   <li className="flex items-start gap-3">
                     <FaCheck className="h-5 w-5 shrink-0 mt-0.5" style={{ fill: "url(#brand-gradient)" }} />
-                    <span className="text-ink-700 text-[14px]">You can get any of these added services as long as you have been using one of our Commercial Cleaning Services for 6 to 12 Months</span>
+                    <span className="text-ink-700 text-[14px]">You can get any of these added services as long as you have been using one of our Commercial or Residential Cleaning Services for 6 to 12 Months</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <FaCheck className="h-5 w-5 shrink-0 mt-0.5" style={{ fill: "url(#brand-gradient)" }} />
@@ -135,7 +136,7 @@ export default function CleaningPage() {
                 <div className="bg-brand-600 text-white p-5 text-center leading-relaxed">
                   <p className="font-bold text-sm">
                     Added Services Provided by OptiCore Holdings when taking<br />
-                    Commercial Cleaning Services any of our Daily Cleaning Services (Free of Charge – Adding Value)
+                    Commercial or Residential Cleaning Services any of our Daily Cleaning Services (Free of Charge – Adding Value)
                   </p>
                 </div>
 

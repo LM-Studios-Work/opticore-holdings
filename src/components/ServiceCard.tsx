@@ -9,13 +9,14 @@ import medicalHero from "../../public/Services Heros/medical supplies hero.png";
 import webHero from "../../public/Services Heros/web development hero.jpg";
 import landscapingHero from "../../public/Services Heros/landscaping_hero.jpg";
 import transportationHero from "../../public/Services Heros/transportation_hero.jpg";
+import wasteHero from "../../public/waste-management/waste management.jpeg";
 
 const serviceImages: Record<string, StaticImageData> = {
   cleaning: cleaningHero,
   sanitising: sanitisingHero,
   "pest-control": pestHero,
   "medical-supplies": medicalHero,
-  "waste-management": cleaningHero,
+  "waste-management": wasteHero,
   "web-development": webHero,
   landscaping: landscapingHero,
   transportation: transportationHero,

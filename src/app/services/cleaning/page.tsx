@@ -23,7 +23,7 @@ export default function CleaningPage() {
       <PageHero
         eyebrow="Cleaning Services Gauteng > Commercial Cleaning Services"
         title="Commercial Cleaning Services"
-        description="Scalable cleaning operations for homes, offices, and commercial properties, executed by trained teams to an uncompromising standard."
+        description="Opticore Holdings delivers professional commercial and residential cleaning services in Bryanston, Sandton, and surrounding areas to ensure your property stays immaculate."
         image={cleaningHero}
         imageAlt="Professional cleaning team on site"
       />
